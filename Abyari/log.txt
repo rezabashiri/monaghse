@@ -1,0 +1,58 @@
+_______________________________________
+An error occurred while updating the entries. See the inner exception for details.----source : EntityFramework 
+12/9/1393 7:48:01 PM
+
+_______________________________________
+An error occurred while updating the entries. See the inner exception for details.----source : EntityFramework 
+12/9/1393 7:52:30 PM
+
+_______________________________________
+An error occurred while updating the entries. See the inner exception for details.----source : EntityFramework 
+12/10/1395 12:00:00 AM
+
+_______________________________________
+The UPDATE statement conflicted with the FOREIGN KEY constraint "FK_ZirProje_Moshtary". The conflict occurred in database "Abyari", table "bse.Moshtary", column 'CodeMelli'.
+The statement has been terminated.----source : .Net SqlClient Data Provider 
+12/10/1395 12:00:00 AM
+
+_______________________________________
+An error occurred while updating the entries. See the inner exception for details.----source : EntityFramework 
+2/12/1396 12:00:00 AM
+
+_______________________________________
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK_ZirProje_Moshtary". The conflict occurred in database "Abyari", table "bse.Moshtary", column 'CodeMelli'.
+The statement has been terminated.----source : .Net SqlClient Data Provider 
+2/12/1396 12:00:00 AM
+
+_______________________________________
+An error occurred while executing the command definition. See the inner exception for details.
+6/15/1396 12:00:00 AM
+
+_______________________________________
+An error occurred while executing the command definition. See the inner exception for details.
+6/15/1396 12:00:00 AM
+
+_______________________________________
+Invalid JSON primitive: .
+6/15/1396 12:00:00 AM
+
+_______________________________________
+Invalid JSON primitive: .
+6/15/1396 12:00:00 AM
+
+_______________________________________
+Invalid JSON primitive: .
+6/15/1396 12:00:00 AM
+
+_______________________________________
+Returned [1] Message:[در صف ارسال]
+6/15/1396 12:00:00 AM
+
+_______________________________________
+در صف ارسال
+6/15/1396 12:00:00 AM
+
+_______________________________________
+دریافت کننده نامعتبر است
+6/22/1396 12:00:00 AM
+

@@ -3,6 +3,11 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+
+.nuget/
+docs/
+
+
 # User-specific files
 *.suo
 *.user
@@ -13,19 +18,19 @@
 *.userprefs
 
 # Build results
-[Dd]ebug/
-[Dd]ebugPublic/
-[Rr]elease/
-[Rr]eleases/
-x64/
-x86/
-bld/
-[Bb]in/
-[Oo]bj/
-[Ll]og/
+Abyari/[Dd]ebug/
+Abyari/[Dd]ebugPublic/
+Abyari/[Rr]elease/
+Abyari/[Rr]eleases/
+Abyari/x64/
+Abyari/x86/
+Abyari/bld/
+Abyari/[Bb]in/
+Abyari/[Oo]bj/
+Abyari/[Ll]og/
 
 # Visual Studio 2015 cache/options directory
-.vs/
+Abyari/.vs/
 # Uncomment if you have tasks that create the project's static files in wwwroot
 #wwwroot/
 
@@ -213,8 +218,8 @@ Generated_Code/
 # because we have git ;-)
 _UpgradeReport_Files/
 Backup*/
-UpgradeLog*.XML
-UpgradeLog*.htm
+Abyari/UpgradeLog*.XML
+Abyari/UpgradeLog*.htm
 
 # SQL Server files
 *.mdf
