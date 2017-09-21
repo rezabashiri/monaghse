@@ -6,7 +6,7 @@
 
 .nuget/
 docs/
-
+*.xlsx
 
 # User-specific files
 *.suo
