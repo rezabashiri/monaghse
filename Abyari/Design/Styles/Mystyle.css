@@ -1,0 +1,194 @@
+.grid 
+{ 
+	width:99%; 
+	margin:5px;
+	font-family:Tahoma;
+}
+.grid H2 
+{ 
+	margin:0; padding:0; 
+	color:#ffffff;
+	height:20px;
+	line-height:20px;
+	font-size:14px;
+}
+.grid .mid
+{
+	padding:3px 0px 0px 0px;
+}
+.grid .datatable
+{
+	width:100%;
+	color:#666;
+}        
+.grid .datatable TH
+{
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:0px;
+    padding:2px 4px;
+    color:#0066cc;
+    border-bottom:solid 2px #bbd9ee;
+}
+.grid .datatable TH A
+{ 
+	text-decoration:none;
+	padding-right:18px; 
+	color:#0066cc;
+}
+.grid .datatable .row TD
+{
+    font-size:11px;
+    /*text-align:right;*/
+    padding:6px 4px;
+    border-bottom:solid 1px #bbd9ee;
+}
+
+.grid .datatable .row TD A
+{
+    text-decoration:none;
+    color:#0066cc;
+}  
+  
+.grid .datatable .row:hover
+{
+	background-color:#fffacd;
+	color:#000;
+}
+.grid .datatable .row TD.first { padding-left:10px; }
+.grid .datatable TH.first { padding-left:10px; }
+.grid .datatable .row:hover .first
+{
+    background-repeat:no-repeat;   
+	background-image:url(../Images/bullet.gif);
+}  
+/* Data Pager Styles */
+.grid TR.pager-row TD
+{
+    border-top:solid 2px #bbd9ee;
+}
+.grid .pager
+{
+    font-family:arial,sans-serif;
+    text-align:center;
+    padding:6px;	
+    font-size:12px;
+} 
+.grid .pager SPAN.command,        
+.grid .pager SPAN.current,        
+.grid .pager A.command,
+.grid TR.pager-row TD A
+{
+    color:#5a90ce;
+    padding:0px 5px;
+    text-decoration:none;
+    font-size:12px;
+    border:none;
+}
+.grid .pager A.command:hover,
+.grid TR.pager-row TD A:hover
+{
+    border:solid 2px #408BB6;
+    background-color:#59A5D1;
+    color:#fff;
+    font-size:12px;
+    padding:0px 3px;
+    text-decoration:none;
+}        
+.grid .pager SPAN.current,
+.grid TR.pager-row TD SPAN
+{
+	border:none;
+    font-weight:bold;
+    font-size:12px;
+    color:#3e3e3e;
+    padding:0px 6px;
+}
+.grid TR.pager-row TD
+{
+	border-top:none;
+	text-align:center;
+}
+.grid TR.pager-row TABLE
+{
+	height:30px;
+	margin:0 auto 0 auto;
+}
+
+.StyRadif1 { text-align: left;  
+}
+2 { text-align: right;
+}
+.StyRadif2 { text-align: right;
+}
+.StyRadif1_3 {text-align: right; width: 13%}
+.StyRadif2_3 {text-align: right; width: 20%;}
+.StyRadif3 { text-align: right;  width: 3%    }
+.StyRadif4 { text-align: right; width: 96%  }
+.StyRadif5 {      text-align: right;
+    direction: ltr;
+}
+.pnl_Tb{  border-color:#660066; border-style:inset; direction:rtl;
+    margin-left: 0px;
+}
+.under{
+ border-color: #0000FF;
+ border-style: none none double none;
+ border-width: thin;
+ font-weight: bold;
+ }
+.linetop{
+ border-color: #0000FF;
+ border-style:  double none  none none;
+ border-width: thin;
+
+ }
+.lineright{
+ border-color: #0000FF;
+ border-style: none double none none;
+ border-width: thin;
+
+ }
+.linedown{
+ border-color: #0000FF;
+ border-style: none none double none;
+ border-width: thin;
+
+ }
+.lineleft{
+ border-color: #0000FF;
+ border-style: none none  none double;
+ border-width: thin;
+ 
+ }.lineTopRight{
+ border-color: #0000FF;
+ border-style:  double double  none none;
+ border-width: thin;
+
+ }
+.lineTopLeft{
+ border-color: #0000FF;
+ border-style: double none  none double;
+ border-width: thin;
+
+ }
+.linedownRight{
+ border-color: #0000FF;
+ border-style:  none double double none;
+ border-width: thin;
+
+ }
+.lineDownleft{
+ border-color: #0000FF;
+ border-style: none none  double double;
+ border-width: thin;
+ 
+ }
+.heading {
+    color: #5377A9;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 1em 0;
+    direction:rtl ; 
+    text-align: right;
+}

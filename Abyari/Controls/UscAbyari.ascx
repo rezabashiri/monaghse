@@ -432,7 +432,7 @@
   <uc1:RoleSelect  ID="uscRoleSelect" runat="server"></uc1:RoleSelect>
 
     </div>
-    <div class ="col-sm-9"  >
+    <div class ="col-sm-12"  >
         <uc1:ImportFromExcel ID="ImportFromExcel"  runat="server"></uc1:ImportFromExcel>
     </div>
 

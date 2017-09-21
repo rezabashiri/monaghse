@@ -1,0 +1,97 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Sitepopup.Master.cs" Inherits="Modiriat_Gharardadha.Site1" %>
+
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <!-- Bootstrap Core CSS -->
+    <link href="/Design/Styles/bootstrap.min.css" rel="stylesheet" />
+    <script src="/Design/Scripts/jquery-1.11.0.js"></script>
+    <%--<script src="/Design/Scripts/jquery-1.7.1.min.js"></script>--%>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/Design/Scripts/bootstrap.min.js"></script>
+    <script src="/Design/Scripts/jquery.blockUI.js"></script>
+    <script type="text/javascript" src="/Design/Scripts/jquery.maskedinput.js"> </script>
+    <script src="/Design/Scripts/validation.js"></script>
+       <script src="/Design/Scripts/jquery.validationEngine-fa.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/Design/Scripts/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
+    <!-- Custom CSS -->
+    <link href="/Design/Styles/custom.css" rel="stylesheet" />
+    <link href="/Design/Styles/sb-admin.css" rel="stylesheet" />
+    <link rel ="stylesheet" href="/Design/Styles/Grid.css" />
+    <!-- Custom Fonts -->
+    <link href="/Design/Styles/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you 
+         the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<script type="text/javascript">
+    $(document).ready(function () {
+        // binds form submission and fields to the validation engine
+        //$("#MainForm").validationEngine({ autoHidePrompt: true });
+        //$(".validatebtn").css("color", "red");
+        $(".validatebtn").on("click", function (evt) {
+            $("#MainForm").validationEngine({ autoHidePrompt: true, promptPosition: "topRight" });
+
+        });
+
+        $(".notvalidatebtn").on("click", function (evt) {
+            $("#MainForm").validationEngine('detach');
+        });
+
+    });
+    function show(msg) {
+        $(document).ready(function () {
+            //window.setTimeout(function () { alert(msg); }, 2000);
+            var win = $(window);
+            var dialog = $("#myAlert");
+            var top = (win.height()) / 2;
+
+            dialog.css('display', 'normal');
+            dialog.css('top', top - dialog.height());
+
+            $("#alertstr").text(msg);
+
+            window.setTimeout(function () { dialog.css('display', 'none'); }, 4000);
+
+        });
+    }
+    $(document).ready(function () {
+        $(".ajax__tab_tab").css('height', '20px');
+        $(".ajax__tab_tab").focus(function () { $(".ajax__tab_tab").css('font-size', 'larger'); });
+    });
+</script>
+       <script type="text/javascript">
+           $(document).ready(
+               function () {
+                    $(".select_botton").css('background-image', 'url(/Design/Images/t_bullet.gif)'); });
+              
+   </script>
+
+</head>
+<body style="z-index: -1000; margin-top:0;">
+     <div id="myAlert" style="display:none" class="alert alert-success">
+        <a href="#" class="close" data-dismiss="alert">&times;</a>
+        <strong id="alertstr" style="text-align:center;padding-left:40%;"> </strong> 
+    </div>
+    <div>
+         
+        <form id="MainForm" runat="server">
+            <telerik:RadScriptManager ID="RadScriptManager1" runat="server"></telerik:RadScriptManager>
+           <%-- <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                <ContentTemplate>--%>
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+               <%-- </ContentTemplate>
+            </asp:UpdatePanel>--%>
+        </form>
+            
+    </div>
+</body>
+</html>

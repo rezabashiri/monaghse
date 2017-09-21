@@ -21,6 +21,7 @@
     <IISExpressUseClassicPipelineMode />
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -356,11 +357,14 @@
     <Content Include="Financial\Management.aspx" />
     <Content Include="Global.asax" />
     <Content Include="LoginUser.aspx" />
+    <Content Include="Monaghese\CSS\wizard.css" />
+    <Content Include="Monaghese\getData.aspx" />
     <Content Include="Reports\Report.aspx" />
     <Content Include="Reports\ReportDesigner.aspx" />
     <Content Include="Reports\ReportShow.aspx" />
     <Content Include="Reports\WebForm1.aspx" />
     <Content Include="ScoringSystem\uscConfig.ascx" />
+    <Content Include="test.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -665,6 +669,7 @@
     <Compile Include="Helpers\SessionHelpers.cs" />
     <Compile Include="Helpers\SetPathHelpers.cs" />
     <Compile Include="Logic\Configuration.cs" />
+    <Compile Include="Logic\import.cs" />
     <Compile Include="LoginUser.aspx.cs">
       <DependentUpon>LoginUser.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -726,6 +731,13 @@
     <Compile Include="Model\ZirProjeTahvilMovaghat.cs">
       <DependentUpon>AbyariModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Monaghese\getData.aspx.cs">
+      <DependentUpon>getData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Monaghese\getData.aspx.designer.cs">
+      <DependentUpon>getData.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Reports\Report.aspx.cs">
       <DependentUpon>Report.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -760,6 +772,13 @@
     </Compile>
     <Compile Include="ScoringSystem\uscConfig.ascx.designer.cs">
       <DependentUpon>uscConfig.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
     </Compile>
     <Compile Include="WorkFlowHelpers\EntityDefinition.aspx.cs">
       <DependentUpon>EntityDefinition.aspx</DependentUpon>
