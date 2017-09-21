@@ -13,12 +13,21 @@ namespace Abyari {
     public partial class Default {
         
         /// <summary>
-        /// UScListZirProje control.
+        /// UscZirprojeSearchParameter control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Abyari.Controls.UScListZirProje UScListZirProje;
+        protected global::Abyari.Controls.UscZirprojeSearchParameter UscZirprojeSearchParameter;
+        
+        /// <summary>
+        /// UscSearchZirProjeByWF control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Abyari.WorkFlowHelpers.UscSearchZirProjeByWF UscSearchZirProjeByWF;
     }
 }

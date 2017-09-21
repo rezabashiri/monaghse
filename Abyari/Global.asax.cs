@@ -19,7 +19,7 @@ namespace Abyari
             WebUtility.AppStart.ConfigRoutes.RegisterModelRoutes(RouteTable.Routes, AppStart.DynamicDataConfig.DefualtModel);
             WebUtility.AppStart.EntityModelHelpers.RegisterEntityModel(global::AccessManagementService.AppStart.DynamicDataConfig.AccessManagementModel, new global::AccessManagementService.Model.AccessEntities());
             WebUtility.AppStart.ConfigRoutes.RegisterModelRoutes(RouteTable.Routes, global::AccessManagementService.AppStart.DynamicDataConfig.AccessManagementModel);
-
+        
             WebUtility.AppStart.EntityModelHelpers.RegisterEntityModel(WebUtility.AppStart.EntityModelHelpers.DefualtModel, new WebUtility.Model.WebUtilityEntities());
             WebUtility.AppStart.ConfigRoutes.RegisterModelRoutes(RouteTable.Routes, WebUtility.AppStart.EntityModelHelpers.DefualtModel);
         }
