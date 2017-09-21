@@ -529,6 +529,7 @@
     <Compile Include="DBClass\NoeProje.cs" />
     <Compile Include="DBClass\RotbeReshte.cs" />
     <Compile Include="DBClass\Shahrestan.cs" />
+    <Compile Include="DBClass\sp_ListOFPaymankarsProject_Result.cs" />
     <Compile Include="DBClass\ViewMahal.cs" />
     <Compile Include="DBClass\ViewPaymankarReshtePartial.cs" />
     <Compile Include="DBClass\ViewZirProje.cs" />

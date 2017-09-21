@@ -11,7 +11,7 @@ namespace Abyari.Dashboard.Paymankar
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Helpers.SessionHelpers.GetCompany() == null)
+            if (Helpers.SessionHelpers.GetCompany() == null )
             {
                 Server.Transfer("/Administrator/SelectCompany.aspx", false);
             }

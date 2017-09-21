@@ -6,7 +6,8 @@
 
 .nuget/
 docs/
-*.xlsx
+**.xlsx
+Abyari/Design/
 
 # User-specific files
 *.suo

@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UscSearchZirProjeByWF.ascx.cs" Inherits="Abyari.WorkFlowHelpers.UscSearchZirProjeByWF" %>
 
-<asp:HiddenField ID="hd" runat="server" OnInit="hd_Init" />
+ 
  
      <script  type="text/javascript">
          var ExecutingID;
@@ -39,7 +39,7 @@
 <div style="width:100%">
 
 
-<dynamic:DynamicRadGrid   OnDataBound="grdZirProjeData_DataBound" RenderMode="Mobile" AllowSorting="true"  OnItemCommand="grdZirProjeData_ItemCommand"  ID="grdZirProjeData" Skin="Web20" AutoGenerateColumns="false"  runat="server">
+<telerik:RadGrid   OnDataBound="grdZirProjeData_DataBound" RenderMode="Mobile" AllowSorting="true"  OnItemCommand="grdZirProjeData_ItemCommand"  ID="grdZirProjeData" Skin="Web20" AutoGenerateColumns="false"  runat="server">
     <ClientSettings >
          
         <ClientEvents OnRowDblClick="RowDblClick"  />
@@ -70,8 +70,18 @@
                     <asp:Label runat="server" ID="lblStepName" ></asp:Label>
                 </ItemTemplate>
             </telerik:GridTemplateColumn>
+             <telerik:GridBoundColumn DataField="Code" HeaderText="کد طرح" ItemStyle-BackColor="YellowGreen"></telerik:GridBoundColumn>
+                        <telerik:GridBoundColumn DataField="Name" HeaderText="نام طرح" ItemStyle-BackColor="Salmon"></telerik:GridBoundColumn>
+                        <telerik:GridBoundColumn DataField="Sath" HeaderText="سطح" ItemStyle-BackColor="GreenYellow"></telerik:GridBoundColumn>
+                        <telerik:GridBoundColumn DataField="MeghdareEstesnaSath" HeaderText="مقداراستثنای سطح" ItemStyle-BackColor="Yellow"></telerik:GridBoundColumn>
+                        <telerik:GridBoundColumn DataField="NoeProje" HeaderText="نوع پروژه"></telerik:GridBoundColumn>
+                        <telerik:GridBoundColumn DataField="TedadDastgahAbyari" HeaderText="نعداد دستگاه آبیاری"></telerik:GridBoundColumn>
+                        <telerik:GridBoundColumn DataField="NoePomp" HeaderText="نوع پمپ"></telerik:GridBoundColumn>
+                        <telerik:GridBoundColumn DataField="Debi" HeaderText="دبی"></telerik:GridBoundColumn>
+                        <telerik:GridBoundColumn DataField="ManbaeTaminAb" HeaderText="منابع تامین آب"></telerik:GridBoundColumn>
+                        <telerik:GridBoundColumn DataField="CodeMeliMoshtary" HeaderText="کدملی مشتری"></telerik:GridBoundColumn>
            
         </Columns>
     </MasterTableView>
-</dynamic:DynamicRadGrid>
+</telerik:RadGrid >
     </div>
