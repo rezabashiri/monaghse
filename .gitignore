@@ -29,7 +29,7 @@ Abyari/bld/
 Abyari/[Bb]in/
 Abyari/[Oo]bj/
 Abyari/[Ll]og/
-
+lib/
 # Visual Studio 2015 cache/options directory
 Abyari/.vs/
 # Uncomment if you have tasks that create the project's static files in wwwroot
