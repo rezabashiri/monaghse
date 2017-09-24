@@ -133,12 +133,29 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
-    <Reference Include="Telerik.Web.UI, Version=2014.2.618.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Telerik\UI for ASP.NET AJAX Q2 2014\Bin45\Telerik.Web.UI.dll</HintPath>
+    <Reference Include="Telerik.Web.Spreadsheet">
+      <HintPath>..\lib\RCAJAX\2017.3.913.45\AdditionalLibraries\Bin45\Telerik.Web.Spreadsheet.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI">
+      <HintPath>..\lib\RCAJAX\2017.3.913.45\Telerik.Web.UI.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Web.UI.Skins">
-      <HintPath>C:\Program Files (x86)\Telerik\UI for ASP.NET AJAX Q2 2014\Bin45\Telerik.Web.UI.Skins.dll</HintPath>
+      <HintPath>..\lib\RCAJAX\2017.3.913.45\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Core">
+      <HintPath>..\lib\RCAJAX\2017.3.913.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Flow">
+      <HintPath>..\lib\RCAJAX\2017.3.913.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Flow.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet">
+      <HintPath>..\lib\RCAJAX\2017.3.913.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Spreadsheet.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml">
+      <HintPath>..\lib\RCAJAX\2017.3.913.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Zip">
+      <HintPath>..\lib\RCAJAX\2017.3.913.45\AdditionalLibraries\Bin45\Telerik.Windows.Zip.dll</HintPath>
     </Reference>
     <Reference Include="tkvUtility">
       <HintPath>..\..\..\component\Utility\bin\Release\tkvUtility.dll</HintPath>
@@ -663,6 +680,9 @@
     <Compile Include="Financial\Management.aspx.designer.cs">
       <DependentUpon>Management.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\Config.cs" />
     <Compile Include="Helpers\ContextHelpers.cs" />
     <Compile Include="Helpers\InvoiceHelpers.cs" />
@@ -1083,9 +1103,6 @@
       <DependentUpon>ListDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="ExtraControls\SerializableDropDownList.cs" />
-    <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
     <Compile Include="Helpers\CustomAttribute.cs" />
     <Compile Include="Helpers\DateConvert.cs" />
     <Compile Include="Helpers\ExceptionHelper.cs" />
