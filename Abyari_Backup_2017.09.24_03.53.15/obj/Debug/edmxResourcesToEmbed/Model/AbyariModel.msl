@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AbyariModelStoreContainer" CdmEntityContainer="AbyariEntities">
+    <EntitySetMapping Name="PaymankarReshtes">
+      <EntityTypeMapping TypeName="AbyariModel.PaymankarReshte">
+        <MappingFragment StoreEntitySet="PaymankarReshte">
+          <ScalarProperty Name="IDRotbe" ColumnName="IDRotbe" />
+          <ScalarProperty Name="Faal" ColumnName="Faal" />
+          <ScalarProperty Name="ShomareMojavez" ColumnName="ShomareMojavez" />
+          <ScalarProperty Name="TarikhEtebarMojavez" ColumnName="TarikhEtebarMojavez" />
+          <ScalarProperty Name="TarikhSodorMojavez" ColumnName="TarikhSodorMojavez" />
+          <ScalarProperty Name="IDReshte" ColumnName="IDReshte" />
+          <ScalarProperty Name="IDPaymankar" ColumnName="IDPaymankar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZirProjeTahvilMovaghats">
+      <EntityTypeMapping TypeName="AbyariModel.ZirProjeTahvilMovaghat">
+        <MappingFragment StoreEntitySet="ZirProjeTahvilMovaghat">
+          <ScalarProperty Name="NameBahreBardaran" ColumnName="NameBahreBardaran" />
+          <ScalarProperty Name="TarikhTahvil" ColumnName="TarikhTahvil" />
+          <ScalarProperty Name="IDZirProje" ColumnName="IDZirProje" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SearchZirProje_Get" FunctionName="AbyariModel.Store.SearchZirProje_Get" />
+    <EntitySetMapping Name="Sherkats">
+      <EntityTypeMapping TypeName="AbyariModel.Sherkat">
+        <MappingFragment StoreEntitySet="Sherkat">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="DateUpdate" ColumnName="DateUpdate" />
+          <ScalarProperty Name="MahalSabt" ColumnName="MahalSabt" />
+          <ScalarProperty Name="ShomareMojavez" ColumnName="ShomareMojavez" />
+          <ScalarProperty Name="modateEtebarMojavez" ColumnName="modateEtebarMojavez" />
+          <ScalarProperty Name="TarikhSodorMojavez" ColumnName="TarikhSodorMojavez" />
+          <ScalarProperty Name="Addres" ColumnName="Addres" />
+          <ScalarProperty Name="Faal" ColumnName="Faal" />
+          <ScalarProperty Name="TelMOdir" ColumnName="TelMOdir" />
+          <ScalarProperty Name="Modir" ColumnName="Modir" />
+          <ScalarProperty Name="EMail" ColumnName="EMail" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="NameKamel" ColumnName="NameKamel" />
+          <ScalarProperty Name="ListSiah" ColumnName="ListSiah" />
+          <ScalarProperty Name="Haghighi" ColumnName="Haghighi" />
+          <ScalarProperty Name="ShenaseMeli" ColumnName="ShenaseMeli" />
+          <ScalarProperty Name="ShomareSabt" ColumnName="ShomareSabt" />
+          <ScalarProperty Name="CodeEghtesadi" ColumnName="CodeEghtesadi" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="IDRotbe" ColumnName="IDRotbe" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NoeProjes">
+      <EntityTypeMapping TypeName="AbyariModel.NoeProje">
+        <MappingFragment StoreEntitySet="NoeProje">
+          <ScalarProperty Name="IDReshte" ColumnName="IDReshte" />
+          <ScalarProperty Name="ZaribSath" ColumnName="ZaribSath" />
+          <ScalarProperty Name="MeghdareEstesnaSath" ColumnName="MeghdareEstesnaSath" />
+          <ScalarProperty Name="Sharh" ColumnName="Sharh" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reshtes">
+      <EntityTypeMapping TypeName="AbyariModel.Reshte">
+        <MappingFragment StoreEntitySet="Reshte">
+          <ScalarProperty Name="Sharh" ColumnName="Sharh" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_SearchPaymankar" FunctionName="AbyariModel.Store.sp_SearchPaymankar" />
+    <EntitySetMapping Name="Moshtaries">
+      <EntityTypeMapping TypeName="AbyariModel.Moshtary">
+        <MappingFragment StoreEntitySet="Moshtary">
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="telephon" ColumnName="telephon" />
+          <ScalarProperty Name="EMail" ColumnName="EMail" />
+          <ScalarProperty Name="Famil" ColumnName="Famil" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CodeMelli" ColumnName="CodeMelli" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RotbeReshtes">
+      <EntityTypeMapping TypeName="AbyariModel.RotbeReshte">
+        <MappingFragment StoreEntitySet="RotbeReshte">
+          <ScalarProperty Name="SatheMojazeSalane" ColumnName="SatheMojazeSalane" />
+          <ScalarProperty Name="Faal" ColumnName="Faal" />
+          <ScalarProperty Name="SatheMojaz" ColumnName="SatheMojaz" />
+          <ScalarProperty Name="TedadKarMojaz" ColumnName="TedadKarMojaz" />
+          <ScalarProperty Name="Rotbe" ColumnName="Rotbe" />
+          <ScalarProperty Name="IDReshte" ColumnName="IDReshte" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SetPaymankarInvoiceID" FunctionName="AbyariModel.Store.SetPaymankarInvoiceID" />
+    <FunctionImportMapping FunctionImportName="ListOfPaymankaranMojaz" FunctionName="AbyariModel.Store.ListOfPaymankaranMojaz" />
+    <FunctionImportMapping FunctionImportName="sp_ListOFPaymankarsProject" FunctionName="AbyariModel.Store.sp_ListOFPaymankarsProject">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AbyariModel.sp_ListOFPaymankarsProject_Result">
+          <ScalarProperty Name="RowNumber" ColumnName="RowNumber" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sath" ColumnName="Sath" />
+          <ScalarProperty Name="TedadDastgahAbyari" ColumnName="TedadDastgahAbyari" />
+          <ScalarProperty Name="NoePomp" ColumnName="NoePomp" />
+          <ScalarProperty Name="Debi" ColumnName="Debi" />
+          <ScalarProperty Name="ManbaeTaminAb" ColumnName="ManbaeTaminAb" />
+          <ScalarProperty Name="IDPaymankar" ColumnName="IDPaymankar" />
+          <ScalarProperty Name="IDSherkatTarah" ColumnName="IDSherkatTarah" />
+          <ScalarProperty Name="IDRoosta" ColumnName="IDRoosta" />
+          <ScalarProperty Name="IDNoe" ColumnName="IDNoe" />
+          <ScalarProperty Name="NoeProje" ColumnName="NoeProje" />
+          <ScalarProperty Name="MeghdareEstesnaSath" ColumnName="MeghdareEstesnaSath" />
+          <ScalarProperty Name="ZaribSath" ColumnName="ZaribSath" />
+          <ScalarProperty Name="Sharh" ColumnName="Sharh" />
+          <ScalarProperty Name="IDReshte" ColumnName="IDReshte" />
+          <ScalarProperty Name="ContractDate" ColumnName="ContractDate" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="CodeMeliMoshtary" ColumnName="CodeMeliMoshtary" />
+          <ScalarProperty Name="Tahvil" ColumnName="Tahvil" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="WfExecutingID" ColumnName="WfExecutingID" />
+          <ScalarProperty Name="Reserved" ColumnName="Reserved" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="ZirProjes">
+      <EntityTypeMapping TypeName="AbyariModel.ZirProje">
+        <MappingFragment StoreEntitySet="ZirProje">
+          <ScalarProperty Name="WfExecutingID" ColumnName="WfExecutingID" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="ContractDate" ColumnName="ContractDate" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="SahmeMotaghazi" ColumnName="SahmeMotaghazi" />
+          <ScalarProperty Name="SahmeBank" ColumnName="SahmeBank" />
+          <ScalarProperty Name="SahmeDolat" ColumnName="SahmeDolat" />
+          <ScalarProperty Name="CodeMeliMoshtary" ColumnName="CodeMeliMoshtary" />
+          <ScalarProperty Name="IDNoe" ColumnName="IDNoe" />
+          <ScalarProperty Name="IDRoosta" ColumnName="IDRoosta" />
+          <ScalarProperty Name="IDSherkatTarah" ColumnName="IDSherkatTarah" />
+          <ScalarProperty Name="IDPaymankar" ColumnName="IDPaymankar" />
+          <ScalarProperty Name="ManbaeTaminAb" ColumnName="ManbaeTaminAb" />
+          <ScalarProperty Name="Debi" ColumnName="Debi" />
+          <ScalarProperty Name="NoePomp" ColumnName="NoePomp" />
+          <ScalarProperty Name="TedadDastgahAbyari" ColumnName="TedadDastgahAbyari" />
+          <ScalarProperty Name="Sath" ColumnName="Sath" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_ReportTotalGroupByCompany" FunctionName="AbyariModel.Store.sp_ReportTotalGroupByCompany">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AbyariModel.sp_ReportTotalGroupByCompany_Result">
+          <ScalarProperty Name="NamePaymankar" ColumnName="NamePaymankar" />
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="CodeEghtesadi" ColumnName="CodeEghtesadi" />
+          <ScalarProperty Name="ShenaseMeli" ColumnName="ShenaseMeli" />
+          <ScalarProperty Name="NameReshte" ColumnName="NameReshte" />
+          <ScalarProperty Name="IDReshte" ColumnName="IDReshte" />
+          <ScalarProperty Name="Rotbe" ColumnName="Rotbe" />
+          <ScalarProperty Name="SatheMojazeSalane" ColumnName="SatheMojazeSalane" />
+          <ScalarProperty Name="SatheJari" ColumnName="SatheJari" />
+          <ScalarProperty Name="SatheKol" ColumnName="SatheKol" />
+          <ScalarProperty Name="TedadKol" ColumnName="TedadKol" />
+          <ScalarProperty Name="TedadTahvilShode" ColumnName="TedadTahvilShode" />
+          <ScalarProperty Name="TedadJari" ColumnName="TedadJari" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="آبیاری_بارانی" ColumnName="آبیاری بارانی" />
+          <ScalarProperty Name="آبیاری_قطره_ای" ColumnName="آبیاری قطره ای" />
+          <ScalarProperty Name="آبیاری_کم_فشار" ColumnName="آبیاری کم فشار" />
+          <ScalarProperty Name="آبیاری_کم_فشار_تیپ" ColumnName="آبیاری کم فشار تیپ" />
+          <ScalarProperty Name="موضعی" ColumnName="موضعی" />
+          <ScalarProperty Name="آبیاری_بارانی_تیپ" ColumnName="آبیاری بارانی تیپ" />
+          <ScalarProperty Name="TedadJariBozorg" ColumnName="TedadJariBozorg" />
+          <ScalarProperty Name="TedadKarMojaz" ColumnName="TedadKarMojaz" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_DeliveryProje" FunctionName="AbyariModel.Store.sp_DeliveryProje" />
+    <EntitySetMapping Name="ViewPaymankarReshtes">
+      <EntityTypeMapping TypeName="AbyariModel.ViewPaymankarReshte">
+        <MappingFragment StoreEntitySet="ViewPaymankarReshte">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="ShenaseMeli" ColumnName="ShenaseMeli" />
+          <ScalarProperty Name="CodeEghtesadi" ColumnName="CodeEghtesadi" />
+          <ScalarProperty Name="SatheMojazeSalane" ColumnName="SatheMojazeSalane" />
+          <ScalarProperty Name="TedadKarMojaz" ColumnName="TedadKarMojaz" />
+          <ScalarProperty Name="Rotbe" ColumnName="Rotbe" />
+          <ScalarProperty Name="ReshteFaal" ColumnName="ReshteFaal" />
+          <ScalarProperty Name="SatheMojaz" ColumnName="SatheMojaz" />
+          <ScalarProperty Name="IDRotbe" ColumnName="IDRotbe" />
+          <ScalarProperty Name="NamePaymankar" ColumnName="NamePaymankar" />
+          <ScalarProperty Name="NameReshte" ColumnName="NameReshte" />
+          <ScalarProperty Name="Faal" ColumnName="Faal" />
+          <ScalarProperty Name="ShomareMojavez" ColumnName="ShomareMojavez" />
+          <ScalarProperty Name="TarikhEtebarMojavez" ColumnName="TarikhEtebarMojavez" />
+          <ScalarProperty Name="TarikhSodorMojavez" ColumnName="TarikhSodorMojavez" />
+          <ScalarProperty Name="IDReshte" ColumnName="IDReshte" />
+          <ScalarProperty Name="IDPaymankar" ColumnName="IDPaymankar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shahrestans">
+      <EntityTypeMapping TypeName="AbyariModel.Shahrestan">
+        <MappingFragment StoreEntitySet="Shahrestan">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="DateUpdate" ColumnName="DateUpdate" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Addres" ColumnName="Addres" />
+          <ScalarProperty Name="TelePhone" ColumnName="TelePhone" />
+          <ScalarProperty Name="Sharh" ColumnName="Sharh" />
+          <ScalarProperty Name="CodeOstan" ColumnName="CodeOstan" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_Contract" FunctionName="AbyariModel.Store.sp_Contract" />
+    <FunctionImportMapping FunctionImportName="Import" FunctionName="AbyariModel.Store.Import" />
+    <FunctionImportMapping FunctionImportName="sp_ZirProjeReserve" FunctionName="AbyariModel.Store.sp_ZirProjeReserve" />
+    <FunctionImportMapping FunctionImportName="sp_GetPaymanakrStatistics" FunctionName="AbyariModel.Store.sp_GetPaymanakrStatistics">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AbyariModel.sp_GetPaymanakrStatistics_Result">
+          <ScalarProperty Name="Allowed" ColumnName="Allowed" />
+          <ScalarProperty Name="Reserved" ColumnName="Reserved" />
+          <ScalarProperty Name="Contracted" ColumnName="Contracted" />
+          <ScalarProperty Name="TotalInvoice" ColumnName="TotalInvoice" />
+          <ScalarProperty Name="TotalPayment" ColumnName="TotalPayment" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SearchReserved" FunctionName="AbyariModel.Store.sp_SearchReserved" />
+    <EntitySetMapping Name="ViewMahals">
+      <EntityTypeMapping TypeName="AbyariModel.ViewMahal">
+        <MappingFragment StoreEntitySet="ViewMahal">
+          <ScalarProperty Name="IDShahrestan" ColumnName="IDShahrestan" />
+          <ScalarProperty Name="IDRoosta" ColumnName="IDRoosta" />
+          <ScalarProperty Name="Roosta" ColumnName="Roosta" />
+          <ScalarProperty Name="Dehestan" ColumnName="Dehestan" />
+          <ScalarProperty Name="Bakhsh" ColumnName="Bakhsh" />
+          <ScalarProperty Name="Shahrestan" ColumnName="Shahrestan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Paymankars">
+      <EntityTypeMapping TypeName="AbyariModel.Paymankar">
+        <MappingFragment StoreEntitySet="Paymankar">
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="MahalSabt" ColumnName="MahalSabt" />
+          <ScalarProperty Name="Addres" ColumnName="Addres" />
+          <ScalarProperty Name="Faal" ColumnName="Faal" />
+          <ScalarProperty Name="TelMOdir" ColumnName="TelMOdir" />
+          <ScalarProperty Name="Modir" ColumnName="Modir" />
+          <ScalarProperty Name="EMail" ColumnName="EMail" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="NameKamel" ColumnName="NameKamel" />
+          <ScalarProperty Name="ListSiah" ColumnName="ListSiah" />
+          <ScalarProperty Name="Haghighi" ColumnName="Haghighi" />
+          <ScalarProperty Name="ShenaseMeli" ColumnName="ShenaseMeli" />
+          <ScalarProperty Name="ShomareSabt" ColumnName="ShomareSabt" />
+          <ScalarProperty Name="CodeEghtesadi" ColumnName="CodeEghtesadi" />
+          <ScalarProperty Name="Sharh" ColumnName="Sharh" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZirProjeReservations">
+      <EntityTypeMapping TypeName="AbyariModel.ZirProjeReservation">
+        <MappingFragment StoreEntitySet="ZirProjeReservation">
+          <ScalarProperty Name="Tavafogh" ColumnName="Tavafogh" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="IDZirProje" ColumnName="IDZirProje" />
+          <ScalarProperty Name="IDPaymankar" ColumnName="IDPaymankar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ViewZirProjes">
+      <EntityTypeMapping TypeName="AbyariModel.ViewZirProje">
+        <MappingFragment StoreEntitySet="ViewZirProje">
+          <ScalarProperty Name="WfExecutingID" ColumnName="WfExecutingID" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Tahvil" ColumnName="Tahvil" />
+          <ScalarProperty Name="CodeMeliMoshtary" ColumnName="CodeMeliMoshtary" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="ContractDate" ColumnName="ContractDate" />
+          <ScalarProperty Name="IDReshte" ColumnName="IDReshte" />
+          <ScalarProperty Name="Sharh" ColumnName="Sharh" />
+          <ScalarProperty Name="ZaribSath" ColumnName="ZaribSath" />
+          <ScalarProperty Name="MeghdareEstesnaSath" ColumnName="MeghdareEstesnaSath" />
+          <ScalarProperty Name="NoeProje" ColumnName="NoeProje" />
+          <ScalarProperty Name="IDNoe" ColumnName="IDNoe" />
+          <ScalarProperty Name="IDRoosta" ColumnName="IDRoosta" />
+          <ScalarProperty Name="IDSherkatTarah" ColumnName="IDSherkatTarah" />
+          <ScalarProperty Name="IDPaymankar" ColumnName="IDPaymankar" />
+          <ScalarProperty Name="ManbaeTaminAb" ColumnName="ManbaeTaminAb" />
+          <ScalarProperty Name="Debi" ColumnName="Debi" />
+          <ScalarProperty Name="NoePomp" ColumnName="NoePomp" />
+          <ScalarProperty Name="TedadDastgahAbyari" ColumnName="TedadDastgahAbyari" />
+          <ScalarProperty Name="Sath" ColumnName="Sath" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RowNumber" ColumnName="RowNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ViewZirProjeMoshtaries">
+      <EntityTypeMapping TypeName="AbyariModel.ViewZirProjeMoshtary">
+        <MappingFragment StoreEntitySet="ViewZirProjeMoshtary">
+          <ScalarProperty Name="PersianContractedDate" ColumnName="PersianContractedDate" />
+          <ScalarProperty Name="ContractDate" ColumnName="ContractDate" />
+          <ScalarProperty Name="NamePaymankar" ColumnName="NamePaymankar" />
+          <ScalarProperty Name="Shahrestan" ColumnName="Shahrestan" />
+          <ScalarProperty Name="NoeProje" ColumnName="NoeProje" />
+          <ScalarProperty Name="Tahvil" ColumnName="Tahvil" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Famil" ColumnName="Famil" />
+          <ScalarProperty Name="NameMoshtary" ColumnName="NameMoshtary" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="SahmeMotaghazi" ColumnName="SahmeMotaghazi" />
+          <ScalarProperty Name="SahmeBank" ColumnName="SahmeBank" />
+          <ScalarProperty Name="SahmeDolat" ColumnName="SahmeDolat" />
+          <ScalarProperty Name="CodeMeliMoshtary" ColumnName="CodeMeliMoshtary" />
+          <ScalarProperty Name="IDNoe" ColumnName="IDNoe" />
+          <ScalarProperty Name="IDRoosta" ColumnName="IDRoosta" />
+          <ScalarProperty Name="IDSherkatTarah" ColumnName="IDSherkatTarah" />
+          <ScalarProperty Name="IDPaymankar" ColumnName="IDPaymankar" />
+          <ScalarProperty Name="ManbaeTaminAb" ColumnName="ManbaeTaminAb" />
+          <ScalarProperty Name="Debi" ColumnName="Debi" />
+          <ScalarProperty Name="NoePomp" ColumnName="NoePomp" />
+          <ScalarProperty Name="TedadDastgahAbyari" ColumnName="TedadDastgahAbyari" />
+          <ScalarProperty Name="Sath" ColumnName="Sath" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ViewZirprojeResevations">
+      <EntityTypeMapping TypeName="AbyariModel.ViewZirprojeResevation">
+        <MappingFragment StoreEntitySet="ViewZirprojeResevation">
+          <ScalarProperty Name="ContractDate" ColumnName="ContractDate" />
+          <ScalarProperty Name="PersianCreateDate" ColumnName="PersianCreateDate" />
+          <ScalarProperty Name="IDShahrestan" ColumnName="IDShahrestan" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ReservedPaymankarID" ColumnName="ReservedPaymankarID" />
+          <ScalarProperty Name="Rotbe" ColumnName="Rotbe" />
+          <ScalarProperty Name="Shahrestan" ColumnName="Shahrestan" />
+          <ScalarProperty Name="NamePaymankar" ColumnName="NamePaymankar" />
+          <ScalarProperty Name="Tavafogh" ColumnName="Tavafogh" />
+          <ScalarProperty Name="Sharh" ColumnName="Sharh" />
+          <ScalarProperty Name="ContractedPaymankarID" ColumnName="ContractedPaymankarID" />
+          <ScalarProperty Name="Sath" ColumnName="Sath" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetPaymankarDetail" FunctionName="AbyariModel.Store.sp_GetPaymankarDetail" />
+    <FunctionImportMapping FunctionImportName="sp_ZirProjeUnReserve" FunctionName="AbyariModel.Store.sp_ZirProjeUnReserve" />
+    <FunctionImportMapping FunctionImportName="sp_SetPaymankarUserID" FunctionName="AbyariModel.Store.sp_SetPaymankarUserID" />
+    <EntitySetMapping Name="Configs">
+      <EntityTypeMapping TypeName="AbyariModel.Config">
+        <MappingFragment StoreEntitySet="Config">
+          <ScalarProperty Name="Scoring" ColumnName="Scoring" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_AddUpdateConfig" FunctionName="AbyariModel.Store.sp_AddUpdateConfig" />
+  </EntityContainerMapping>
+</Mapping>

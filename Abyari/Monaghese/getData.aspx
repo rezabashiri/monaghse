@@ -10,6 +10,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
+        <asp:UpdatePanel runat="server" UpdateMode="Conditional" ID="updatePanel_wizard">
+        <ContentTemplate>
+
 
     <div class="container">
         <div class="row">
@@ -52,7 +55,6 @@
                         </ul>
                     </div>
 
-
                     <div class="tab-content">
                         <div class="tab-pane active" role="tabpanel" id="step1">
                             <div class="step1">
@@ -63,6 +65,62 @@
 
                                     </div>
                                 </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12">
+
+                                        <telerik:RadGrid ID="grdProjecs" runat="server" Skin="Sunset" AllowFilteringByColumn="false" AllowPaging="true">
+                                            <ClientSettings>
+                                                <Scrolling AllowScroll="true" ScrollHeight="700" />
+                                                <Resizing AllowResizeToFit="true" AllowColumnResize="true" />
+
+                                            </ClientSettings>
+                                            <MasterTableView AutoGenerateColumns="false" DataKeyNames="ردیف">
+                                                <Columns>
+                                                    <telerik:GridTemplateColumn HeaderText="افزودن فایل های مورد نیاز">
+                                                        <ItemTemplate>
+                                                            <input type="button" class="btn btn-small btn-success check" data-idproje="<%# Eval("ردیف") %>" onclick="openAttachmentModel(this);" value="افزودن" />
+                                                        </ItemTemplate>
+                                                    </telerik:GridTemplateColumn>
+
+
+                                                    <telerik:GridBoundColumn DataField="ردیف" HeaderText="ردیف" ItemStyle-BackColor="YellowGreen"></telerik:GridBoundColumn>
+
+                                                </Columns>
+                                            </MasterTableView>
+                                        </telerik:RadGrid>
+
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12">
+
+                                        <%--for error gridview--%>
+
+                                        <telerik:RadGrid ID="grdError" runat="server" Skin="Sunset" AllowFilteringByColumn="false" AllowPaging="true">
+                                            <ClientSettings>
+                                                <Scrolling AllowScroll="true" ScrollHeight="700" />
+                                                <Resizing AllowResizeToFit="true" AllowColumnResize="true" />
+                                            </ClientSettings>
+                                            <MasterTableView AutoGenerateColumns="false" DataKeyNames="ردیف">
+                                                <Columns>
+                                                    <telerik:GridTemplateColumn HeaderText="افزودن فایل های مورد نیاز">
+                                                        <ItemTemplate>
+                                                            <input type="button" class="btn btn-small btn-success check" data-idproje="<%# Eval("ردیف") %>" onclick="openAttachmentModel(this);" value="افزودن" />
+                                                        </ItemTemplate>
+                                                    </telerik:GridTemplateColumn>
+
+
+                                                    <telerik:GridBoundColumn DataField="ردیف" HeaderText="ردیف" ItemStyle-BackColor="YellowGreen"></telerik:GridBoundColumn>
+
+                                                </Columns>
+                                            </MasterTableView>
+                                        </telerik:RadGrid>
+                                    </div>
+                                </div>
+
+
                                 <%--    <div class="col-md-6">
                                         <label for="exampleInputEmail1">Last Name</label>
                                         <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Last Name">
@@ -98,7 +156,12 @@
                             </div>
                             <ul class="list-inline pull-right">
                                 <li>
-                                    <button type="button" id="btnGoToNextSteps" runat="server" class="btn btn-primary next-step">مرحله بعد</button></li>
+                                    <%--<asp:Button ID="Button1" runat="server" Text="Button" />--%>
+                                    <asp:Button runat="server" ID="btnSave" CssClass="btn btn-success" OnClick="btnSave_Click" Text="ذخیره" />
+                                </li>
+                                <li>
+                                    <button type="button" id="btnGoToNextSteps" class="btn btn-primary next-step">مرحله بعد</button>
+                                </li>
                             </ul>
                         </div>
                         <div class="tab-pane" role="tabpanel" id="step2">
@@ -109,29 +172,6 @@
                                     </div>
                                 </div>
                                 <div class="step-22">
-
-
-
-                                    <telerik:RadGrid ID="grdProjecs" runat="server" Skin="Sunset" AllowFilteringByColumn="false" AllowPaging="true">
-                                        <ClientSettings>
-                                            <Scrolling AllowScroll="true" ScrollHeight="700" />
-                                            <Resizing AllowResizeToFit="true" AllowColumnResize="true" />
-
-                                        </ClientSettings>
-                                        <MasterTableView AutoGenerateColumns="false" DataKeyNames="ردیف">
-                                            <Columns>
-                                                <telerik:GridTemplateColumn HeaderText="افزودن فایل های مورد نیار">
-                                                    <ItemTemplate>
-                                                        <input type="button" class="btn btn-small btn-success check" data-idproje="<%# Eval("ردیف") %>" onclick="openAttachmentModel(this);" value="افزودن" />
-                                                    </ItemTemplate>
-                                                </telerik:GridTemplateColumn>
-
-
-                                                <telerik:GridBoundColumn DataField="ردیف" HeaderText="ردیف" ItemStyle-BackColor="YellowGreen"></telerik:GridBoundColumn>
-
-                                            </Columns>
-                                        </MasterTableView>
-                                    </telerik:RadGrid>
 
 
                                     <%--for DynamicRadGrid--%>
@@ -160,9 +200,10 @@
                             </div>
                             <ul class="list-inline pull-right">
                                 <li>
-                                    <button type="button" class="btn btn-default prev-step">مرحله قبل</button></li>
+                                    <button type="button" id="btnPrevToSlide1" class="btn btn-default prev-step">مرحله قبل</button></li>
                                 <li>
-                                    <button type="button" class="btn btn-primary next-step">اتمام مراحل</button></li>
+                                    <asp:Button runat="server" ID="btnFinish" CssClass="btn btn-primary next-step" Text="اتمام مراحل" OnClick="btnFinish_Click" />
+                                </li>
                             </ul>
                         </div>
                         <div class="tab-pane" role="tabpanel" id="step3">
@@ -286,8 +327,6 @@
                         <div class="tab-pane" role="tabpanel" id="complete">
                             <div class="step44">
                                 <h5>Completed</h5>
-
-
                             </div>
                         </div>
                         <div class="clearfix"></div>
@@ -299,6 +338,8 @@
     </div>
 
 
+
+            <%--<telerik:RadWizard ID="RadWizard1" runat="server"></telerik:RadWizard>--%>
 
 
     <div class="modal fade" id="modalAttachment">
@@ -343,12 +384,30 @@
         <!-- /.modal-dialog -->
     </div>
 
-
-
+            </ContentTemplate>
+    </asp:UpdatePanel>
 
 
     <script>
+
+
+
+        function GoToNextStep() {
+            var $active = $('.wizard .nav-tabs li.active');
+            $active.next().removeClass('disabled');
+            nextTab($active);
+        }
+
+        function GoToPrevStep() {
+            var $active = $('.wizard .nav-tabs li.active');
+            prevTab($active);
+        }
+
+
+
         $(document).ready(function () {
+
+            //document.getElementById("btnGoToNextSteps").disabled = true;
 
             //Initialize tooltips
             $('.nav-tabs > li a[title]').tooltip();
@@ -363,6 +422,7 @@
                 }
             });
 
+
             $(".next-step").click(function (e) {
 
                 var $active = $('.wizard .nav-tabs li.active');
@@ -370,6 +430,7 @@
                 nextTab($active);
 
             });
+
             $(".prev-step").click(function (e) {
 
                 var $active = $('.wizard .nav-tabs li.active');
@@ -414,10 +475,8 @@
                 }
             });
 
-            return false;
+            //return false;
         });
-
-        document.getElementById("#btnGoToNextSteps").disabled = true;
 
 
         //code for grid
@@ -432,9 +491,9 @@
             var grd = $find("<%= grdProjecs.ClientID %>");
             var selectedkey = $(btn).data("idproje");
             selectedProjects = selectedkey;
-            alert(String(selectedProjects));
+            alert(selectedProjects);
 
-            //$('#modalAttachment').modal();
+            $('#modalAttachment').modal();
 
         }
 

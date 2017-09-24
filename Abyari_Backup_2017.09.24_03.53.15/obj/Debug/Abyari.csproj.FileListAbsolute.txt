@@ -1,0 +1,13 @@
+E:\project\monaghse\Abyari\bin\Abyari.dll.config
+E:\project\monaghse\Abyari\bin\Abyari.dll
+E:\project\monaghse\Abyari\bin\Abyari.pdb
+E:\project\monaghse\Abyari\bin\EntityFramework.dll
+E:\project\monaghse\Abyari\bin\EntityFramework.SqlServer.dll
+E:\project\monaghse\Abyari\bin\Microsoft.AspNet.DynamicData.EFProvider.dll
+E:\project\monaghse\Abyari\bin\Microsoft.AspNet.EntityDataSource.dll
+E:\project\monaghse\Abyari\bin\Microsoft.AspNet.FriendlyUrls.dll
+E:\project\monaghse\Abyari\bin\EntityFramework.xml
+E:\project\monaghse\Abyari\bin\EntityFramework.SqlServer.xml
+E:\project\monaghse\Abyari\bin\Microsoft.AspNet.FriendlyUrls.xml
+E:\project\monaghse\Abyari\obj\Debug\Abyari.dll
+E:\project\monaghse\Abyari\obj\Debug\Abyari.pdb

@@ -1,0 +1,1316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2498220A-646C-4AED-83DF-B86DD3FA46C3}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Abyari</RootNamespace>
+    <AssemblyName>Abyari</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AccessManagementService, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\publish\AccessManagement\bin\AccessManagementService.dll</HintPath>
+    </Reference>
+    <Reference Include="App_Web_logincontrol.ascx.cc671b29, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\publish\AccessManagement\bin\App_Web_logincontrol.ascx.cc671b29.dll</HintPath>
+    </Reference>
+    <Reference Include="App_Web_reciverposition.ascx.cc671b29">
+      <HintPath>..\..\..\publish1\bin\App_Web_reciverposition.ascx.cc671b29.dll</HintPath>
+    </Reference>
+    <Reference Include="App_Web_usccontrol.ascx.cc671b29">
+      <HintPath>..\..\..\publish\AccessManagement\bin\App_Web_usccontrol.ascx.cc671b29.dll</HintPath>
+    </Reference>
+    <Reference Include="App_Web_uscentitytypeshow.ascx.cc671b29">
+      <HintPath>..\..\..\publish\WorkFlow\bin\App_Web_uscentitytypeshow.ascx.cc671b29.dll</HintPath>
+    </Reference>
+    <Reference Include="App_Web_uscimportfromexcel.ascx.cc671b29">
+      <HintPath>..\..\..\publish\WebUtilityv2\bin\App_Web_uscimportfromexcel.ascx.cc671b29.dll</HintPath>
+    </Reference>
+    <Reference Include="App_Web_uscinvoiceandpayemnts.ascx.cc671b29">
+      <HintPath>..\..\..\publish\WebUtilityv2\bin\App_Web_uscinvoiceandpayemnts.ascx.cc671b29.dll</HintPath>
+    </Reference>
+    <Reference Include="App_Web_uscinvoicetypes.ascx.cc671b29">
+      <HintPath>..\..\..\publish\WebUtilityv2\bin\App_Web_uscinvoicetypes.ascx.cc671b29.dll</HintPath>
+    </Reference>
+    <Reference Include="App_Web_uscmahaleejra.ascx.cc671b29">
+      <HintPath>..\..\..\publish\MPOInterface\bin\App_Web_uscmahaleejra.ascx.cc671b29.dll</HintPath>
+    </Reference>
+    <Reference Include="App_Web_uscmenulink.ascx.cc671b29">
+      <HintPath>..\..\..\publish\AccessManagement\bin\App_Web_uscmenulink.ascx.cc671b29.dll</HintPath>
+    </Reference>
+    <Reference Include="App_Web_uscreportdesign.ascx.cc671b29">
+      <HintPath>..\..\..\publish\WebUtilityv2\bin\App_Web_uscreportdesign.ascx.cc671b29.dll</HintPath>
+    </Reference>
+    <Reference Include="App_Web_uscreportshow.ascx.cc671b29">
+      <HintPath>..\..\..\publish\WebUtilityv2\bin\App_Web_uscreportshow.ascx.cc671b29.dll</HintPath>
+    </Reference>
+    <Reference Include="App_Web_uscroleselect.ascx.cc671b29">
+      <HintPath>..\..\..\publish\AccessManagement\bin\App_Web_uscroleselect.ascx.cc671b29.dll</HintPath>
+    </Reference>
+    <Reference Include="App_Web_uscsignup.ascx.cc671b29">
+      <HintPath>..\..\..\publish\AccessManagement\bin\App_Web_uscsignup.ascx.cc671b29.dll</HintPath>
+    </Reference>
+    <Reference Include="App_Web_uscverification.ascx.cc671b29, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\App_Web_uscverification.ascx.cc671b29.dll</HintPath>
+    </Reference>
+    <Reference Include="App_Web_uscworkflowdefinition.ascx.cc671b29">
+      <HintPath>..\..\..\publish\WorkFlow\bin\App_Web_uscworkflowdefinition.ascx.cc671b29.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Heidarpour.WebControlUI">
+      <HintPath>..\packages\Persian_Calendar\Heidarpour.WebControlUI.dll</HintPath>
+    </Reference>
+    <Reference Include="JQControls">
+      <HintPath>..\..\..\component\JQControls_custom\JQControls_WithMs\bin\Debug\JQControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.DynamicData.EFProvider">
+      <HintPath>..\packages\Microsoft.AspNet.DynamicData.EFProvider.6.0.0\lib\net40\Microsoft.AspNet.DynamicData.EFProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.EntityDataSource">
+      <HintPath>..\packages\Microsoft.AspNet.EntityDataSource.6.0.0\lib\net40\Microsoft.AspNet.EntityDataSource.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MPOInterface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Modiriat Gharardadha_V2\MPOInterface\bin\MPOInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Telerik.Web.UI, Version=2014.2.618.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Telerik\UI for ASP.NET AJAX Q2 2014\Bin45\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins">
+      <HintPath>C:\Program Files (x86)\Telerik\UI for ASP.NET AJAX Q2 2014\Bin45\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+    <Reference Include="tkvUtility">
+      <HintPath>..\..\..\component\Utility\bin\Release\tkvUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="WebUtilityv2">
+      <HintPath>..\..\..\component\WebUtility_v2\bin\WebUtilityv2.dll</HintPath>
+    </Reference>
+    <Reference Include="WorkFlow">
+      <HintPath>..\..\..\publish\WorkFlow\bin\WorkFlow.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Administrator\Configurate.aspx" />
+    <Content Include="Administrator\CreateUser.aspx" />
+    <Content Include="Administrator\SelectCompany.aspx" />
+    <Content Include="Administrator\WorkFlowManagement.aspx" />
+    <Content Include="ClientFunctions\ClientCalls.aspx" />
+    <Content Include="Controls\UscAbyari.ascx" />
+    <Content Include="Controls\UscCheckNamayande.ascx" />
+    <Content Include="Controls\UscEntekhabPaymankar.ascx" />
+    <Content Include="Controls\UscEntekhbProjeToInvoice.ascx" />
+    <Content Include="Controls\UScListZirProje.ascx" />
+    <Content Include="Controls\uscMahaleEjra.ascx" />
+    <Content Include="Controls\UscNoeParameter.ascx" />
+    <Content Include="Controls\UscPaymankarDetails.ascx" />
+    <Content Include="Controls\UscPaymankarSearchParameter.ascx" />
+    <Content Include="Controls\UscReserveSearch.ascx" />
+    <Content Include="Controls\UscSathParameter.ascx" />
+    <Content Include="Controls\UscSearchZirProject.ascx" />
+    <Content Include="Controls\UscSelectPaymankar.ascx" />
+    <Content Include="Controls\UscShowPaymankars.ascx" />
+    <Content Include="Controls\UscZirprojeSearchParameter.ascx" />
+    <Content Include="Dashboard\chart.js" />
+    <Content Include="Dashboard\flot.tooltip\js\excanvas.min.js" />
+    <Content Include="Dashboard\flot.tooltip\js\jquery.flot.js" />
+    <Content Include="Dashboard\flot.tooltip\js\jquery.flot.tooltip.js" />
+    <Content Include="Dashboard\flot.tooltip\js\jquery.flot.tooltip.min.js" />
+    <Content Include="Dashboard\flot.tooltip\js\jquery.flot.tooltip.source.js" />
+    <Content Include="Dashboard\flot\.gitignore" />
+    <Content Include="Dashboard\flot\examples\ajax\index.html" />
+    <Content Include="Dashboard\flot\examples\annotating\index.html" />
+    <Content Include="Dashboard\flot\examples\axes-interacting\index.html" />
+    <Content Include="Dashboard\flot\examples\axes-multiple\index.html" />
+    <Content Include="Dashboard\flot\examples\axes-time-zones\date.js" />
+    <Content Include="Dashboard\flot\examples\axes-time-zones\index.html" />
+    <Content Include="Dashboard\flot\examples\axes-time\index.html" />
+    <Content Include="Dashboard\flot\examples\background.png" />
+    <Content Include="Dashboard\flot\examples\basic-options\index.html" />
+    <Content Include="Dashboard\flot\examples\basic-usage\index.html" />
+    <Content Include="Dashboard\flot\examples\canvas\index.html" />
+    <Content Include="Dashboard\flot\examples\categories\index.html" />
+    <Content Include="Dashboard\flot\examples\examples.css" />
+    <Content Include="Dashboard\flot\examples\image\hs-2004-27-a-large-web.jpg" />
+    <Content Include="Dashboard\flot\examples\image\index.html" />
+    <Content Include="Dashboard\flot\examples\index.html" />
+    <Content Include="Dashboard\flot\examples\interacting\index.html" />
+    <Content Include="Dashboard\flot\examples\navigate\arrow-down.gif" />
+    <Content Include="Dashboard\flot\examples\navigate\arrow-left.gif" />
+    <Content Include="Dashboard\flot\examples\navigate\arrow-right.gif" />
+    <Content Include="Dashboard\flot\examples\navigate\arrow-up.gif" />
+    <Content Include="Dashboard\flot\examples\navigate\index.html" />
+    <Content Include="Dashboard\flot\examples\percentiles\index.html" />
+    <Content Include="Dashboard\flot\examples\realtime\index.html" />
+    <Content Include="Dashboard\flot\examples\resize\index.html" />
+    <Content Include="Dashboard\flot\examples\selection\index.html" />
+    <Content Include="Dashboard\flot\examples\series-errorbars\index.html" />
+    <Content Include="Dashboard\flot\examples\series-pie\index.html" />
+    <Content Include="Dashboard\flot\examples\series-toggle\index.html" />
+    <Content Include="Dashboard\flot\examples\series-types\index.html" />
+    <Content Include="Dashboard\flot\examples\shared\jquery-ui\jquery-ui.min.css" />
+    <Content Include="Dashboard\flot\examples\stacking\index.html" />
+    <Content Include="Dashboard\flot\examples\symbols\index.html" />
+    <Content Include="Dashboard\flot\examples\threshold\index.html" />
+    <Content Include="Dashboard\flot\examples\tracking\index.html" />
+    <Content Include="Dashboard\flot\examples\visitors\index.html" />
+    <Content Include="Dashboard\flot\examples\zooming\index.html" />
+    <Content Include="Dashboard\flot\excanvas.js" />
+    <Content Include="Dashboard\flot\excanvas.min.js" />
+    <Content Include="Dashboard\flot\jquery.colorhelpers.js" />
+    <Content Include="Dashboard\flot\jquery.flot.canvas.js" />
+    <Content Include="Dashboard\flot\jquery.flot.categories.js" />
+    <Content Include="Dashboard\flot\jquery.flot.crosshair.js" />
+    <Content Include="Dashboard\flot\jquery.flot.errorbars.js" />
+    <Content Include="Dashboard\flot\jquery.flot.fillbetween.js" />
+    <Content Include="Dashboard\flot\jquery.flot.image.js" />
+    <Content Include="Dashboard\flot\jquery.flot.js" />
+    <Content Include="Dashboard\flot\jquery.flot.navigate.js" />
+    <Content Include="Dashboard\flot\jquery.flot.pie.js" />
+    <Content Include="Dashboard\flot\jquery.flot.resize.js" />
+    <Content Include="Dashboard\flot\jquery.flot.selection.js" />
+    <Content Include="Dashboard\flot\jquery.flot.stack.js" />
+    <Content Include="Dashboard\flot\jquery.flot.symbol.js" />
+    <Content Include="Dashboard\flot\jquery.flot.threshold.js" />
+    <Content Include="Dashboard\flot\jquery.flot.time.js" />
+    <Content Include="Dashboard\flot\jquery.js" />
+    <Content Include="Dashboard\flot\LICENSE.txt" />
+    <Content Include="Dashboard\Paymankar\Default.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Design\Images\backg2.jpg" />
+    <Content Include="Design\Images\loading.gif" />
+    <Content Include="Design\Images\loadingAnimation.gif" />
+    <Content Include="Design\Images\view-details.png" />
+    <Content Include="Design\Scripts\bootstrap.js" />
+    <Content Include="Design\Scripts\bootstrap.min.js" />
+    <Content Include="Design\Scripts\jkblayout.min.js" />
+    <Content Include="Design\Scripts\jquery-1.11.0.js" />
+    <Content Include="Design\Scripts\jquery-tree-1.0.min.js" />
+    <Content Include="Design\Scripts\jquery-ui.min.js" />
+    <Content Include="Design\Scripts\jquery.blockUI.js" />
+    <Content Include="Design\Scripts\jquery.fancybox.js" />
+    <Content Include="Design\Scripts\jquery.fancybox.pack.js" />
+    <Content Include="Design\Scripts\jquery.maskedinput.js" />
+    <Content Include="Design\Scripts\jquery.mousewheel-3.0.6.pack.js" />
+    <Content Include="Design\Scripts\jquery.responsivetable.min.js" />
+    <Content Include="Design\Scripts\jquery.validationEngine-fa.js" />
+    <Content Include="Design\Scripts\jquery.validationEngine.js" />
+    <Content Include="Design\Scripts\metisMenu.min.js" />
+    <Content Include="Design\Scripts\morris-data.js" />
+    <Content Include="Design\Scripts\plugins\flot\excanvas.min.js" />
+    <Content Include="Design\Scripts\plugins\flot\flot-data.js" />
+    <Content Include="Design\Scripts\plugins\flot\jquery.flot.js" />
+    <Content Include="Design\Scripts\plugins\flot\jquery.flot.pie.js" />
+    <Content Include="Design\Scripts\plugins\flot\jquery.flot.resize.js" />
+    <Content Include="Design\Scripts\plugins\flot\jquery.flot.tooltip.min.js" />
+    <Content Include="Design\Scripts\plugins\morris\morris-data.js" />
+    <Content Include="Design\Scripts\plugins\morris\morris.js" />
+    <Content Include="Design\Scripts\plugins\morris\morris.min.js" />
+    <Content Include="Design\Scripts\plugins\morris\raphael.min.js" />
+    <Content Include="Design\Scripts\Respon.js" />
+    <Content Include="Design\Scripts\sb-admin-2.js" />
+    <Content Include="Design\Scripts\Show.js" />
+    <Content Include="Design\Scripts\thickbox.js" />
+    <Content Include="Design\Scripts\validation.js" />
+    <Content Include="Design\Styles\bootstrap-rtl.min.css" />
+    <Content Include="Design\Styles\bootstrap.css" />
+    <Content Include="Design\Styles\bootstrap.min.css" />
+    <Content Include="Design\Styles\custom.css" />
+    <Content Include="Design\Styles\font-awesome\css\font-awesome.css" />
+    <Content Include="Design\Styles\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Design\Styles\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Design\Styles\form.css" />
+    <Content Include="Design\Styles\Grid.css" />
+    <Content Include="Design\Styles\gridview.css" />
+    <Content Include="Design\Styles\jquery.fancybox.css" />
+    <Content Include="Design\Styles\metisMenu\dist\metisMenu.css" />
+    <Content Include="Design\Styles\metisMenu\dist\metisMenu.js" />
+    <Content Include="Design\Styles\metisMenu\dist\metisMenu.min.css" />
+    <Content Include="Design\Styles\metisMenu\dist\metisMenu.min.js" />
+    <Content Include="Design\Styles\metisMenu\Gruntfile.js" />
+    <Content Include="Design\Styles\metisMenu\src\metisMenu.css" />
+    <Content Include="Design\Styles\metisMenu\src\metisMenu.js" />
+    <Content Include="Design\Styles\Mystyle.css" />
+    <Content Include="Design\Styles\nicetree-style.css" />
+    <Content Include="Design\Styles\plugins\morris.css" />
+    <Content Include="Design\Styles\sb-admin-2.css" />
+    <Content Include="Design\Styles\style.css" />
+    <Content Include="Design\Styles\thickbox.css" />
+    <Content Include="Design\Styles\validationEngine.jquery.css" />
+    <Content Include="DynamicData\Content\GridViewPager.ascx" />
+    <Content Include="DynamicData\Content\Images\Back.gif" />
+    <Content Include="DynamicData\Content\Images\header_back.gif" />
+    <Content Include="DynamicData\Content\Images\PgFirst.gif" />
+    <Content Include="DynamicData\Content\Images\PgLast.gif" />
+    <Content Include="DynamicData\Content\Images\PgNext.gif" />
+    <Content Include="DynamicData\Content\Images\PgPrev.gif" />
+    <Content Include="DynamicData\Content\Images\plus.gif" />
+    <Content Include="DynamicData\EntityTemplates\Default.ascx" />
+    <Content Include="DynamicData\EntityTemplates\Default_Edit.ascx" />
+    <Content Include="DynamicData\EntityTemplates\Default_Insert.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Boolean.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Boolean_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Children.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Children_Insert.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Currency.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Currency_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\DateTime.ascx" />
+    <Content Include="DynamicData\FieldTemplates\DateTime_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Decimal_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\DepartmentChart.ascx" />
+    <Content Include="DynamicData\FieldTemplates\DepartmentChart_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\DepartmentSetting.ascx" />
+    <Content Include="DynamicData\FieldTemplates\DepartmentSetting_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\EmailAddress.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Enumeration.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Enumeration_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\ExtraData.ascx" />
+    <Content Include="DynamicData\FieldTemplates\ExtraData_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\ForeignKey.ascx" />
+    <Content Include="DynamicData\FieldTemplates\ForeignKey_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Integer_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\InvoiceType.ascx" />
+    <Content Include="DynamicData\FieldTemplates\InvoiceType_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\ManyToMany.ascx" />
+    <Content Include="DynamicData\FieldTemplates\ManyToMany_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\MultilineText_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Password.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Password_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\PersianDate.ascx" />
+    <Content Include="DynamicData\FieldTemplates\PersianDate_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\RightServiceName.ascx" />
+    <Content Include="DynamicData\FieldTemplates\RightServiceName_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Text.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Text_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Url.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Url_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\UserSelect.ascx" />
+    <Content Include="DynamicData\FieldTemplates\UserSelect_Edit.ascx" />
+    <Content Include="DynamicData\Filters\Boolean.ascx" />
+    <Content Include="DynamicData\Filters\Enumeration.ascx" />
+    <Content Include="DynamicData\Filters\ForeignKey.ascx" />
+    <Content Include="DynamicData\PageTemplates\Details.aspx" />
+    <Content Include="DynamicData\PageTemplates\Edit.aspx" />
+    <Content Include="DynamicData\PageTemplates\Insert.aspx" />
+    <Content Include="DynamicData\PageTemplates\List.aspx" />
+    <Content Include="DynamicData\PageTemplates\ListDetails.aspx" />
+    <Content Include="Financial\Management.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="LoginUser.aspx" />
+    <Content Include="Monaghese\CSS\wizard.css" />
+    <Content Include="Monaghese\getData.aspx" />
+    <Content Include="Reports\Report.aspx" />
+    <Content Include="Reports\ReportDesigner.aspx" />
+    <Content Include="Reports\ReportShow.aspx" />
+    <Content Include="Reports\WebForm1.aspx" />
+    <Content Include="ScoringSystem\uscConfig.ascx" />
+    <Content Include="test.aspx" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="WorkFlowHelpers\EntityDefinition.aspx" />
+    <Content Include="WorkFlowHelpers\UscSearchZirProjeByWF.ascx" />
+    <Content Include="WorkFlowHelpers\WorkFlowDefinition.aspx" />
+    <Content Include="ZirProje\SearcZirProject.aspx" />
+    <Content Include="ZirProje\ZirProje.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administrator\Configurate.aspx.cs">
+      <DependentUpon>Configurate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\Configurate.aspx.designer.cs">
+      <DependentUpon>Configurate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\CreateUser.aspx.cs">
+      <DependentUpon>CreateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\CreateUser.aspx.designer.cs">
+      <DependentUpon>CreateUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\SelectCompany.aspx.cs">
+      <DependentUpon>SelectCompany.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\SelectCompany.aspx.designer.cs">
+      <DependentUpon>SelectCompany.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\WorkFlowManagement.aspx.cs">
+      <DependentUpon>WorkFlowManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\WorkFlowManagement.aspx.designer.cs">
+      <DependentUpon>WorkFlowManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientFunctions\ClientCalls.aspx.cs">
+      <DependentUpon>ClientCalls.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientFunctions\ClientCalls.aspx.designer.cs">
+      <DependentUpon>ClientCalls.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UscAbyari.ascx.cs">
+      <DependentUpon>UscAbyari.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UscAbyari.ascx.designer.cs">
+      <DependentUpon>UscAbyari.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UscCheckNamayande.ascx.cs">
+      <DependentUpon>UscCheckNamayande.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UscCheckNamayande.ascx.designer.cs">
+      <DependentUpon>UscCheckNamayande.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UscEntekhabPaymankar.ascx.cs">
+      <DependentUpon>UscEntekhabPaymankar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UscEntekhabPaymankar.ascx.designer.cs">
+      <DependentUpon>UscEntekhabPaymankar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UscEntekhbProjeToInvoice.ascx.cs">
+      <DependentUpon>UscEntekhbProjeToInvoice.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UscEntekhbProjeToInvoice.ascx.designer.cs">
+      <DependentUpon>UscEntekhbProjeToInvoice.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UScListZirProje.ascx.cs">
+      <DependentUpon>UScListZirProje.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UScListZirProje.ascx.designer.cs">
+      <DependentUpon>UScListZirProje.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\uscMahaleEjra.ascx.cs">
+      <DependentUpon>uscMahaleEjra.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\uscMahaleEjra.ascx.designer.cs">
+      <DependentUpon>uscMahaleEjra.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UscNoeParameter.ascx.cs">
+      <DependentUpon>UscNoeParameter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UscNoeParameter.ascx.designer.cs">
+      <DependentUpon>UscNoeParameter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UscPaymankarDetails.ascx.cs">
+      <DependentUpon>UscPaymankarDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UscPaymankarDetails.ascx.designer.cs">
+      <DependentUpon>UscPaymankarDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UscPaymankarSearchParameter.ascx.cs">
+      <DependentUpon>UscPaymankarSearchParameter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UscPaymankarSearchParameter.ascx.designer.cs">
+      <DependentUpon>UscPaymankarSearchParameter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UscReserveSearch.ascx.cs">
+      <DependentUpon>UscReserveSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UscReserveSearch.ascx.designer.cs">
+      <DependentUpon>UscReserveSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UscSathParameter.ascx.cs">
+      <DependentUpon>UscSathParameter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UscSathParameter.ascx.designer.cs">
+      <DependentUpon>UscSathParameter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UscSearchZirProject.ascx.cs">
+      <DependentUpon>UscSearchZirProject.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UscSearchZirProject.ascx.designer.cs">
+      <DependentUpon>UscSearchZirProject.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UscSelectPaymankar.ascx.cs">
+      <DependentUpon>UscSelectPaymankar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UscSelectPaymankar.ascx.designer.cs">
+      <DependentUpon>UscSelectPaymankar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UscShowPaymankars.ascx.cs">
+      <DependentUpon>UscShowPaymankars.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UscShowPaymankars.ascx.designer.cs">
+      <DependentUpon>UscShowPaymankars.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UscZirprojeSearchParameter.ascx.cs">
+      <DependentUpon>UscZirprojeSearchParameter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UscZirprojeSearchParameter.ascx.designer.cs">
+      <DependentUpon>UscZirprojeSearchParameter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Paymankar\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Paymankar\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DBClass\Config.cs" />
+    <Compile Include="DBClass\CustomType.cs" />
+    <Compile Include="DBClass\Moshtary.cs" />
+    <Compile Include="DBClass\NoeProje.cs" />
+    <Compile Include="DBClass\RotbeReshte.cs" />
+    <Compile Include="DBClass\Shahrestan.cs" />
+    <Compile Include="DBClass\sp_ListOFPaymankarsProject_Result.cs" />
+    <Compile Include="DBClass\ViewMahal.cs" />
+    <Compile Include="DBClass\ViewPaymankarReshtePartial.cs" />
+    <Compile Include="DBClass\ViewZirProje.cs" />
+    <Compile Include="DBClass\ViewZirProjeMoshtary.cs" />
+    <Compile Include="DBClass\ViewZirprojeResevation.cs" />
+    <Compile Include="DBClass\ZirProjeReservation.cs" />
+    <Compile Include="DBClass\ZirProjeTahvilMovaghatPartial.cs" />
+    <Compile Include="Design\Masters\Sitepopup.Master.cs">
+      <DependentUpon>Sitepopup.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Design\Masters\Sitepopup.Master.designer.cs">
+      <DependentUpon>Sitepopup.Master</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Currency.ascx.cs">
+      <DependentUpon>Currency.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Currency.ascx.designer.cs">
+      <DependentUpon>Currency.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Currency_Edit.ascx.cs">
+      <DependentUpon>Currency_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Currency_Edit.ascx.designer.cs">
+      <DependentUpon>Currency_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\DepartmentChart.ascx.cs">
+      <DependentUpon>DepartmentChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\DepartmentChart.ascx.designer.cs">
+      <DependentUpon>DepartmentChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\DepartmentChart_Edit.ascx.cs">
+      <DependentUpon>DepartmentChart_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\DepartmentChart_Edit.ascx.designer.cs">
+      <DependentUpon>DepartmentChart_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\DepartmentSetting.ascx.cs">
+      <DependentUpon>DepartmentSetting.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\DepartmentSetting.ascx.designer.cs">
+      <DependentUpon>DepartmentSetting.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\DepartmentSetting_Edit.ascx.cs">
+      <DependentUpon>DepartmentSetting_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\DepartmentSetting_Edit.ascx.designer.cs">
+      <DependentUpon>DepartmentSetting_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ExtraData.ascx.cs">
+      <DependentUpon>ExtraData.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ExtraData.ascx.designer.cs">
+      <DependentUpon>ExtraData.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ExtraData_Edit.ascx.cs">
+      <DependentUpon>ExtraData_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ExtraData_Edit.ascx.designer.cs">
+      <DependentUpon>ExtraData_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\InvoiceType.ascx.cs">
+      <DependentUpon>InvoiceType.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\InvoiceType.ascx.designer.cs">
+      <DependentUpon>InvoiceType.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\InvoiceType_Edit.ascx.cs">
+      <DependentUpon>InvoiceType_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\InvoiceType_Edit.ascx.designer.cs">
+      <DependentUpon>InvoiceType_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Password.ascx.cs">
+      <DependentUpon>Password.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Password.ascx.designer.cs">
+      <DependentUpon>Password.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Password_Edit.ascx.cs">
+      <DependentUpon>Password_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Password_Edit.ascx.designer.cs">
+      <DependentUpon>Password_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\RightServiceName.ascx.cs">
+      <DependentUpon>RightServiceName.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\RightServiceName.ascx.designer.cs">
+      <DependentUpon>RightServiceName.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\RightServiceName_Edit.ascx.cs">
+      <DependentUpon>RightServiceName_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\RightServiceName_Edit.ascx.designer.cs">
+      <DependentUpon>RightServiceName_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\UserSelect.ascx.cs">
+      <DependentUpon>UserSelect.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\UserSelect.ascx.designer.cs">
+      <DependentUpon>UserSelect.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\UserSelect_Edit.ascx.cs">
+      <DependentUpon>UserSelect_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\UserSelect_Edit.ascx.designer.cs">
+      <DependentUpon>UserSelect_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\Management.aspx.cs">
+      <DependentUpon>Management.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Financial\Management.aspx.designer.cs">
+      <DependentUpon>Management.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\Config.cs" />
+    <Compile Include="Helpers\ContextHelpers.cs" />
+    <Compile Include="Helpers\InvoiceHelpers.cs" />
+    <Compile Include="Helpers\ReportHelpers.cs" />
+    <Compile Include="Helpers\SessionHelpers.cs" />
+    <Compile Include="Helpers\SetPathHelpers.cs" />
+    <Compile Include="Logic\Configuration.cs" />
+    <Compile Include="Logic\import.cs" />
+    <Compile Include="LoginUser.aspx.cs">
+      <DependentUpon>LoginUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginUser.aspx.designer.cs">
+      <DependentUpon>LoginUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Config.cs">
+      <DependentUpon>AbyariModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\GetPaymankarDetail_Result.cs">
+      <DependentUpon>AbyariModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Moshtary.cs">
+      <DependentUpon>AbyariModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\NoeProje.cs">
+      <DependentUpon>AbyariModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PaymankarReshte.cs">
+      <DependentUpon>AbyariModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\RotbeReshte.cs">
+      <DependentUpon>AbyariModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Shahrestan.cs">
+      <DependentUpon>AbyariModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_GetPaymanakrStatistics_Result.cs">
+      <DependentUpon>AbyariModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_ListOFPaymankarsProject_Result.cs">
+      <DependentUpon>AbyariModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_ReportTotalGroupByCompany_Result.cs">
+      <DependentUpon>AbyariModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ViewMahal.cs">
+      <DependentUpon>AbyariModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ViewPaymankarReshte.cs">
+      <DependentUpon>AbyariModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ViewZirProje.cs">
+      <DependentUpon>AbyariModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ViewZirProjeMoshtary.cs">
+      <DependentUpon>AbyariModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ViewZirprojeResevation.cs">
+      <DependentUpon>AbyariModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ZirProje.cs">
+      <DependentUpon>AbyariModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ZirProjeReservation.cs">
+      <DependentUpon>AbyariModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ZirProjeTahvilMovaghat.cs">
+      <DependentUpon>AbyariModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Monaghese\getData.aspx.cs">
+      <DependentUpon>getData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Monaghese\getData.aspx.designer.cs">
+      <DependentUpon>getData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Report.aspx.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\Report.aspx.designer.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportDesigner.aspx.cs">
+      <DependentUpon>ReportDesigner.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportDesigner.aspx.designer.cs">
+      <DependentUpon>ReportDesigner.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportShow.aspx.cs">
+      <DependentUpon>ReportShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportShow.aspx.designer.cs">
+      <DependentUpon>ReportShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ScoringSystem\uscConfig.ascx.cs">
+      <DependentUpon>uscConfig.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ScoringSystem\uscConfig.ascx.designer.cs">
+      <DependentUpon>uscConfig.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlowHelpers\EntityDefinition.aspx.cs">
+      <DependentUpon>EntityDefinition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlowHelpers\EntityDefinition.aspx.designer.cs">
+      <DependentUpon>EntityDefinition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlowHelpers\UscSearchZirProjeByWF.ascx.cs">
+      <DependentUpon>UscSearchZirProjeByWF.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlowHelpers\UscSearchZirProjeByWF.ascx.designer.cs">
+      <DependentUpon>UscSearchZirProjeByWF.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlowHelpers\WorkFlowDefinition.aspx.cs">
+      <DependentUpon>WorkFlowDefinition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlowHelpers\WorkFlowDefinition.aspx.designer.cs">
+      <DependentUpon>WorkFlowDefinition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlowHelpers\WorkFlowEngineHelpers.cs" />
+    <Compile Include="WorkFlowHelpers\WorkFlowSetPathHelpers.cs" />
+    <Compile Include="ZirProje\SearcZirProject.aspx.cs">
+      <DependentUpon>SearcZirProject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZirProje\SearcZirProject.aspx.designer.cs">
+      <DependentUpon>SearcZirProject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZirProje\ZirProje.aspx.cs">
+      <DependentUpon>ZirProje.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZirProje\ZirProje.aspx.designer.cs">
+      <DependentUpon>ZirProje.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ٍEnums\AbyariType.cs" />
+    <Compile Include="App_Start\ConfigRoutes.cs" />
+    <Compile Include="App_Start\DynamicDataConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\UnleashedColumnProvider.cs" />
+    <Compile Include="App_Start\UnleashedModelProvider.cs" />
+    <Compile Include="App_Start\UnleashedTableProvider.cs" />
+    <Compile Include="DBClass\PaymankarPartial.cs" />
+    <Compile Include="DBClass\PaymankarReshtePartial.cs" />
+    <Compile Include="DBClass\ReshtePartial.cs" />
+    <Compile Include="DBClass\Sherkat.cs" />
+    <Compile Include="DBClass\ZirProjePartial.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Design\Masters\Main.Master.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Design\Masters\Main.Master.designer.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\Content\GridViewPager.ascx.cs">
+      <DependentUpon>GridViewPager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\Content\GridViewPager.ascx.designer.cs">
+      <DependentUpon>GridViewPager.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\EntityTemplates\Default.ascx.cs">
+      <DependentUpon>Default.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\EntityTemplates\Default.ascx.designer.cs">
+      <DependentUpon>Default.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\EntityTemplates\Default_Edit.ascx.cs">
+      <DependentUpon>Default_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\EntityTemplates\Default_Edit.ascx.designer.cs">
+      <DependentUpon>Default_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\EntityTemplates\Default_Insert.ascx.cs">
+      <DependentUpon>Default_Insert.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\EntityTemplates\Default_Insert.ascx.designer.cs">
+      <DependentUpon>Default_Insert.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Boolean.ascx.cs">
+      <DependentUpon>Boolean.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Boolean.ascx.designer.cs">
+      <DependentUpon>Boolean.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Boolean_Edit.ascx.cs">
+      <DependentUpon>Boolean_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Boolean_Edit.ascx.designer.cs">
+      <DependentUpon>Boolean_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Children.ascx.cs">
+      <DependentUpon>Children.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Children.ascx.designer.cs">
+      <DependentUpon>Children.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Children_Insert.ascx.cs">
+      <DependentUpon>Children_Insert.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Children_Insert.ascx.designer.cs">
+      <DependentUpon>Children_Insert.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\DateTime.ascx.cs">
+      <DependentUpon>DateTime.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\DateTime.ascx.designer.cs">
+      <DependentUpon>DateTime.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\DateTime_Edit.ascx.cs">
+      <DependentUpon>DateTime_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\DateTime_Edit.ascx.designer.cs">
+      <DependentUpon>DateTime_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Decimal_Edit.ascx.cs">
+      <DependentUpon>Decimal_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Decimal_Edit.ascx.designer.cs">
+      <DependentUpon>Decimal_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\EmailAddress.ascx.cs">
+      <DependentUpon>EmailAddress.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\EmailAddress.ascx.designer.cs">
+      <DependentUpon>EmailAddress.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Enumeration.ascx.cs">
+      <DependentUpon>Enumeration.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Enumeration.ascx.designer.cs">
+      <DependentUpon>Enumeration.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Enumeration_Edit.ascx.cs">
+      <DependentUpon>Enumeration_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Enumeration_Edit.ascx.designer.cs">
+      <DependentUpon>Enumeration_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ForeignKey.ascx.cs">
+      <DependentUpon>ForeignKey.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ForeignKey.ascx.designer.cs">
+      <DependentUpon>ForeignKey.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ForeignKey_Edit.ascx.cs">
+      <DependentUpon>ForeignKey_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ForeignKey_Edit.ascx.designer.cs">
+      <DependentUpon>ForeignKey_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Integer_Edit.ascx.cs">
+      <DependentUpon>Integer_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Integer_Edit.ascx.designer.cs">
+      <DependentUpon>Integer_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ManyToMany.ascx.cs">
+      <DependentUpon>ManyToMany.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ManyToMany.ascx.designer.cs">
+      <DependentUpon>ManyToMany.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ManyToMany_Edit.ascx.cs">
+      <DependentUpon>ManyToMany_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ManyToMany_Edit.ascx.designer.cs">
+      <DependentUpon>ManyToMany_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\MultilineText_Edit.ascx.cs">
+      <DependentUpon>MultilineText_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\MultilineText_Edit.ascx.designer.cs">
+      <DependentUpon>MultilineText_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\PersianDate.ascx.cs">
+      <DependentUpon>PersianDate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\PersianDate.ascx.designer.cs">
+      <DependentUpon>PersianDate.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\PersianDate_Edit.ascx.cs">
+      <DependentUpon>PersianDate_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\PersianDate_Edit.ascx.designer.cs">
+      <DependentUpon>PersianDate_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Text.ascx.cs">
+      <DependentUpon>Text.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Text.ascx.designer.cs">
+      <DependentUpon>Text.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Text_Edit.ascx.cs">
+      <DependentUpon>Text_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Text_Edit.ascx.designer.cs">
+      <DependentUpon>Text_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Url.ascx.cs">
+      <DependentUpon>Url.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Url.ascx.designer.cs">
+      <DependentUpon>Url.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Url_Edit.ascx.cs">
+      <DependentUpon>Url_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Url_Edit.ascx.designer.cs">
+      <DependentUpon>Url_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\Filters\Boolean.ascx.cs">
+      <DependentUpon>Boolean.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\Filters\Boolean.ascx.designer.cs">
+      <DependentUpon>Boolean.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\Filters\Enumeration.ascx.cs">
+      <DependentUpon>Enumeration.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\Filters\Enumeration.ascx.designer.cs">
+      <DependentUpon>Enumeration.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\Filters\ForeignKey.ascx.cs">
+      <DependentUpon>ForeignKey.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\Filters\ForeignKey.ascx.designer.cs">
+      <DependentUpon>ForeignKey.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\Insert.aspx.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\Insert.aspx.designer.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\ListDetails.aspx.cs">
+      <DependentUpon>ListDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\ListDetails.aspx.designer.cs">
+      <DependentUpon>ListDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExtraControls\SerializableDropDownList.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\CustomAttribute.cs" />
+    <Compile Include="Helpers\DateConvert.cs" />
+    <Compile Include="Helpers\ExceptionHelper.cs" />
+    <Compile Include="Helpers\ExtensionHelprs.cs" />
+    <Compile Include="Helpers\LogHelpers.cs" />
+    <Compile Include="Helpers\PersianSearchDataSourceHelpers.cs" />
+    <Compile Include="Model\AbyariModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AbyariModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AbyariModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AbyariModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AbyariModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AbyariModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Paymankar.cs">
+      <DependentUpon>AbyariModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Reshte.cs">
+      <DependentUpon>AbyariModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Sherkat.cs">
+      <DependentUpon>AbyariModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="Site.Mobile.Master" />
+    <EntityDeploy Include="Model\AbyariModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AbyariModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Model\AbyariModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AbyariModel.edmx</DependentUpon>
+      <LastGenOutput>AbyariModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\AbyariModel.edmx.diagram">
+      <DependentUpon>AbyariModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model\AbyariModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AbyariModel.edmx</DependentUpon>
+      <LastGenOutput>AbyariModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Design\Masters\Main.Master" />
+    <Content Include="Design\Styles\metisMenu\.bower.json" />
+    <Content Include="Design\Styles\metisMenu\bower.json" />
+    <Content Include="Design\Styles\metisMenu\LICENSE" />
+    <Content Include="Design\Styles\metisMenu\package.json" />
+    <Content Include="Design\Styles\metisMenu\README.md" />
+    <Content Include="Design\Styles\font-awesome\.bower.json" />
+    <Content Include="Design\Styles\font-awesome\.gitignore" />
+    <Content Include="Design\Styles\font-awesome\.npmignore" />
+    <Content Include="Design\Styles\font-awesome\bower.json" />
+    <Content Include="Design\Styles\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Design\Styles\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Design\Styles\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Design\Styles\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Design\Styles\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Design\Styles\font-awesome\less\core.less" />
+    <Content Include="Design\Styles\font-awesome\less\extras.less" />
+    <Content Include="Design\Styles\font-awesome\less\fixed-width.less" />
+    <Content Include="Design\Styles\font-awesome\less\font-awesome.less" />
+    <Content Include="Design\Styles\font-awesome\less\icons.less" />
+    <Content Include="Design\Styles\font-awesome\less\larger.less" />
+    <Content Include="Design\Styles\font-awesome\less\list.less" />
+    <Content Include="Design\Styles\font-awesome\less\mixins.less" />
+    <Content Include="Design\Styles\font-awesome\less\path.less" />
+    <Content Include="Design\Styles\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Design\Styles\font-awesome\less\spinning.less" />
+    <Content Include="Design\Styles\font-awesome\less\stacked.less" />
+    <Content Include="Design\Styles\font-awesome\less\variables.less" />
+    <Content Include="Design\Styles\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Design\Styles\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Design\Styles\font-awesome\scss\_core.scss" />
+    <Content Include="Design\Styles\font-awesome\scss\_extras.scss" />
+    <Content Include="Design\Styles\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Design\Styles\font-awesome\scss\_icons.scss" />
+    <Content Include="Design\Styles\font-awesome\scss\_larger.scss" />
+    <Content Include="Design\Styles\font-awesome\scss\_list.scss" />
+    <Content Include="Design\Styles\font-awesome\scss\_mixins.scss" />
+    <Content Include="Design\Styles\font-awesome\scss\_path.scss" />
+    <Content Include="Design\Styles\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Design\Styles\font-awesome\scss\_spinning.scss" />
+    <Content Include="Design\Styles\font-awesome\scss\_stacked.scss" />
+    <Content Include="Design\Styles\font-awesome\scss\_variables.scss" />
+    <Content Include="Design\Masters\Sitepopup.Master" />
+    <Content Include="Design\Styles\fonts\fontawesome-webfont.eot" />
+    <Content Include="Design\Styles\fonts\fontawesome-webfont.svg" />
+    <Content Include="Design\Styles\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Design\Styles\fonts\fontawesome-webfont.woff" />
+    <Content Include="Design\Styles\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Design\Styles\fonts\FontAwesome.otf" />
+    <Content Include="Design\Styles\fonts\IRANSans-Light.eot" />
+    <Content Include="Design\Styles\fonts\IRANSans-Light.woff" />
+    <Content Include="Design\Styles\fonts\IRANSans-Light.woff2" />
+    <Content Include="Design\Styles\fonts\IRANSANS.eot" />
+    <Content Include="Design\Styles\fonts\IRANSANS.woff" />
+    <Content Include="Design\Styles\fonts\IRANSANS.woff2" />
+    <Content Include="Design\Styles\fonts\iransw.eot" />
+    <Content Include="Design\Styles\fonts\iransw.ttf" />
+    <Content Include="Design\Styles\fonts\iransw.woff" />
+    <Content Include="Design\Styles\fonts\iransw.woff2" />
+    <Content Include="Design\Styles\fonts\WebYekan.eot" />
+    <Content Include="Design\Styles\fonts\WebYekan.svg" />
+    <Content Include="Design\Styles\fonts\WebYekan.ttf" />
+    <Content Include="Design\Styles\fonts\WebYekan.woff" />
+    <Content Include="Dashboard\flot\.bower.json" />
+    <Content Include="Dashboard\flot\.travis.yml" />
+    <Content Include="Dashboard\flot\API.md" />
+    <Content Include="Dashboard\flot\component.json" />
+    <Content Include="Dashboard\flot\CONTRIBUTING.md" />
+    <Content Include="Dashboard\flot\examples\ajax\data-eu-gdp-growth-1.json" />
+    <Content Include="Dashboard\flot\examples\ajax\data-eu-gdp-growth-2.json" />
+    <Content Include="Dashboard\flot\examples\ajax\data-eu-gdp-growth-3.json" />
+    <Content Include="Dashboard\flot\examples\ajax\data-eu-gdp-growth-4.json" />
+    <Content Include="Dashboard\flot\examples\ajax\data-eu-gdp-growth-5.json" />
+    <Content Include="Dashboard\flot\examples\ajax\data-eu-gdp-growth.json" />
+    <Content Include="Dashboard\flot\examples\ajax\data-japan-gdp-growth.json" />
+    <Content Include="Dashboard\flot\examples\ajax\data-usa-gdp-growth.json" />
+    <Content Include="Dashboard\flot\examples\axes-time-zones\tz\africa" />
+    <Content Include="Dashboard\flot\examples\axes-time-zones\tz\antarctica" />
+    <Content Include="Dashboard\flot\examples\axes-time-zones\tz\asia" />
+    <Content Include="Dashboard\flot\examples\axes-time-zones\tz\australasia" />
+    <Content Include="Dashboard\flot\examples\axes-time-zones\tz\backward" />
+    <Content Include="Dashboard\flot\examples\axes-time-zones\tz\etcetera" />
+    <Content Include="Dashboard\flot\examples\axes-time-zones\tz\europe" />
+    <Content Include="Dashboard\flot\examples\axes-time-zones\tz\factory" />
+    <Content Include="Dashboard\flot\examples\axes-time-zones\tz\iso3166.tab" />
+    <Content Include="Dashboard\flot\examples\axes-time-zones\tz\leapseconds" />
+    <Content Include="Dashboard\flot\examples\axes-time-zones\tz\northamerica" />
+    <Content Include="Dashboard\flot\examples\axes-time-zones\tz\pacificnew" />
+    <Content Include="Dashboard\flot\examples\axes-time-zones\tz\solar87" />
+    <Content Include="Dashboard\flot\examples\axes-time-zones\tz\solar88" />
+    <Content Include="Dashboard\flot\examples\axes-time-zones\tz\solar89" />
+    <Content Include="Dashboard\flot\examples\axes-time-zones\tz\southamerica" />
+    <Content Include="Dashboard\flot\examples\axes-time-zones\tz\systemv" />
+    <Content Include="Dashboard\flot\examples\axes-time-zones\tz\yearistype.sh" />
+    <Content Include="Dashboard\flot\examples\axes-time-zones\tz\zone.tab" />
+    <Content Include="Dashboard\flot\FAQ.md" />
+    <Content Include="Dashboard\flot\flot.jquery.json" />
+    <Content Include="Dashboard\flot\Makefile" />
+    <Content Include="Dashboard\flot\NEWS.md" />
+    <Content Include="Dashboard\flot\package.json" />
+    <Content Include="Dashboard\flot\PLUGINS.md" />
+    <Content Include="Dashboard\flot\README.md" />
+    <Content Include="Dashboard\flot.tooltip\.bower.json" />
+    <Content Include="Dashboard\flot.tooltip\bower.json" />
+    <None Include="Properties\PublishProfiles\abyari.pubxml" />
+    <Content Include="Reports\RequestPrint.mrt" />
+    <Content Include="RequestPrint.mrt" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Design\Scripts\ThickBox\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52044</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:37140/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

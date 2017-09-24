@@ -1,0 +1,96 @@
+﻿ 
+
+.mGrid {
+    direction:rtl;
+    background-color: #eee;
+    border: 1px solid #fff;
+    border-collapse: collapse;
+    box-shadow: 0 0 6px #fff;
+    cursor: default;
+    font-family: Tahoma;
+    font-size: 14px;
+    margin: 5px 0 0;
+    text-align:center;
+    float:right;
+    
+
+}
+
+    .mGrid td {
+        direction :ltr;
+        border: 1px solid #fff;
+        color: #717171;
+        padding: 3px;
+    }
+
+    .mGrid th {
+        background-color:#222231;
+        border-left: 1px solid #fff;
+        font-family:'B Lotus' !important;
+        color: #777;
+        font-size: 18px;
+        min-height: 39px;
+        padding: 0;
+        border-color: #fff;
+        text-align:center;
+        font-weight:300 !important;
+    }
+
+        .mGrid th a, .mGrid th a:visited, .mGrid th a:active {
+            color: #858585;
+            font-size: 11px;
+            text-decoration: none;
+        }
+
+    .mGrid .alt {
+        background-color: #F4F4F4;
+    }
+
+    .mGrid .pgr:hover {
+        background-color: #FFF;
+    }
+
+.pGrid {
+    background-color: #FFF;
+    border: 0 solid #525252;
+    border-collapse: collapse;
+    cursor: default;
+    font-family: Tahoma;
+    font-size: 11px;
+    width: 100%;
+    margin: 5px 0 0;
+}
+
+    .pGrid td {
+        border: 1px solid #C1C1C1;
+        color: #717171;
+        padding: 3px;
+    }
+
+    .pGrid th {
+        background-color: #CCC;
+        background-position: center top;
+        border-left: 1px solid #525252;
+        color: #000;
+        font-size: 11px;
+        height: 30px;
+        border-style: solid;
+        border-width: 1px;
+        padding: 0;
+    }
+
+        .pGrid th a, .pGrid th a:visited, .pGrid th a:active {
+            color: #FFF;
+            font-size: 11px;
+            text-decoration: none;
+        }
+         
+
+.mGrid tr, .pGrid tr {
+    text-align: center;
+
+}
+
+    .mGrid tr:hover, .mGrid .alt:hover {
+        background-color: #DBDBDB;
+    }

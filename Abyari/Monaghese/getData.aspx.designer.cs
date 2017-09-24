@@ -13,6 +13,15 @@ namespace Abyari.Monaghese {
     public partial class getData {
         
         /// <summary>
+        /// updatePanel_wizard control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel updatePanel_wizard;
+        
+        /// <summary>
         /// ImportFromExcel control.
         /// </summary>
         /// <remarks>
@@ -22,15 +31,6 @@ namespace Abyari.Monaghese {
         protected global::WebUtility.Controls.ImportFromExcel ImportFromExcel;
         
         /// <summary>
-        /// btnGoToNextSteps control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton btnGoToNextSteps;
-        
-        /// <summary>
         /// grdProjecs control.
         /// </summary>
         /// <remarks>
@@ -38,6 +38,33 @@ namespace Abyari.Monaghese {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadGrid grdProjecs;
+        
+        /// <summary>
+        /// grdError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadGrid grdError;
+        
+        /// <summary>
+        /// btnSave control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSave;
+        
+        /// <summary>
+        /// btnFinish control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnFinish;
         
         /// <summary>
         /// ImportFromExcel1 control.

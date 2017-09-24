@@ -13,6 +13,8 @@ namespace Abyari.Monaghese
         protected void Page_Load(object sender, EventArgs e)
         {
             ImportFromExcel.OnImportDataCompelete += ImportFromExcel_OnImportDataCompelete;
+            btnSave.Enabled = false;
+            //btnGoToNextSteps.Enabled = false;
         }
 
         void ImportFromExcel_OnImportDataCompelete(System.Data.DataSet _ds)
@@ -20,9 +22,35 @@ namespace Abyari.Monaghese
             grdProjecs.DataSource = _ds.Tables[0];
             grdProjecs.DataBind();
 
-
-            //WebUtility.Helpers.RegisterHelpers.RegisterScript(btnGoToNextSteps, "go", "$('#btnGoToNextSteps').prop('disabled', false);)", true);
+            btnSave.Enabled = true;
+            //WebUtility.Helpers.RegisterHelpers.RegisterScript(this, "importExcel", "alert('salam')", true);
         }
+
+        protected void btnSave_Click(object sender, EventArgs e)
+        {
+            //btnGoToNextSteps.Enabled = true;
+            //WebUtility.Helpers.RegisterHelpers.RegisterScript(btnSave, "goNext", "alert('dsd');", true);
+        }
+
+        //protected void btnGoToNextSteps_Click(object sender, EventArgs e)
+        //{
+        //    WebUtility.Helpers.RegisterHelpers.RegisterScript(btnGoToNextSteps, "goNext", "GoToNextStep();", true);
+
+        //}
+
+        //protected void btnPrevToSlide1_Click(object sender, EventArgs e)
+        //{
+        //    WebUtility.Helpers.RegisterHelpers.RegisterScript(btnPrevToSlide1, "goPrev", "GoToPrevStep();", true);
+
+        //}
+
+        protected void btnFinish_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
 
         //void readFromExcel(System.Data.DataSet _ds)
         //{
