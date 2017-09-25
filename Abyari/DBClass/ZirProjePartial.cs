@@ -152,6 +152,8 @@ namespace Abyari.Model
                      foreach (System.Data.DataTable table in ds.Tables)
                      {
                          var pList = new SqlParameter("@data", SqlDbType.Structured);
+                         var uid = new SqlParameter("@UserID", userid);
+                         var rid = new SqlParameter("@RoleID", roleid);
                          pList.TypeName = "dbo.ImportExcelFormat";
                          int i = table.Columns.Count;
                          Type _coltype = typeof(string);
@@ -187,7 +189,7 @@ namespace Abyari.Model
                          }
                          dt.Merge(table, false, MissingSchemaAction.Ignore);
                          pList.Value = dt;
-                         var ret = en.Database.ExecuteSqlCommand(TransactionalBehavior.DoNotEnsureTransaction, " dbo.Import @data,@UserID,@RoleID", pList,userid,roleid);
+                         var ret = en.Database.ExecuteSqlCommand(TransactionalBehavior.DoNotEnsureTransaction, " dbo.Import @data,@UserID,@RoleID", pList,uid,rid);
                      }
 
                  }
