@@ -1,345 +1,206 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Design/Masters/Main.Master" AutoEventWireup="true" CodeBehind="getData.aspx.cs" Inherits="Abyari.Monaghese.getData" %>
 
 <%@ Register Assembly="App_Web_uscimportfromexcel.ascx.cc671b29" Namespace="WebUtility.Controls" TagPrefix="uc1" %>
-
+<%--<%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
+<%@ Register TagPrefix="qsf" Namespace="Telerik.QuickStart" %>--%>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 
-    <link href="CSS/wizard.css" rel="stylesheet" />
+    <style>
+        html .demo-container .redColor {
+            color: red;
+        }
+
+        /*Wizard wrapper*/
+        #example .demo-container {
+            width: 725px;
+            margin: 40px auto 80px;
+            padding: 0 80px;
+            border: 0;
+            background: url(Images/shadow.png) no-repeat 0 bottom;
+        }
+
+        .demo-container .wizardHeader {
+            width: 100%;
+            height: 50px;
+            background: url(Images/header.jpg) no-repeat 0 0;
+        }
+
+        /*Wizard*/
+        .demo-container .RadWizard {
+            padding: 20px;
+            border: 1px solid #f1f1f1;
+            border-bottom: 0;
+            box-shadow: 0 0 0 1px #fff;
+        }
+
+        .background-black .demo-container .RadWizard,
+        .background-blackmetrotouch .demo-container .RadWizard,
+        .background-glow .demo-container .RadWizard,
+        .background-office2010black .demo-container .RadWizard {
+            border: 0;
+            box-shadow: 0;
+        }
+
+        .demo-container .RadWizard_Material .rwzBreadCrumb .rwzText:before {
+            display: none;
+        }
+
+        .demo-container .RadWizard_Material .rwzBreadCrumb .rwzLink {
+            padding-left: 0;
+        }
+
+
+        .rwzImage {
+            background-image: url(Images/bread-crumb-icons.png);
+        }
+
+        html .RadWizard .rwzBreadCrumb span.rwzImage {
+            width: 24px;
+            height: 24px;
+        }
+
+        .demo-container .accountInfo.rwzImage {
+            background-position: 0 0;
+        }
+
+        .demo-container .rwzSelected .accountInfo.rwzImage {
+            background-position: -25px 0;
+        }
+
+        .demo-container .rwzDisabled .accountInfo.rwzImage {
+            background-position: -50px 0;
+        }
+
+
+        .demo-container .personalInfo.rwzImage {
+            background-position: 0 -25px;
+        }
+
+        .demo-container .rwzSelected .personalInfo.rwzImage {
+            background-position: -25px -25px;
+        }
+
+        .demo-container .rwzDisabled .personalInfo.rwzImage {
+            background-position: -50px -25px;
+        }
+
+
+        .demo-container .contactDetails.rwzImage {
+            background-position: 0 -50px;
+        }
+
+        .demo-container .rwzSelected .contactDetails.rwzImage {
+            background-position: -25px -50px;
+        }
+
+        .demo-container .rwzDisabled .contactDetails.rwzImage {
+            background-position: -50px -50px;
+        }
+
+
+        .demo-container .confirmation.rwzImage {
+            background-position: 0 -75px;
+        }
+
+        .demo-container .rwzSelected .confirmation.rwzImage {
+            background-position: -25px -75px;
+        }
+
+        .demo-container .rwzDisabled .confirmation.rwzImage {
+            background-position: -50px -75px;
+        }
+
+
+        .demo-container .RadWizard .rwzContent {
+            overflow: hidden;
+            background-color: #f5f5f6;
+            line-height: 2em;
+            margin: 0 -20px;
+            padding: 0 20px;
+        }
+
+        .background-black .demo-container .rwzContent,
+        .background-blackmetrotouch .demo-container .rwzContent,
+        .background-glow .demo-container .rwzContent,
+        .background-office2010black .demo-container .rwzContent {
+            background-color: transparent;
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        .background-silver .demo-container .rwzContent {
+            background-color: transparent;
+            background-color: rgba(255,255,255,0.5);
+        }
+
+        .background-sunset .demo-container .rwzContent {
+            background: #f9f5f0;
+        }
+
+        /*Wizard content*/
+        .demo-container .inputWapper {
+            display: inline-block;
+            *display: inline;
+            width: 320px;
+            position: relative;
+            zoom: 1;
+        }
+
+            .demo-container .inputWapper.first {
+                margin-right: 35px;
+            }
+
+            .demo-container .inputWapper label {
+                display: block;
+                margin: 5px 0 0;
+            }
+
+        .demo-container .validator {
+            color: #ff0000;
+            position: absolute;
+            top: 10px;
+            right: 0;
+        }
+
+        .demo-container .anti-spam-policy {
+            margin-top: 40px;
+        }
+
+        .demo-container .conditions {
+            display: block;
+            color: #a7a7a7;
+            font-size: 0.857em;
+        }
+
+        .demo-container .inputWapper.date .riLabel {
+            position: absolute;
+        }
+
+        .demo-container .RadWizard .rwzStep {
+            height: 100%;
+            position: relative;
+        }
+
+        .demo-container .RadWizard.rwzComplete {
+            padding-top: 95px;
+        }
+
+        .demo-container .rwzStep p {
+            margin: 0;
+            padding: 10px 0;
+        }
+
+        .demo-container .RadWizard .complete {
+            height: auto;
+            padding: 75px 0;
+            text-align: center;
+        }
+    </style>
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-        <asp:UpdatePanel runat="server" UpdateMode="Conditional" ID="updatePanel_wizard">
-        <ContentTemplate>
 
-
-    <div class="container">
-        <div class="row">
-            <section>
-                <div class="wizard">
-                    <div class="wizard-inner">
-                        <div class="connecting-line"></div>
-                        <ul class="nav nav-tabs" role="tablist">
-
-                            <li role="presentation" class="active">
-                                <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="وارد کردن طرح ها">
-                                    <span class="round-tab">
-                                        <i class="fa fa-tasks"></i>
-                                    </span>
-                                </a>
-                            </li>
-
-                            <li role="presentation" class="disabled">
-                                <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="بارگذاری فایل ها">
-                                    <span class="round-tab">
-                                        <i class="fa fa-eye"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li role="presentation" class="disabled">
-                                <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Step 3">
-                                    <span class="round-tab">
-                                        <i class="glyphicon glyphicon-open"></i>
-                                    </span>
-                                </a>
-                            </li>
-
-                            <li role="presentation" class="disabled">
-                                <a href="#complete" data-toggle="tab" aria-controls="complete" role="tab" title="Complete">
-                                    <span class="round-tab">
-                                        <i class="glyphicon glyphicon-ok-circle"></i>
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="tab-content">
-                        <div class="tab-pane active" role="tabpanel" id="step1">
-                            <div class="step1">
-                                <div class="row">
-                                    <div class="col-md-12 col-sm-12">
-
-                                        <uc1:ImportFromExcel ID="ImportFromExcel" runat="server"></uc1:ImportFromExcel>
-
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md-12 col-sm-12">
-
-                                        <telerik:RadGrid ID="grdProjecs" runat="server" Skin="Sunset" AllowFilteringByColumn="false" AllowPaging="true">
-                                            <ClientSettings>
-                                                <Scrolling AllowScroll="true" ScrollHeight="700" />
-                                                <Resizing AllowResizeToFit="true" AllowColumnResize="true" />
-
-                                            </ClientSettings>
-                                            <MasterTableView AutoGenerateColumns="false" DataKeyNames="ردیف">
-                                                <Columns>
-                                                    <telerik:GridTemplateColumn HeaderText="افزودن فایل های مورد نیاز">
-                                                        <ItemTemplate>
-                                                            <input type="button" class="btn btn-small btn-success check" data-idproje="<%# Eval("ردیف") %>" onclick="openAttachmentModel(this);" value="افزودن" />
-                                                        </ItemTemplate>
-                                                    </telerik:GridTemplateColumn>
-
-
-                                                    <telerik:GridBoundColumn DataField="ردیف" HeaderText="ردیف" ItemStyle-BackColor="YellowGreen"></telerik:GridBoundColumn>
-
-                                                </Columns>
-                                            </MasterTableView>
-                                        </telerik:RadGrid>
-
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md-12 col-sm-12">
-
-                                        <%--for error gridview--%>
-
-                                        <telerik:RadGrid ID="grdError" runat="server" Skin="Sunset" AllowFilteringByColumn="false" AllowPaging="true">
-                                            <ClientSettings>
-                                                <Scrolling AllowScroll="true" ScrollHeight="700" />
-                                                <Resizing AllowResizeToFit="true" AllowColumnResize="true" />
-                                            </ClientSettings>
-                                            <MasterTableView AutoGenerateColumns="false" DataKeyNames="ردیف">
-                                                <Columns>
-                                                    <telerik:GridTemplateColumn HeaderText="افزودن فایل های مورد نیاز">
-                                                        <ItemTemplate>
-                                                            <input type="button" class="btn btn-small btn-success check" data-idproje="<%# Eval("ردیف") %>" onclick="openAttachmentModel(this);" value="افزودن" />
-                                                        </ItemTemplate>
-                                                    </telerik:GridTemplateColumn>
-
-
-                                                    <telerik:GridBoundColumn DataField="ردیف" HeaderText="ردیف" ItemStyle-BackColor="YellowGreen"></telerik:GridBoundColumn>
-
-                                                </Columns>
-                                            </MasterTableView>
-                                        </telerik:RadGrid>
-                                    </div>
-                                </div>
-
-
-                                <%--    <div class="col-md-6">
-                                        <label for="exampleInputEmail1">Last Name</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Last Name">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label for="exampleInputEmail1">Email address</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="exampleInputEmail1">Confirm Email address</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label for="exampleInputEmail1">Mobile Number</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="exampleInputEmail1">Email address</label>
-                                        <div class="row">
-                                            <div class="col-md-3 col-xs-3">
-                                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-                                            </div>
-                                            <div class="col-md-9 col-xs-9">
-                                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>--%>
-                            </div>
-                            <ul class="list-inline pull-right">
-                                <li>
-                                    <%--<asp:Button ID="Button1" runat="server" Text="Button" />--%>
-                                    <asp:Button runat="server" ID="btnSave" CssClass="btn btn-success" OnClick="btnSave_Click" Text="ذخیره" />
-                                </li>
-                                <li>
-                                    <button type="button" id="btnGoToNextSteps" class="btn btn-primary next-step">مرحله بعد</button>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="tab-pane" role="tabpanel" id="step2">
-                            <div class="step2">
-                                <div class="step_21">
-                                    <div class="row">
-                                        <div class="col-md-12 col-sm-12">لطفا برای وارد کردن اطلاعات هر پروژه بر روی دکمه انتخاب کلیک کنید</div>
-                                    </div>
-                                </div>
-                                <div class="step-22">
-
-
-                                    <%--for DynamicRadGrid--%>
-
-                                    <%--  <asp:HiddenField ID="hdfield" runat="server" OnInit="hdfield_Init" />
-
-                                    <dynamic:DynamicRadGrid ID="grdShowProject" runat="server" AutoGenerateColumns="false" Skin="Windows7">
-                                        <ExportSettings ExportOnlyData="true" HideStructureColumns="true" IgnorePaging="true" OpenInNewWindow="true">
-                                        </ExportSettings>
-                                        <ClientSettings>
-                                            <Scrolling AllowScroll="true" ScrollHeight="700" />
-                                            <Resizing AllowResizeToFit="true" AllowColumnResize="true" />
-                                        </ClientSettings>
-                                        <MasterTableView>
-   
-                                            <Columns>
-                                                <telerik:GridTemplateColumn>
-                                                    <ItemTemplate>
-                                                        <button ID="btnSelect" class="click btn btn-sm btn-success" value= "اضافه کردن فایل های ضمیمه" onclick="openAttachmentModel();" />
-                                                    </ItemTemplate>
-                                                </telerik:GridTemplateColumn>
-                                            </Columns>
-                                        </MasterTableView>
-                                    </dynamic:DynamicRadGrid>--%>
-                                </div>
-                            </div>
-                            <ul class="list-inline pull-right">
-                                <li>
-                                    <button type="button" id="btnPrevToSlide1" class="btn btn-default prev-step">مرحله قبل</button></li>
-                                <li>
-                                    <asp:Button runat="server" ID="btnFinish" CssClass="btn btn-primary next-step" Text="اتمام مراحل" OnClick="btnFinish_Click" />
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="tab-pane" role="tabpanel" id="step3">
-                            <div class="step33">
-                                <h5><strong>Basic Details</strong></h5>
-                                <hr>
-                                <div class="row mar_ned">
-                                </div>
-                                <div class="row mar_ned">
-                                    <div class="col-md-4 col-xs-3">
-                                        <p>
-                                            Date of birth
-                                        </p>
-                                    </div>
-                                    <div class="col-md-8 col-xs-9">
-                                        <div class="row">
-                                            <div class="col-md-4 col-xs-4 wdth">
-                                            </div>
-                                            <div class="col-md-4 col-xs-4 wdth">
-                                            </div>
-                                            <div class="col-md-4 col-xs-4 wdth">
-                                                <select name="visa_status" id="visa_status" class="dropselectsec1">
-                                                    <option value="">Year</option>
-                                                    <option value="2">1990</option>
-                                                    <option value="1">1991</option>
-                                                    <option value="4">1992</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row mar_ned">
-                                    <div class="col-md-4 col-xs-3">
-                                        <p>
-                                            Marital Status
-                                        </p>
-                                    </div>
-                                    <div class="col-md-8 col-xs-9">
-                                        <label class="radio-inline">
-                                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                            Single
-                                   
-                                        </label>
-                                        <label class="radio-inline">
-                                            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                                            Married
-                                   
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="row mar_ned">
-                                    <div class="col-md-4 col-xs-3">
-                                        <p align="right">
-                                            <stong>Highest Education</stong>
-                                        </p>
-                                    </div>
-                                    <div class="col-md-8 col-xs-9">
-                                        <select name="highest_qualification" id="highest_qualification" class="dropselectsec">
-                                            <option value="">Select Highest Education</option>
-                                            <option value="1">Ph.D</option>
-                                            <option value="2">Masters Degree</option>
-                                            <option value="3">PG Diploma</option>
-                                            <option value="4">Bachelors Degree</option>
-                                            <option value="5">Diploma</option>
-                                            <option value="6">Intermediate / (10+2)</option>
-                                            <option value="7">Secondary</option>
-                                            <option value="8">Others</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="row mar_ned">
-                                    <div class="col-md-4 col-xs-3">
-                                        <p align="right">
-                                            <stong>Specialization</stong>
-                                        </p>
-                                    </div>
-                                    <div class="col-md-8 col-xs-9">
-                                        <input type="text" name="specialization" id="specialization" placeholder="Specialization" class="dropselectsec" autocomplete="off">
-                                    </div>
-                                </div>
-                                <div class="row mar_ned">
-                                    <div class="col-md-4 col-xs-3">
-                                        <p align="right">
-                                            <stong>Year of Passed Out</stong>
-                                        </p>
-                                    </div>
-                                    <div class="col-md-8 col-xs-9">
-                                        <select name="year_of_passedout" id="year_of_passedout" class="birthdrop">
-                                            <option value="">Year</option>
-                                            <option value="1980">1980</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="row mar_ned">
-                                    <div class="col-md-4 col-xs-3">
-                                        <p>
-                                            Total Experience
-                                        </p>
-                                    </div>
-                                    <div class="col-md-8 col-xs-9">
-                                        <div class="row">
-                                            <div class="col-md-6 col-xs-6 wdth">
-                                            </div>
-                                            <div class="col-md-6 col-xs-6 wdth">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row mar_ned">
-                                </div>
-                            </div>
-                            <ul class="list-inline pull-right">
-                                <li>
-                                    <button type="button" class="btn btn-default prev-step">Previous</button></li>
-                                <li>
-                                    <button type="button" class="btn btn-default next-step">Skip</button></li>
-                                <li>
-                                    <button type="button" class="btn btn-primary btn-info-full next-step">Save and continue</button></li>
-                            </ul>
-                        </div>
-                        <div class="tab-pane" role="tabpanel" id="complete">
-                            <div class="step44">
-                                <h5>Completed</h5>
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-
-                </div>
-            </section>
-        </div>
-    </div>
-
-
-
-            <%--<telerik:RadWizard ID="RadWizard1" runat="server"></telerik:RadWizard>--%>
 
 
     <div class="modal fade" id="modalAttachment">
@@ -384,99 +245,230 @@
         <!-- /.modal-dialog -->
     </div>
 
-            </ContentTemplate>
-    </asp:UpdatePanel>
+
+
+
+
+    <%-- <asp:UpdatePanel runat="server" ID="updatepanel1">
+        <ContentTemplate>--%>
+
+    <div class="demo-container">
+        <div class="wizardHeader"></div>
+        <telerik:RadWizard RenderMode="Lightweight" ID="RadWizard3" RenderedSteps="Active" dir="rtl" runat="server" Localization-Next="مرحله بعد" Localization-Finish="اتمام" Localization-Cancel="انصراف" Localization-Previous="مرحله قبل" DisplayNavigationButtons="True" DisplayNavigationBar="True">
+            <WizardSteps>
+                <telerik:RadWizardStep ID="RadWizardStep4" Title="وارد کردن طرح" runat="server" StepType="Start" SpriteCssClass="accountInfo">
+
+                    <div class="row col-sm-9">
+                        <uc1:RoleSelect ID="uscRoleSelect" runat="server"></uc1:RoleSelect>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+
+                            <uc1:ImportFromExcel ID="ImportFromExcel" runat="server"></uc1:ImportFromExcel>
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+
+                            <telerik:RadAjaxManager ID="RadAjaxManager1" runat="server" RequestQueueSize="5">
+                                <AjaxSettings>
+                                    <telerik:AjaxSetting AjaxControlID="grdShowProjecs">
+                                        <UpdatedControls>
+                                            <telerik:AjaxUpdatedControl ControlID="grdShowProjecs" LoadingPanelID="RadAjaxLoadingPanel1" />
+
+                                        </UpdatedControls>
+                                    </telerik:AjaxSetting>
+                                </AjaxSettings>
+                            </telerik:RadAjaxManager>
+
+                            <telerik:RadAjaxLoadingPanel runat="server" ID="RadAjaxLoadingPanel1" />
+
+                            <telerik:RadGrid ID="grdShowProjecs" runat="server" Skin="Sunset" AllowFilteringByColumn="false" AllowPaging="true">
+                                <PagerStyle Mode="NextPrevAndNumeric" />
+                                <%--<GroupingSettings CaseSensitive="false" />--%>
+
+                                <ClientSettings>
+                                    <Scrolling AllowScroll="true" ScrollHeight="700" />
+                                    <Resizing AllowResizeToFit="true" AllowColumnResize="true" />
+
+                                </ClientSettings>
+                            </telerik:RadGrid>
+
+
+
+
+                        </div>
+                    </div>
+
+                    <%-- <div class="row">
+                                <div class="col-md-12 col-sm-12">--%>
+
+                    <%--for error gridview--%>
+
+                    <telerik:RadGrid ID="grdError" runat="server" Skin="Sunset" AllowFilteringByColumn="false" AllowPaging="true">
+                        <ClientSettings>
+                            <Scrolling AllowScroll="true" ScrollHeight="700" />
+                            <Resizing AllowResizeToFit="true" AllowColumnResize="true" />
+                        </ClientSettings>
+                        <MasterTableView AutoGenerateColumns="false" DataKeyNames="ردیف">
+                            <Columns>
+                                <telerik:GridTemplateColumn HeaderText="افزودن فایل های مورد نیاز">
+                                    <ItemTemplate>
+                                        <input type="button" class="btn btn-small btn-success check" data-idproje="<%# Eval("ردیف") %>" onclick="openAttachmentModel(this);" value="افزودن" />
+                                    </ItemTemplate>
+                                </telerik:GridTemplateColumn>
+
+
+                                <telerik:GridBoundColumn DataField="ردیف" HeaderText="ردیف" ItemStyle-BackColor="YellowGreen"></telerik:GridBoundColumn>
+
+                            </Columns>
+                        </MasterTableView>
+                    </telerik:RadGrid>
+                    <%--       </div>
+                            </div>--%>
+                </telerik:RadWizardStep>
+
+                <telerik:RadWizardStep Title="اضافه کردن فایل" runat="server" StepType="Step" SpriteCssClass="personalInfo">
+
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            لطفا برای وارد کردن اطلاعات هر پروژه بر روی دکمه انتخاب کلیک کنید
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+
+                        <div class="col-md-12 col-sm-12">
+
+                            <telerik:RadGrid ID="grdProjecsSelect" runat="server" Skin="Sunset" AllowFilteringByColumn="false" AllowPaging="true">
+                                <ClientSettings>
+                                    <Scrolling AllowScroll="true" ScrollHeight="700" />
+                                    <Resizing AllowResizeToFit="true" AllowColumnResize="true" />
+
+                                </ClientSettings>
+                                <MasterTableView AutoGenerateColumns="false" DataKeyNames="کدپروژه">
+                                    <Columns>
+                                        <telerik:GridTemplateColumn HeaderText="افزودن فایل های مورد نیاز">
+                                            <ItemTemplate>
+                                                <input type="button" class="btn btn-small btn-success check" data-idproje="<%# Eval("کدپروژه") %>" onclick="openAttachmentModel(this);" value="افزودن" />
+                                            </ItemTemplate>
+                                        </telerik:GridTemplateColumn>
+
+
+                                        <telerik:GridBoundColumn DataField="کدپروژه" HeaderText="کد پروژه" ItemStyle-BackColor="YellowGreen"></telerik:GridBoundColumn>
+
+                                    </Columns>
+                                </MasterTableView>
+                            </telerik:RadGrid>
+
+                        </div>
+
+                    </div>
+
+                </telerik:RadWizardStep>
+
+                <telerik:RadWizardStep Title="Contact Details" runat="server" StepType="Step" SpriteCssClass="contactDetails">
+                    <%-- <div class="inputWapper first">
+                        <asp:Label Text="Street Address: *" runat="server" AssociatedControlID="StreetAddressTextBox" />
+                        <telerik:RadTextBox RenderMode="Lightweight" ID="StreetAddressTextBox" runat="server" ValidationGroup="ContactDetails" Width="320px"></telerik:RadTextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="StreetAddressTextBox" EnableClientScript="true" ValidationGroup="ContactDetails" ErrorMessage="required field" CssClass="validator" ForeColor="Red"></asp:RequiredFieldValidator>
+                    </div>
+                    <div class="inputWapper">
+                        <asp:Label Text="City: *" runat="server" AssociatedControlID="CityTextBox" />
+                        <telerik:RadTextBox RenderMode="Lightweight" ID="CityTextBox" runat="server" ValidationGroup="ContactDetails" Width="320px"></telerik:RadTextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="CityTextBox" EnableClientScript="true" ValidationGroup="ContactDetails" ErrorMessage="required field" CssClass="validator" ForeColor="Red"></asp:RequiredFieldValidator>
+                    </div>
+                    <div class="inputWapper first">
+                        <asp:Label Text="Country: *" runat="server" AssociatedControlID="CountryTextBox" />
+                        <telerik:RadTextBox RenderMode="Lightweight" ID="CountryTextBox" runat="server" ValidationGroup="ContactDetails" Width="320px"></telerik:RadTextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="CountryTextBox" EnableClientScript="true" ValidationGroup="ContactDetails" ErrorMessage="required field" CssClass="validator" ForeColor="Red"></asp:RequiredFieldValidator>
+                    </div>
+                    <div class="inputWapper">
+                        <asp:Label Text="State:" runat="server" AssociatedControlID="StateTextBox" />
+                        <telerik:RadTextBox RenderMode="Lightweight" ID="StateTextBox" runat="server" Width="320px"></telerik:RadTextBox>
+                    </div>
+                    <div class="inputWapper first">
+                        <asp:Label Text="Zip Code:" runat="server" AssociatedControlID="ZipCodeTextBox" />
+                        <telerik:RadTextBox RenderMode="Lightweight" ID="ZipCodeTextBox" runat="server" Width="320px"></telerik:RadTextBox>
+                    </div>--%>
+                </telerik:RadWizardStep>
+
+                <telerik:RadWizardStep StepType="Finish" Title="Confirmation" ValidationGroup="Confirmation" SpriteCssClass="confirmation">
+                    <p>Make sure you review our anti-spam, privacy and terms of use policies before you create an account. We take spam very seriously and have a strict permission policy you and your clients will need to abide by.</p>
+                    <p class="anti-spam-policy">
+                        <asp:CheckBox ID="AcceptTermsCheckBox" runat="server" Text="I agree to the terms of use and will abide by the anti-spam policy." CausesValidation="true" ValidationGroup="Confirmation" />
+                        <asp:CustomValidator ID="AcceptTermsCheckBoxCustomValidator" runat="server"
+                            EnableClientScript="true" ClientValidationFunction="AcceptTermsCheckBoxValidation" ValidationGroup="Confirmation"
+                            ErrorMessage="Please agree to the anti-spam policy" Display="Dynamic"
+                            CssClass="checkbox-validator" ForeColor="Red" />
+                    </p>
+                </telerik:RadWizardStep>
+
+                <telerik:RadWizardStep runat="server" StepType="Complete" CssClass="complete">
+                    <p>Congratulations, you have registered successfully!</p>
+                    <telerik:RadButton RenderMode="Lightweight" ID="NewRegistrationButton" runat="server" OnClick="NewRegistrationButton_Click" Text="Create a new registration"></telerik:RadButton>
+                </telerik:RadWizardStep>
+
+            </WizardSteps>
+        </telerik:RadWizard>
+    </div>
+
+
+
+    <%--     </ContentTemplate>
+    </asp:UpdatePanel>--%>
+
+
+
+
+
+
+
 
 
     <script>
 
 
 
-        function GoToNextStep() {
-            var $active = $('.wizard .nav-tabs li.active');
-            $active.next().removeClass('disabled');
-            nextTab($active);
-        }
+        (function () {
 
-        function GoToPrevStep() {
-            var $active = $('.wizard .nav-tabs li.active');
-            prevTab($active);
-        }
+            //window.pageLoad = function () {
+            //    var $ = $telerik.$;
+            //    var cssSelectors = ["accountInfo", "personalInfo", "contactDetails", "confirmation"];
+            //    var breadCrumbButtons = $(".rwzBreadCrumb .rwzLI");
 
+            //    for (var i = 0; i < cssSelectors.length; i++) {
+            //        $(breadCrumbButtons[i]).addClass(cssSelectors[i]);
+            //    }
+            //}
 
+            //window.OnClientLoad = function (sender, args) {
+            //    for (var i = 1; i < sender.get_wizardSteps().get_count() ; i++) {
+            //        sender.get_wizardSteps().getWizardStep(i).set_enabled(false);
+            //    }
+            //}
 
-        $(document).ready(function () {
-
-            //document.getElementById("btnGoToNextSteps").disabled = true;
-
-            //Initialize tooltips
-            $('.nav-tabs > li a[title]').tooltip();
-
-            //Wizard
-            $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
-
-                var $target = $(e.target);
-
-                if ($target.parent().hasClass('disabled')) {
-                    return false;
-                }
-            });
+            //window.OnClientButtonClicking = function (sender, args) {
 
 
-            $(".next-step").click(function (e) {
+            //    if (!args.get_nextActiveStep().get_enabled()) {
+            //        args.get_nextActiveStep().set_enabled(true);
+            //    }
+            //}
 
-                var $active = $('.wizard .nav-tabs li.active');
-                $active.next().removeClass('disabled');
-                nextTab($active);
-
-            });
-
-            $(".prev-step").click(function (e) {
-
-                var $active = $('.wizard .nav-tabs li.active');
-                prevTab($active);
-
-            });
-        });
-
-        function nextTab(elem) {
-            $(elem).next().find('a[data-toggle="tab"]').click();
-        }
-        function prevTab(elem) {
-            $(elem).prev().find('a[data-toggle="tab"]').click();
-        }
+            window.AcceptTermsCheckBoxValidation = function (source, args) {
+                var termsChecked = $telerik.$("input[id*='AcceptTermsCheckBox']")[0].checked;
+                args.IsValid = termsChecked;
+            }
+        })();
 
 
-        //according menu
-
-        $(document).ready(function () {
-            //Add Inactive Class To All Accordion Headers
-            $('.accordion-header').toggleClass('inactive-header');
-
-            //Set The Accordion Content Width
-            var contentwidth = $('.accordion-header').width();
-            $('.accordion-content').css({});
-
-            //Open The First Accordion Section When Page Loads
-            $('.accordion-header').first().toggleClass('active-header').toggleClass('inactive-header');
-            $('.accordion-content').first().slideDown().toggleClass('open-content');
-
-            // The Accordion Effect
-            $('.accordion-header').click(function () {
-                if ($(this).is('.inactive-header')) {
-                    $('.active-header').toggleClass('active-header').toggleClass('inactive-header').next().slideToggle().toggleClass('open-content');
-                    $(this).toggleClass('active-header').toggleClass('inactive-header');
-                    $(this).next().slideToggle().toggleClass('open-content');
-                }
-
-                else {
-                    $(this).toggleClass('active-header').toggleClass('inactive-header');
-                    $(this).next().slideToggle().toggleClass('open-content');
-                }
-            });
-
-            //return false;
-        });
 
 
         //code for grid
@@ -488,7 +480,7 @@
         function openAttachmentModel(btn) {
 
 
-            var grd = $find("<%= grdProjecs.ClientID %>");
+            var grd = $find("<%= grdProjecsSelect.ClientID %>");
             var selectedkey = $(btn).data("idproje");
             selectedProjects = selectedkey;
             alert(selectedProjects);

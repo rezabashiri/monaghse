@@ -168,6 +168,7 @@
     <Reference Include="Telerik.Windows.Zip, Version=2017.3.907.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Telerik.Windows.Zip.dll</HintPath>
+      </Reference>
     <Reference Include="Telerik.Web.Spreadsheet">
       <HintPath>..\lib\RCAJAX\2017.3.913.45\AdditionalLibraries\Bin45\Telerik.Web.Spreadsheet.dll</HintPath>
     </Reference>
@@ -191,7 +192,6 @@
     </Reference>
     <Reference Include="Telerik.Windows.Zip">
       <HintPath>..\lib\RCAJAX\2017.3.913.45\AdditionalLibraries\Bin45\Telerik.Windows.Zip.dll</HintPath>
->>>>>>> aeaae8fc43b496390d399f4de8718eef08550174
     </Reference>
     <Reference Include="tkvUtility">
       <HintPath>..\..\..\component\Utility\bin\Release\tkvUtility.dll</HintPath>
