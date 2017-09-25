@@ -99,7 +99,7 @@
       <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Heidarpour.WebControlUI">
-      <HintPath>..\packages\Persian_Calendar\Heidarpour.WebControlUI.dll</HintPath>
+      <HintPath>..\packages\Heidarpour.WebControlUI.dll</HintPath>
     </Reference>
     <Reference Include="JQControls">
       <HintPath>..\..\..\component\JQControls_custom\JQControls_WithMs\bin\Debug\JQControls.dll</HintPath>
