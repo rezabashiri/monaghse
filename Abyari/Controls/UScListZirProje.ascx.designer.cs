@@ -22,12 +22,12 @@ namespace Abyari.Controls {
         protected global::Abyari.Controls.UscZirprojeSearchParameter UscZirprojeSearchParameter;
         
         /// <summary>
-        /// grdProjes control.
+        /// grdZirProjeData control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadGrid grdProjes;
+        protected global::Telerik.Web.UI.RadGrid grdZirProjeData;
     }
 }

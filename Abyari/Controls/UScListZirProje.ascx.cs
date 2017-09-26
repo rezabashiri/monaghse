@@ -17,8 +17,8 @@ namespace Abyari.Controls
         void UscZirprojeSearchParameter_OnSearchCompelete(string WhereParameters)
         {
             Model.ViewZirProje _zir = new Model.ViewZirProje();
-            grdProjes.DataSource = _zir.SelectPaymankarsProject(WhereParameters);
-            grdProjes.DataBind();
+            grdZirProjeData.DataSource = _zir.SelectPaymankarsProject(WhereParameters);
+            grdZirProjeData.DataBind();
         }
 
     

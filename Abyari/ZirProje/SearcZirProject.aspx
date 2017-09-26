@@ -66,10 +66,11 @@
             else
                 alert("پروژه عقد قرارداد شده است");
         }
-        function delivery(idp) {
+        function delivery(btn,idp) {
             var grid = $find("<%= GrdZirPRoje.ClientID %>");
             var id = grid.get_masterTableView().get_selectedItems()[0].getDataKeyValue("ID");
             alert(id);
+            alert(idp);
             $.ajax({
                 type:"post",
                 contentType: "application/json; charset=utf-8",

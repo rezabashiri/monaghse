@@ -1,84 +1,23 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UScListZirProje.ascx.cs" Inherits="Abyari.Controls.UScListZirProje" %>
 <%@ Register Src="~/Controls/UscZirprojeSearchParameter.ascx" TagPrefix="uc2" TagName="UscZirprojeSearchParameter" %>
 
-
+<script src="../Logic/ReserveByPaymankar.js"></script>
 <script type="text/javascript">
     function pageLoad() {
-        var grid = $find("<%= grdProjes.ClientID %>");
-         if (grid) {
-             var columns = grid.get_masterTableView().get_columns();
-             for (var i = 0; i < columns.length; i++) {
-                 columns[i].resizeToFit(false, true);
-             }
-         }
-     }
-        function reservewith(btn, tavafogh) {
-            var idproje = $(btn).data("idproje");
-            if (confirm('آیا اطمینان دارید؟')) {
-                $.ajax({
-                    type: "post",
-                    url: "/ClientFunctions/ClientCalls.aspx/ZriprojeReserve",
-                    contentType: "application/json; charset=utf-8",
-                    data: "{idzirproje:'" + idproje + "',tavafogh:" + tavafogh + "}",
-                    success: function (data) {
-                        alert(data.d);
-
-                    },
-                    error: function (xhr, status, error) {
-
-                        alert(xhr.responseText);
-                    }
-
-                });
+        var grid = $find("<%= grdZirProjeData.ClientID %>");
+        if (grid) {
+            var columns = grid.get_masterTableView().get_columns();
+            for (var i = 0; i < columns.length; i++) {
+                columns[i].resizeToFit(false, true);
             }
-
         }
-        function unreserve(btn) {
-            var idproje = $(btn).data("idproje");
-            if (confirm('آیا اطمینان دارید؟')) {
-                $.ajax({
-                    type: "post",
-                    url: "/ClientFunctions/ClientCalls.aspx/ZriprojeUnReserve",
-                    contentType: "application/json; charset=utf-8",
-                    data: "{idzirproje:'" + idproje  + "'}",
-                    success: function (data) {
-                        alert(data.d);
-
-                    },
-                    error: function (xhr, status, error) {
-
-                        alert(xhr.responseText);
-                    }
-
-                });
-            }
-
-        }
-        $(document).ready(function () {
-   
-            $(".check").each(function () {
-                var res = $(this).data("reserved");
-                if (res == "True") {
-                    $(this).attr('disabled', 'disabled');
-                    $(this).attr('value', 'رزرو انجام شده است');
-                }
-            });
-            $(".unreserve").each(function () {
-                var res = $(this).data("reserved");
-                if (res == "False") {
-                    $(this).attr('disabled', 'disabled');
-          
-                }
-            });
-            });
-   
+    }
 </script>
- 
 <uc2:UscZirprojeSearchParameter runat="server" ID="UscZirprojeSearchParameter" />
 <div class="row">
 
 
-            <telerik:RadGrid  ID="grdProjes" runat="server" Skin="Sunset" AllowFilteringByColumn="false">
+            <telerik:RadGrid  ID="grdZirProjeData" runat="server" Skin="Sunset" AllowFilteringByColumn="false">
                    <ClientSettings>
             <Scrolling AllowScroll="true" ScrollHeight="700" />
             <Resizing AllowResizeToFit="true" AllowColumnResize="true"  />

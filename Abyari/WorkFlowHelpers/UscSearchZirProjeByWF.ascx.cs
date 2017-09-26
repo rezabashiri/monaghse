@@ -145,7 +145,14 @@ namespace Abyari.WorkFlowHelpers
                     ((HiddenField)item.FindControl("hdExecuting")).Value = _search.WfExecutingID.ToString();
                     if (!string.IsNullOrEmpty(_search.StepAccess))
                     {
-                        ((ImageButton)item.FindControl("btnSelect")).Visible = _engine.CheckAccess(_search.StepEntity, global::AccessManagementService.Access.RightRelatedService.View);
+                        if (!_engine.CheckAccess(_search.StepEntity, global::AccessManagementService.Access.RightRelatedService.View))
+                        {
+                            item.Controls.RemoveAt(2);
+                            item.Controls.AddAt(2,new GridTableCell() { Text="اتمام مهلت" });
+                            
+                        }
+                        
+                        
                         ((Label)item.FindControl("lblStepName")).Text = _search.StepEntity.Name;
                     }
                     else

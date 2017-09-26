@@ -32,6 +32,7 @@ namespace Abyari.ScoringSystem
                 var config = ViewState["__scorelist"] as Configuration;
                 config = config.Deserialize(_con.Scoring);
                 txtTime.Text = config.AllowedTime.ToString();
+                txtWfName.Text = config.TimeUpStepID;
                 ViewState["__scorelist"] = config;
                 grdConfig.DataBind();
             }
@@ -42,18 +43,18 @@ namespace Abyari.ScoringSystem
             {
                 Enums.ScoreType _item = (Enums.ScoreType)item;
                 var desc = _item.GetAttributeOfType<System.ComponentModel.DescriptionAttribute>();
-                drpType.Items.Add(new ListItem() { Text=desc.Description,Value=_item.ToString()});
+                drpType.Items.Add(new ListItem() { Text = desc.Description, Value = _item.ToString() });
             }
         }
         protected void btkAdd_Click(object sender, EventArgs e)
         {
             var config = ViewState["__scorelist"] as Configuration;
-            var sco=(Enums.ScoreType)Enum.Parse(typeof(Enums.ScoreType),drpType.SelectedValue);
-            if (!config.ScoreConfigList.Any(x=>x.ScoreTypes == sco))
+            var sco = (Enums.ScoreType)Enum.Parse(typeof(Enums.ScoreType), drpType.SelectedValue);
+            if (!config.ScoreConfigList.Any(x => x.ScoreTypes == sco))
             {
-            config.ScoreConfigList.Add(new ScoreSystem() { Score =double.Parse( txtScore.Text), Subject = txtSubject.Text ,ScoreTypes=sco });
-            grdConfig.Rebind(); 
-        }
+                config.ScoreConfigList.Add(new ScoreSystem() { Score = double.Parse(txtScore.Text), Subject = txtSubject.Text, ScoreTypes = sco });
+                grdConfig.Rebind();
+            }
         }
         public List<ScoreSystem> GetData()
         {
@@ -66,6 +67,7 @@ namespace Abyari.ScoringSystem
             Model.Config _entity = new Model.Config();
             var conf = ViewState["__scorelist"] as Configuration;
             conf.AllowedTime = txtTime.Text.ToInt32();
+            conf.TimeUpStepID = txtWfName.Text;
             _entity.Scoring = conf.SerializeToXML();
             _entity.ID = ViewState["__confid"] != null ? ViewState["__confid"].ToInt32() : -1;
             _entity.AddUpdate();

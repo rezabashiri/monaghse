@@ -70,7 +70,7 @@ namespace Abyari.ClientFunctions
         }
         [System.Web.Services.WebMethod()]
 
-        public static string ZriprojeReserve(string idzirproje, string idpaymankar,bool tavafogh)
+        public static string ZriprojeReserveByIdPaymankar(string idzirproje, string idpaymankar,bool tavafogh)
         {
             ZirProjeReservation _reserv = new ZirProjeReservation();
             if (!string.IsNullOrEmpty(idzirproje) && idzirproje != "undifiend" && !string.IsNullOrEmpty(idpaymankar) && idpaymankar != "undefined")
@@ -86,13 +86,13 @@ namespace Abyari.ClientFunctions
         }
         [System.Web.Services.WebMethod()]
 
-        public static string ZriprojeReserve(string idzirproje,   bool tavafogh)
+        public static string ZriprojeReserve(string idzirproje, bool tavafogh)
         {
             var com = Helpers.SessionHelpers.GetCompany();
             if (com != null)
             {
                 string idp = com.ID.ToString();
-                return ZriprojeReserve(idzirproje, idp, tavafogh);
+                return ZriprojeReserveByIdPaymankar(idzirproje, idp, tavafogh);
             }
             else
             {

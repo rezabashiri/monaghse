@@ -35,7 +35,7 @@
        
         $.ajax({
             type: "post",
-            url: "/ClientFunctions/ClientCalls.aspx/ZriprojeReserve",
+            url: "/ClientFunctions/ClientCalls.aspx/ZriprojeReserveByIdPaymankar",
             contentType: "application/json; charset=utf-8",
             data: "{idzirproje:'" + idproje + "',idpaymankar:'"+id+"',tavafogh:"+tavafogh+"}",
             success: function (data) {

@@ -58,7 +58,7 @@
     </Triggers>
 </asp:UpdatePanel>
         <div class="row">
-    <div class="col-md-3 col-sm-12">
+    <div class="col-md-3 col-sm-5">
         مدت زمان انجام مناقصه
     </div>
     <div class="col-md-3 col-sm-6">
@@ -66,11 +66,19 @@
         </asp:TextBox>
         
     </div>
-            <div class="col-md-1 col-sm-6">
+            <div class="col-md-1 col-sm-1">
 روز
                 </div>
-            <div class="col-md-3 col-sm-12">
-                <uc1:MoroorgaranButton ID="btnSave" CssClass="btn btn-danger" ValidateionType="validate" Text="ثبت" OnClick="btnSave_Click" runat="server" />
+             <div class="col-md-2 col-sm-6">
+       کد مرحله بعد از پایان مناقصه
+    </div>
+    <div class="col-md-3 col-sm-6">
+        <asp:TextBox ID="txtWfName" CssClass="validate[required] form-control" runat="server">
+        </asp:TextBox>
+        
+    </div>
+            <div class="col-md-12 col-sm-12 text-center">
+                <uc1:MoroorgaranButton ID="btnSave" CssClass="btn btn-lg btn-danger" ValidateionType="validate" Text="ثبت" OnClick="btnSave_Click" runat="server" />
 
                 </div>
 </div>

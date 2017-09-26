@@ -373,6 +373,7 @@
     <Content Include="DynamicData\PageTemplates\ListDetails.aspx" />
     <Content Include="Financial\Management.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Logic\ReserveByPaymankar.js" />
     <Content Include="LoginUser.aspx" />
     <Content Include="Monaghese\CSS\wizard.css" />
     <Content Include="Monaghese\getData.aspx" />

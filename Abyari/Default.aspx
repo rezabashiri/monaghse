@@ -10,7 +10,9 @@
 
 <asp:Content ContentPlaceHolderID="MainContent" ID="Content" runat="server">
     
-  
+  <div class="row">
     <uc2:UscZirprojeSearchParameter runat="server" id="UscZirprojeSearchParameter" />
+
+  </div>
     <uc2:UscSearchZirProjeByWF  EntityTypeID="1" runat="server" id="UscSearchZirProjeByWF" />
 </asp:Content>

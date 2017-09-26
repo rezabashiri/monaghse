@@ -57,6 +57,11 @@ namespace Abyari.Logic
             get;
             set;
         }
+        public string TimeUpStepID
+        {
+            get;
+            set;
+        }
         public string SerializeToXML()
         {
             var ser = new tkv.Utility.XmlHelper().SerializeEntity<Configuration>(this);

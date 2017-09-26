@@ -76,6 +76,15 @@ namespace Abyari.ScoringSystem {
         protected global::System.Web.UI.WebControls.TextBox txtTime;
         
         /// <summary>
+        /// txtWfName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtWfName;
+        
+        /// <summary>
         /// btnSave control.
         /// </summary>
         /// <remarks>
