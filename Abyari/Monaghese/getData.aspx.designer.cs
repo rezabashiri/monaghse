@@ -13,31 +13,31 @@ namespace Abyari.Monaghese {
     public partial class getData {
         
         /// <summary>
-        /// ImportFromExcel1 control.
+        /// ImportFromExcel_ProjectOne control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::WebUtility.Controls.ImportFromExcel ImportFromExcel1;
+        protected global::WebUtility.Controls.ImportFromExcel ImportFromExcel_ProjectOne;
         
         /// <summary>
-        /// ImportFromExcel2 control.
+        /// uscFileUplaod control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::WebUtility.Controls.ImportFromExcel ImportFromExcel2;
+        protected global::WebUtility.Controls.FileUpload uscFileUplaod;
         
         /// <summary>
-        /// ImportFromExcel3 control.
+        /// updatepanel1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::WebUtility.Controls.ImportFromExcel ImportFromExcel3;
+        protected global::System.Web.UI.UpdatePanel updatepanel1;
         
         /// <summary>
         /// RadWizard3 control.
@@ -67,31 +67,13 @@ namespace Abyari.Monaghese {
         protected global::AccessManagementService.Controls.RoleSelect uscRoleSelect;
         
         /// <summary>
-        /// ImportFromExcel control.
+        /// ImportFromExcel_projectProperties control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::WebUtility.Controls.ImportFromExcel ImportFromExcel;
-        
-        /// <summary>
-        /// RadAjaxManager1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadAjaxManager RadAjaxManager1;
-        
-        /// <summary>
-        /// RadAjaxLoadingPanel1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadAjaxLoadingPanel RadAjaxLoadingPanel1;
+        protected global::WebUtility.Controls.ImportFromExcel ImportFromExcel_projectProperties;
         
         /// <summary>
         /// grdShowProjecs control.
@@ -112,6 +94,15 @@ namespace Abyari.Monaghese {
         protected global::Telerik.Web.UI.RadGrid grdError;
         
         /// <summary>
+        /// ImportFromExcel_ProjectGeneral control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::WebUtility.Controls.ImportFromExcel ImportFromExcel_ProjectGeneral;
+        
+        /// <summary>
         /// grdProjecsSelect control.
         /// </summary>
         /// <remarks>
@@ -121,30 +112,12 @@ namespace Abyari.Monaghese {
         protected global::Telerik.Web.UI.RadGrid grdProjecsSelect;
         
         /// <summary>
-        /// AcceptTermsCheckBox control.
+        /// selectedProjectID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox AcceptTermsCheckBox;
-        
-        /// <summary>
-        /// AcceptTermsCheckBoxCustomValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator AcceptTermsCheckBoxCustomValidator;
-        
-        /// <summary>
-        /// NewRegistrationButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadButton NewRegistrationButton;
+        protected global::System.Web.UI.WebControls.HiddenField selectedProjectID;
     }
 }
