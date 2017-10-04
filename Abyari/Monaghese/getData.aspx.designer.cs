@@ -13,24 +13,6 @@ namespace Abyari.Monaghese {
     public partial class getData {
         
         /// <summary>
-        /// ImportFromExcel_ProjectOne control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::WebUtility.Controls.ImportFromExcel ImportFromExcel_ProjectOne;
-        
-        /// <summary>
-        /// uscFileUplaod control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::WebUtility.Controls.FileUpload uscFileUplaod;
-        
-        /// <summary>
         /// updatepanel1 control.
         /// </summary>
         /// <remarks>
@@ -101,23 +83,5 @@ namespace Abyari.Monaghese {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::WebUtility.Controls.ImportFromExcel ImportFromExcel_ProjectGeneral;
-        
-        /// <summary>
-        /// grdProjecsSelect control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadGrid grdProjecsSelect;
-        
-        /// <summary>
-        /// selectedProjectID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField selectedProjectID;
     }
 }

@@ -1,4 +1,0 @@
-﻿
-$(function () {
-    $(".select_botton").
-})
