@@ -17,27 +17,17 @@ namespace Abyari.Monaghese
         {
             ImportFromExcel_projectProperties.OnImportDataCompelete += ImportFromExcel_projectProperties_OnImportDataCompelete;
             ImportFromExcel_ProjectGeneral.OnImportDataCompelete += ImportFromExcel_ProjectGeneral_OnImportDataCompelete;
-            ImportFromExcel_ProjectOne.OnImportDataCompelete += ImportFromExcel_ProjectOne_OnImportDataCompelete;
+            ImportFromExcel_LolehGeneral.OnImportDataCompelete += ImportFromExcel_LolehGeneral_OnImportDataCompelete;
             RadWizard3.NextButtonClick += RadWizard3_NextButtonClick;
             RadWizard3.NavigationBarButtonClick += RadWizard3_NavigationBarButtonClick;
             //uscFileUplaod.AttachId
         }
 
-        private void ImportFromExcel_ProjectOne_OnImportDataCompelete(System.Data.DataSet _ds)
+        private void ImportFromExcel_LolehGeneral_OnImportDataCompelete(DataSet _ds)
         {
-            var projes = new Model.ZirProje();
-            DataColumn Col = _ds.Tables[0].Columns.Add("ProjectID", typeof(System.String));
-            Col.SetOrdinal(0);
-
-            foreach (DataRow row in _ds.Tables[0].Rows)
-            {
-                row["ProjectID"] = selectedProjectID.Value;
-            }
-            //_ds.Tables[0].Rows[0]["ProjectID"] = selectedProjectID.Value;
-
-            var msg = projes.ImportFromExcelProject(_ds);
-
-
+            var looleha = new Model.ZirProjeLoole();
+            looleha.ImportFromExcelLoloehProject(_ds);
+            ViewState["IsNextStep"] = true;
 
         }
 
@@ -45,6 +35,7 @@ namespace Abyari.Monaghese
         {
             var projes = new Model.ZirProje();
             var msg = projes.ImportFromExcelProject(_ds);
+            ViewState["IsNextStep"] = true;
         }
 
         private void ImportFromExcel_projectProperties_OnImportDataCompelete(System.Data.DataSet _ds)
@@ -75,9 +66,13 @@ namespace Abyari.Monaghese
 
             if (isNextstep == true)
             {
+                if (e.CurrentStepIndex == 2)
+                {
+                    UscGridWtihAttachment.DataBound(projectCodes);
+                }
+
                 RadWizard3.ActiveStepIndex = e.CurrentStepIndex + 1;
-                grdProjecsSelect.DataSource = projes.SearchZirProjeByConditions(projectCodes);
-                grdProjecsSelect.DataBind();
+                ViewState["IsNextStep"] = false;
             }
             else
                 RadWizard3.ActiveStepIndex = e.CurrentStepIndex;
@@ -85,7 +80,6 @@ namespace Abyari.Monaghese
 
         protected void grdShowProjecs_DataBound(object sender, EventArgs e)
         {
-
             System.Text.StringBuilder sb = new System.Text.StringBuilder();
             string id;
 

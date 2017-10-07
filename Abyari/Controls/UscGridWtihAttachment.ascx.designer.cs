@@ -13,6 +13,33 @@ namespace Abyari.Controls {
     public partial class UscGridWtihAttachment {
         
         /// <summary>
+        /// ImportFromExcel_ProjectOne control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::WebUtility.Controls.ImportFromExcel ImportFromExcel_ProjectOne;
+        
+        /// <summary>
+        /// ImportFromExcel_lolehProjectOne control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::WebUtility.Controls.ImportFromExcel ImportFromExcel_lolehProjectOne;
+        
+        /// <summary>
+        /// uscFileUplaod control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::WebUtility.Controls.FileUpload uscFileUplaod;
+        
+        /// <summary>
         /// grdProjecsSelect control.
         /// </summary>
         /// <remarks>
@@ -29,23 +56,5 @@ namespace Abyari.Controls {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField selectedProjectID;
-        
-        /// <summary>
-        /// ImportFromExcel_ProjectOne control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::WebUtility.Controls.ImportFromExcel ImportFromExcel_ProjectOne;
-        
-        /// <summary>
-        /// uscFileUplaod control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::WebUtility.Controls.FileUpload uscFileUplaod;
     }
 }

@@ -67,15 +67,6 @@ namespace Abyari.Monaghese {
         protected global::Telerik.Web.UI.RadGrid grdShowProjecs;
         
         /// <summary>
-        /// grdError control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadGrid grdError;
-        
-        /// <summary>
         /// ImportFromExcel_ProjectGeneral control.
         /// </summary>
         /// <remarks>
@@ -83,5 +74,23 @@ namespace Abyari.Monaghese {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::WebUtility.Controls.ImportFromExcel ImportFromExcel_ProjectGeneral;
+        
+        /// <summary>
+        /// ImportFromExcel_LolehGeneral control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::WebUtility.Controls.ImportFromExcel ImportFromExcel_LolehGeneral;
+        
+        /// <summary>
+        /// UscGridWtihAttachment control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Abyari.Controls.UscGridWtihAttachment UscGridWtihAttachment;
     }
 }

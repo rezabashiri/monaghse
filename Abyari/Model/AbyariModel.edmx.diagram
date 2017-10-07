@@ -6,7 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="9a1bc2a70b41427398330d926aedb191" Name="Diagram1">
         <EntityTypeShape EntityType="AbyariModel.PaymankarReshte" Width="1.5" PointX="6.8224524309963233" PointY="26.340270129190884" />
-        <EntityTypeShape EntityType="AbyariModel.ZirProjeTahvilMovaghat" Width="1.5" PointX="10.450041179754791" PointY="18.287899457983627" />
+        <EntityTypeShape EntityType="AbyariModel.ZirProjeTahvilMovaghat" Width="1.5" PointX="10.5" PointY="19" />
         <EntityTypeShape EntityType="AbyariModel.Sherkat" Width="1.5" PointX="6.8254965817674513" PointY="29.071709258980913" />
         <EntityTypeShape EntityType="AbyariModel.NoeProje" Width="1.5" PointX="7.375" PointY="6.875" />
         <EntityTypeShape EntityType="AbyariModel.Reshte" Width="1.5" PointX="5.125" PointY="8.75" />
@@ -33,6 +33,12 @@
         <EntityTypeShape EntityType="AbyariModel.ViewZirProjeMoshtary" Width="1.5" PointX="0.75" PointY="10.75" />
         <EntityTypeShape EntityType="AbyariModel.ViewZirprojeResevation" Width="1.5" PointX="0.75" PointY="0.75" />
         <EntityTypeShape EntityType="AbyariModel.Config" Width="1.5" PointX="3.375" PointY="4.75" />
+        <EntityTypeShape EntityType="AbyariModel.NoeLoole" Width="1.5" PointX="10.625" PointY="24.125" />
+        <EntityTypeShape EntityType="AbyariModel.ZirProjeBaravord" Width="1.5" PointX="11.875" PointY="21" />
+        <EntityTypeShape EntityType="AbyariModel.ZirProjeLoole" Width="1.5" PointX="12.875" PointY="17.125" />
+        <AssociationConnector Association="AbyariModel.FK_ZirProjeLoole_NoeLoole" />
+        <AssociationConnector Association="AbyariModel.FK_ZirProjeBaravord_ZirProje" />
+        <AssociationConnector Association="AbyariModel.FK_ZirProjeLoole_ZirProje" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

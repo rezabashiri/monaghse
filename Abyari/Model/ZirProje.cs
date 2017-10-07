@@ -17,6 +17,8 @@ namespace Abyari.Model
         public ZirProje()
         {
             this.ZirProjeReservations = new HashSet<ZirProjeReservation>();
+            this.ZirProjeBaravords = new HashSet<ZirProjeBaravord>();
+            this.ZirProjeLooles = new HashSet<ZirProjeLoole>();
         }
     
         public int ID { get; set; }
@@ -40,6 +42,7 @@ namespace Abyari.Model
         public Nullable<int> RoleId { get; set; }
         public Nullable<int> UserId { get; set; }
         public Nullable<int> WfExecutingID { get; set; }
+        public Nullable<System.Guid> AttachID { get; set; }
     
         public virtual Moshtary Moshtary { get; set; }
         public virtual NoeProje NoeProje { get; set; }
@@ -47,5 +50,7 @@ namespace Abyari.Model
         public virtual ZirProjeTahvilMovaghat ZirProjeTahvilMovaghat { get; set; }
         public virtual Paymankar Paymankar { get; set; }
         public virtual ICollection<ZirProjeReservation> ZirProjeReservations { get; set; }
+        public virtual ICollection<ZirProjeBaravord> ZirProjeBaravords { get; set; }
+        public virtual ICollection<ZirProjeLoole> ZirProjeLooles { get; set; }
     }
 }

@@ -217,6 +217,7 @@
     <Content Include="Controls\UscCheckNamayande.ascx" />
     <Content Include="Controls\UscEntekhabPaymankar.ascx" />
     <Content Include="Controls\UscEntekhbProjeToInvoice.ascx" />
+    <Content Include="Controls\UscGridWtihAttachment.ascx" />
     <Content Include="Controls\UScListZirProje.ascx" />
     <Content Include="Controls\uscMahaleEjra.ascx" />
     <Content Include="Controls\UscNoeParameter.ascx" />
@@ -294,9 +295,14 @@
     <Content Include="Dashboard\flot\LICENSE.txt" />
     <Content Include="Dashboard\Paymankar\Default.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="Design\Images\attach.jpg" />
     <Content Include="Design\Images\backg2.jpg" />
+    <Content Include="Design\Images\DataImport2.png" />
+    <Content Include="Design\Images\DataImportIcon.png" />
+    <Content Include="Design\Images\importExcel.jpg" />
     <Content Include="Design\Images\loading.gif" />
     <Content Include="Design\Images\loadingAnimation.gif" />
+    <Content Include="Design\Images\pipes.jpg" />
     <Content Include="Design\Images\view-details.png" />
     <Content Include="Design\Scripts\bootstrap.js" />
     <Content Include="Design\Scripts\bootstrap.min.js" />
@@ -496,6 +502,13 @@
     <Compile Include="Controls\UscEntekhbProjeToInvoice.ascx.designer.cs">
       <DependentUpon>UscEntekhbProjeToInvoice.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\UscGridWtihAttachment.ascx.cs">
+      <DependentUpon>UscGridWtihAttachment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UscGridWtihAttachment.ascx.designer.cs">
+      <DependentUpon>UscGridWtihAttachment.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Controls\UScListZirProje.ascx.cs">
       <DependentUpon>UScListZirProje.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -592,6 +605,7 @@
     <Compile Include="DBClass\ViewZirProje.cs" />
     <Compile Include="DBClass\ViewZirProjeMoshtary.cs" />
     <Compile Include="DBClass\ViewZirprojeResevation.cs" />
+    <Compile Include="DBClass\ZirProjeLoolePartial.cs" />
     <Compile Include="DBClass\ZirProjeReservation.cs" />
     <Compile Include="DBClass\ZirProjeTahvilMovaghatPartial.cs" />
     <Compile Include="Design\Masters\Sitepopup.Master.cs">
@@ -747,6 +761,9 @@
     <Compile Include="Model\Moshtary.cs">
       <DependentUpon>AbyariModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\NoeLoole.cs">
+      <DependentUpon>AbyariModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\NoeProje.cs">
       <DependentUpon>AbyariModel.tt</DependentUpon>
     </Compile>
@@ -784,6 +801,12 @@
       <DependentUpon>AbyariModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\ZirProje.cs">
+      <DependentUpon>AbyariModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ZirProjeBaravord.cs">
+      <DependentUpon>AbyariModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ZirProjeLoole.cs">
       <DependentUpon>AbyariModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\ZirProjeReservation.cs">
@@ -1313,6 +1336,11 @@
     <Content Include="Dashboard\flot\README.md" />
     <Content Include="Dashboard\flot.tooltip\.bower.json" />
     <Content Include="Dashboard\flot.tooltip\bower.json" />
+    <Content Include="Download\fehrestBaha_general.xlsx" />
+    <Content Include="Download\fehrestBaha_jozee.xlsx" />
+    <Content Include="Download\projectProperties.xlsx" />
+    <Content Include="Download\loleh_general.xlsx" />
+    <Content Include="Download\loleh_jozee.xlsx" />
     <None Include="Properties\PublishProfiles\abyari.pubxml" />
     <Content Include="Reports\RequestPrint.mrt" />
     <Content Include="RequestPrint.mrt" />
