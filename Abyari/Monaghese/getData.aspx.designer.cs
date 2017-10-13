@@ -13,57 +13,84 @@ namespace Abyari.Monaghese {
     public partial class getData {
         
         /// <summary>
-        /// ImportFromExcel control.
+        /// updatepanel1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::WebUtility.Controls.ImportFromExcel ImportFromExcel;
+        protected global::System.Web.UI.UpdatePanel updatepanel1;
         
         /// <summary>
-        /// btnGoToNextSteps control.
+        /// RadWizard3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton btnGoToNextSteps;
+        protected global::Telerik.Web.UI.RadWizard RadWizard3;
         
         /// <summary>
-        /// grdProjecs control.
+        /// RadWizardStep4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadGrid grdProjecs;
+        protected global::Telerik.Web.UI.RadWizardStep RadWizardStep4;
         
         /// <summary>
-        /// ImportFromExcel1 control.
+        /// uscRoleSelect control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::WebUtility.Controls.ImportFromExcel ImportFromExcel1;
+        protected global::AccessManagementService.Controls.RoleSelect uscRoleSelect;
         
         /// <summary>
-        /// ImportFromExcel2 control.
+        /// ImportFromExcel_projectProperties control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::WebUtility.Controls.ImportFromExcel ImportFromExcel2;
+        protected global::WebUtility.Controls.ImportFromExcel ImportFromExcel_projectProperties;
         
         /// <summary>
-        /// ImportFromExcel3 control.
+        /// grdShowProjecs control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::WebUtility.Controls.ImportFromExcel ImportFromExcel3;
+        protected global::Telerik.Web.UI.RadGrid grdShowProjecs;
+        
+        /// <summary>
+        /// ImportFromExcel_ProjectGeneral control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::WebUtility.Controls.ImportFromExcel ImportFromExcel_ProjectGeneral;
+        
+        /// <summary>
+        /// ImportFromExcel_LolehGeneral control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::WebUtility.Controls.ImportFromExcel ImportFromExcel_LolehGeneral;
+        
+        /// <summary>
+        /// UscGridWtihAttachment control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Abyari.Controls.UscGridWtihAttachment UscGridWtihAttachment;
     }
 }

@@ -88,6 +88,10 @@
     <Reference Include="App_Web_uscsignup.ascx.cc671b29">
       <HintPath>..\..\..\publish\AccessManagement\bin\App_Web_uscsignup.ascx.cc671b29.dll</HintPath>
     </Reference>
+    <Reference Include="App_Web_uscverification.ascx.cc671b29, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\App_Web_uscverification.ascx.cc671b29.dll</HintPath>
+    </Reference>
     <Reference Include="App_Web_uscworkflowdefinition.ascx.cc671b29">
       <HintPath>..\..\..\publish\WorkFlow\bin\App_Web_uscworkflowdefinition.ascx.cc671b29.dll</HintPath>
     </Reference>
@@ -136,6 +140,38 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Telerik.Web.Spreadsheet, Version=2017.2.908.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Telerik.Web.Spreadsheet.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2017.3.913.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins, Version=2017.3.913.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Core, Version=2017.3.907.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Telerik.Windows.Documents.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Flow, Version=2017.3.907.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Telerik.Windows.Documents.Flow.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet, Version=2017.3.907.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Telerik.Windows.Documents.Spreadsheet.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml, Version=2017.3.907.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Zip, Version=2017.3.907.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Telerik.Windows.Zip.dll</HintPath>
+    </Reference>
     <Reference Include="Telerik.Web.Spreadsheet">
       <HintPath>..\lib\RCAJAX\2017.3.913.45\AdditionalLibraries\Bin45\Telerik.Web.Spreadsheet.dll</HintPath>
     </Reference>
@@ -181,6 +217,7 @@
     <Content Include="Controls\UscCheckNamayande.ascx" />
     <Content Include="Controls\UscEntekhabPaymankar.ascx" />
     <Content Include="Controls\UscEntekhbProjeToInvoice.ascx" />
+    <Content Include="Controls\UscGridWtihAttachment.ascx" />
     <Content Include="Controls\UScListZirProje.ascx" />
     <Content Include="Controls\uscMahaleEjra.ascx" />
     <Content Include="Controls\UscNoeParameter.ascx" />
@@ -258,9 +295,14 @@
     <Content Include="Dashboard\flot\LICENSE.txt" />
     <Content Include="Dashboard\Paymankar\Default.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="Design\Images\attach.jpg" />
     <Content Include="Design\Images\backg2.jpg" />
+    <Content Include="Design\Images\DataImport2.png" />
+    <Content Include="Design\Images\DataImportIcon.png" />
+    <Content Include="Design\Images\importExcel.jpg" />
     <Content Include="Design\Images\loading.gif" />
     <Content Include="Design\Images\loadingAnimation.gif" />
+    <Content Include="Design\Images\pipes.jpg" />
     <Content Include="Design\Images\view-details.png" />
     <Content Include="Design\Scripts\bootstrap.js" />
     <Content Include="Design\Scripts\bootstrap.min.js" />
@@ -318,6 +360,7 @@
     <Content Include="Design\Styles\style.css" />
     <Content Include="Design\Styles\thickbox.css" />
     <Content Include="Design\Styles\validationEngine.jquery.css" />
+    <Content Include="Design\Styles\wizard.css" />
     <Content Include="DynamicData\Content\GridViewPager.ascx" />
     <Content Include="DynamicData\Content\Images\Back.gif" />
     <Content Include="DynamicData\Content\Images\header_back.gif" />
@@ -379,7 +422,6 @@
     <Content Include="Global.asax" />
     <Content Include="Logic\ReserveByPaymankar.js" />
     <Content Include="LoginUser.aspx" />
-    <Content Include="Monaghese\CSS\wizard.css" />
     <Content Include="Monaghese\getData.aspx" />
     <Content Include="Reports\Report.aspx" />
     <Content Include="Reports\ReportDesigner.aspx" />
@@ -461,6 +503,13 @@
     </Compile>
     <Compile Include="Controls\UscEntekhbProjeToInvoice.ascx.designer.cs">
       <DependentUpon>UscEntekhbProjeToInvoice.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UscGridWtihAttachment.ascx.cs">
+      <DependentUpon>UscGridWtihAttachment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UscGridWtihAttachment.ascx.designer.cs">
+      <DependentUpon>UscGridWtihAttachment.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\UScListZirProje.ascx.cs">
       <DependentUpon>UScListZirProje.ascx</DependentUpon>
@@ -558,6 +607,7 @@
     <Compile Include="DBClass\ViewZirProje.cs" />
     <Compile Include="DBClass\ViewZirProjeMoshtary.cs" />
     <Compile Include="DBClass\ViewZirprojeResevation.cs" />
+    <Compile Include="DBClass\ZirProjeLoolePartial.cs" />
     <Compile Include="DBClass\ZirProjeReservation.cs" />
     <Compile Include="DBClass\ZirProjeTahvilMovaghatPartial.cs" />
     <Compile Include="Design\Masters\Sitepopup.Master.cs">
@@ -713,6 +763,9 @@
     <Compile Include="Model\Moshtary.cs">
       <DependentUpon>AbyariModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\NoeLoole.cs">
+      <DependentUpon>AbyariModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\NoeProje.cs">
       <DependentUpon>AbyariModel.tt</DependentUpon>
     </Compile>
@@ -750,6 +803,12 @@
       <DependentUpon>AbyariModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\ZirProje.cs">
+      <DependentUpon>AbyariModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ZirProjeBaravord.cs">
+      <DependentUpon>AbyariModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ZirProjeLoole.cs">
       <DependentUpon>AbyariModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\ZirProjeReservation.cs">
@@ -1286,6 +1345,11 @@
     <Content Include="Dashboard\flot\README.md" />
     <Content Include="Dashboard\flot.tooltip\.bower.json" />
     <Content Include="Dashboard\flot.tooltip\bower.json" />
+    <Content Include="Download\fehrestBaha_general.xlsx" />
+    <Content Include="Download\fehrestBaha_jozee.xlsx" />
+    <Content Include="Download\projectProperties.xlsx" />
+    <Content Include="Download\loleh_general.xlsx" />
+    <Content Include="Download\loleh_jozee.xlsx" />
     <None Include="Properties\PublishProfiles\abyari.pubxml" />
     <Content Include="Reports\RequestPrint.mrt" />
     <Content Include="RequestPrint.mrt" />

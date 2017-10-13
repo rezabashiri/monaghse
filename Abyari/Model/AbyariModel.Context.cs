@@ -45,6 +45,9 @@ namespace Abyari.Model
         public DbSet<ViewZirProjeMoshtary> ViewZirProjeMoshtaries { get; set; }
         public DbSet<ViewZirprojeResevation> ViewZirprojeResevations { get; set; }
         public DbSet<Config> Configs { get; set; }
+        public DbSet<NoeLoole> NoeLooles { get; set; }
+        public DbSet<ZirProjeBaravord> ZirProjeBaravords { get; set; }
+        public DbSet<ZirProjeLoole> ZirProjeLooles { get; set; }
     
         public virtual ObjectResult<ViewZirProjeMoshtary> SearchZirProje_Get(string whereParam)
         {
@@ -301,6 +304,16 @@ namespace Abyari.Model
                 new ObjectParameter("Scoring", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_AddUpdateConfig", iDParameter, scoringParameter);
+        }
+    
+        public virtual int ImportFromExcelGeneral()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("ImportFromExcelGeneral");
+        }
+    
+        public virtual int importLolehExcelformat()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("importLolehExcelformat");
         }
     }
 }

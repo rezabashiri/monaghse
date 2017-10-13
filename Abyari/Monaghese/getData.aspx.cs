@@ -5,36 +5,98 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.DynamicData;
+using Telerik.Web.UI;
+using System.Data;
 
 namespace Abyari.Monaghese
 {
     public partial class getData : System.Web.UI.Page
     {
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            ImportFromExcel.OnImportDataCompelete += ImportFromExcel_OnImportDataCompelete;
+            ImportFromExcel_projectProperties.OnImportDataCompelete += ImportFromExcel_projectProperties_OnImportDataCompelete;
+            ImportFromExcel_ProjectGeneral.OnImportDataCompelete += ImportFromExcel_ProjectGeneral_OnImportDataCompelete;
+            ImportFromExcel_LolehGeneral.OnImportDataCompelete += ImportFromExcel_LolehGeneral_OnImportDataCompelete;
+            RadWizard3.NextButtonClick += RadWizard3_NextButtonClick;
+            RadWizard3.NavigationBarButtonClick += RadWizard3_NavigationBarButtonClick;
+            //uscFileUplaod.AttachId
         }
 
-        void ImportFromExcel_OnImportDataCompelete(System.Data.DataSet _ds)
+        private void ImportFromExcel_LolehGeneral_OnImportDataCompelete(DataSet _ds)
         {
-            grdProjecs.DataSource = _ds.Tables[0];
-            grdProjecs.DataBind();
+            var looleha = new Model.ZirProjeLoole();
+            looleha.ImportFromExcelLoloehProject(_ds);
+            ViewState["IsNextStep"] = true;
 
-
-            //WebUtility.Helpers.RegisterHelpers.RegisterScript(btnGoToNextSteps, "go", "$('#btnGoToNextSteps').prop('disabled', false);)", true);
         }
 
-        //void readFromExcel(System.Data.DataSet _ds)
-        //{
-        //    for (int i = 0; i < _ds.Tables[0].Rows.Count; i++)
-        //    {
+        private void ImportFromExcel_ProjectGeneral_OnImportDataCompelete(System.Data.DataSet _ds)
+        {
+            var projes = new Model.ZirProje();
+            var msg = projes.ImportFromExcelProject(_ds);
+            ViewState["IsNextStep"] = true;
+        }
 
-        //    }
-        //}
+        private void ImportFromExcel_projectProperties_OnImportDataCompelete(System.Data.DataSet _ds)
+        {
+            grdShowProjecs.DataSource = _ds.Tables[0];
+            grdShowProjecs.DataBind();
 
-        //protected void hdfield_Init(object sender, EventArgs e)
-        //{
-        //    grdShowProject.SetMetaTable(AppStart.DynamicDataConfig.GetMetaTable("Import"));
-        //}
+            var projes = new Model.ZirProje();
+            var msg = projes.ImportFromExcel(_ds, uscRoleSelect.RoleId, uscRoleSelect.UserId);
+
+            ViewState["IsNextStep"] = true;
+            //WebUtility.Helpers.RegisterHelpers.RegisterScript(this, "importExcel", "alert('salam')", true);
+        }
+
+        private void RadWizard3_NavigationBarButtonClick(object sender, Telerik.Web.UI.WizardEventArgs e)
+        {
+            RadWizard3.ActiveStepIndex = e.CurrentStepIndex;
+        }
+
+        private void RadWizard3_NextButtonClick(object sender, Telerik.Web.UI.WizardEventArgs e)
+        {
+            bool isNextstep = ViewState["IsNextStep"] != null ? (bool)ViewState["IsNextStep"] : false;
+            string projectCodes = ViewState["projectCode"] != null ? ViewState["projectCode"].ToString() : string.Empty;
+
+
+            var projes = new Model.ZirProje();
+
+
+            if (isNextstep == true)
+            {
+                if (e.CurrentStepIndex == 2)
+                {
+                    UscGridWtihAttachment.DataBound(projectCodes);
+                }
+
+                RadWizard3.ActiveStepIndex = e.CurrentStepIndex + 1;
+                ViewState["IsNextStep"] = false;
+            }
+            else
+                RadWizard3.ActiveStepIndex = e.CurrentStepIndex;
+        }
+
+        protected void grdShowProjecs_DataBound(object sender, EventArgs e)
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            string id;
+
+            foreach (GridDataItem item in (sender as Telerik.Web.UI.RadGrid).Items)
+            {
+                id = item.Cells[4].Text;
+                sb.Append(" Code = ");
+                sb.Append(id);
+                sb.Append(" OR ");
+            }
+
+            string temp = sb.ToString();
+
+            temp = temp.Remove(temp.Length - 3);
+
+
+            ViewState["projectCode"] = temp;
+        }
     }
 }

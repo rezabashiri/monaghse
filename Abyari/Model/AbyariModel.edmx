@@ -17,6 +17,16 @@
           <Property Name="Mobile" Type="nvarchar" MaxLength="50" />
           <Property Name="Address" Type="nvarchar" MaxLength="200" />
         </EntityType>
+        <EntityType Name="NoeLoole">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Noe" Type="nvarchar" MaxLength="50" />
+          <Property Name="Ghotr" Type="int" />
+          <Property Name="Made" Type="nvarchar" MaxLength="50" />
+          <Property Name="Feshar" Type="int" />
+        </EntityType>
         <EntityType Name="NoeProje">
           <Key>
             <PropertyRef Name="ID" />
@@ -156,6 +166,32 @@
           <Property Name="RoleId" Type="int" />
           <Property Name="UserId" Type="int" />
           <Property Name="WfExecutingID" Type="int" />
+          <Property Name="AttachID" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="ZirProjeBaravord">
+          <Key>
+            <PropertyRef Name="IDZirProje" />
+            <PropertyRef Name="IDNameFehrestBaha" />
+            <PropertyRef Name="CodeFaslFehrestBaha" />
+            <PropertyRef Name="CodeMetrehFehrestBaha" />
+            <PropertyRef Name="Year" />
+          </Key>
+          <Property Name="IDZirProje" Type="int" Nullable="false" />
+          <Property Name="IDNameFehrestBaha" Type="nvarchar" MaxLength="2" Nullable="false" />
+          <Property Name="CodeFaslFehrestBaha" Type="nvarchar" MaxLength="2" Nullable="false" />
+          <Property Name="CodeMetrehFehrestBaha" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="Year" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="Meghdar" Type="float" />
+        </EntityType>
+        <EntityType Name="ZirProjeLoole">
+          <Key>
+            <PropertyRef Name="IDNoeLoole" />
+            <PropertyRef Name="IDZirProje" />
+          </Key>
+          <Property Name="IDNoeLoole" Type="int" Nullable="false" />
+          <Property Name="IDZirProje" Type="int" Nullable="false" />
+          <Property Name="Tedad" Type="int" />
+          <Property Name="Vahed" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="ZirProjeReservation">
           <Key>
@@ -400,6 +436,42 @@ warning 6002: The table/view 'Abyari.dbo.ViewZirprojeResevation' does not have a
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_ZirProjeBaravord_ZirProje">
+          <End Role="ZirProje" Type="Self.ZirProje" Multiplicity="1" />
+          <End Role="ZirProjeBaravord" Type="Self.ZirProjeBaravord" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ZirProje">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ZirProjeBaravord">
+              <PropertyRef Name="IDZirProje" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ZirProjeLoole_NoeLoole">
+          <End Role="NoeLoole" Type="Self.NoeLoole" Multiplicity="1" />
+          <End Role="ZirProjeLoole" Type="Self.ZirProjeLoole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NoeLoole">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ZirProjeLoole">
+              <PropertyRef Name="IDNoeLoole" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ZirProjeLoole_ZirProje">
+          <End Role="ZirProje" Type="Self.ZirProje" Multiplicity="1" />
+          <End Role="ZirProjeLoole" Type="Self.ZirProjeLoole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ZirProje">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ZirProjeLoole">
+              <PropertyRef Name="IDZirProje" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_ZirProjeReservation_Paymankar">
           <End Role="Paymankar" Type="Self.Paymankar" Multiplicity="1" />
           <End Role="ZirProjeReservation" Type="Self.ZirProjeReservation" Multiplicity="*" />
@@ -427,7 +499,9 @@ warning 6002: The table/view 'Abyari.dbo.ViewZirprojeResevation' does not have a
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_ZirProjeTahvilMovaghat_ZirProje">
-          <End Role="ZirProje" Type="Self.ZirProje" Multiplicity="1" />
+          <End Role="ZirProje" Type="Self.ZirProje" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="ZirProjeTahvilMovaghat" Type="Self.ZirProjeTahvilMovaghat" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="ZirProje">
@@ -442,6 +516,8 @@ warning 6002: The table/view 'Abyari.dbo.ViewZirprojeResevation' does not have a
           <Parameter Name="UserID" Type="int" Mode="In" />
           <Parameter Name="RoleID" Type="int" Mode="In" />
         </Function>
+        <Function Name="ImportFromExcelGeneral" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="importLolehExcelformat" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="ListOfPaymankaranMojaz" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="ReshteIds" Type="varchar(max)" Mode="In" />
           <Parameter Name="Conditions" Type="nvarchar" Mode="In" />
@@ -504,6 +580,7 @@ warning 6002: The table/view 'Abyari.dbo.ViewZirprojeResevation' does not have a
         </Function>
         <EntityContainer Name="AbyariModelStoreContainer">
           <EntitySet Name="Moshtary" EntityType="Self.Moshtary" Schema="bse" store:Type="Tables" />
+          <EntitySet Name="NoeLoole" EntityType="Self.NoeLoole" Schema="bse" store:Type="Tables" />
           <EntitySet Name="NoeProje" EntityType="Self.NoeProje" Schema="bse" store:Type="Tables" />
           <EntitySet Name="Paymankar" EntityType="Self.Paymankar" Schema="bse" store:Type="Tables" />
           <EntitySet Name="PaymankarReshte" EntityType="Self.PaymankarReshte" Schema="bse" store:Type="Tables" />
@@ -513,6 +590,8 @@ warning 6002: The table/view 'Abyari.dbo.ViewZirprojeResevation' does not have a
           <EntitySet Name="Sherkat" EntityType="Self.Sherkat" Schema="bse" store:Type="Tables" />
           <EntitySet Name="Config" EntityType="Self.Config" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ZirProje" EntityType="Self.ZirProje" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ZirProjeBaravord" EntityType="Self.ZirProjeBaravord" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ZirProjeLoole" EntityType="Self.ZirProjeLoole" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ZirProjeReservation" EntityType="Self.ZirProjeReservation" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ZirProjeTahvilMovaghat" EntityType="Self.ZirProjeTahvilMovaghat" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ViewMahal" EntityType="Self.ViewMahal" store:Type="Views" store:Schema="dbo">
@@ -653,6 +732,18 @@ FROM [dbo].[ViewZirprojeResevation] AS [ViewZirprojeResevation]</DefiningQuery>
           <AssociationSet Name="FK_ZirProje_Sherkat" Association="Self.FK_ZirProje_Sherkat">
             <End Role="Sherkat" EntitySet="Sherkat" />
             <End Role="ZirProje" EntitySet="ZirProje" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ZirProjeBaravord_ZirProje" Association="Self.FK_ZirProjeBaravord_ZirProje">
+            <End Role="ZirProje" EntitySet="ZirProje" />
+            <End Role="ZirProjeBaravord" EntitySet="ZirProjeBaravord" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ZirProjeLoole_NoeLoole" Association="Self.FK_ZirProjeLoole_NoeLoole">
+            <End Role="NoeLoole" EntitySet="NoeLoole" />
+            <End Role="ZirProjeLoole" EntitySet="ZirProjeLoole" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ZirProjeLoole_ZirProje" Association="Self.FK_ZirProjeLoole_ZirProje">
+            <End Role="ZirProje" EntitySet="ZirProje" />
+            <End Role="ZirProjeLoole" EntitySet="ZirProjeLoole" />
           </AssociationSet>
           <AssociationSet Name="FK_ZirProjeReservation_Paymankar" Association="Self.FK_ZirProjeReservation_Paymankar">
             <End Role="Paymankar" EntitySet="Paymankar" />
@@ -797,6 +888,23 @@ FROM [dbo].[ViewZirprojeResevation] AS [ViewZirprojeResevation]</DefiningQuery>
             <Parameter Name="ID" Mode="In" Type="Int32" />
             <Parameter Name="Scoring" Mode="In" Type="String" />
           </FunctionImport>
+          <EntitySet Name="NoeLooles" EntityType="AbyariModel.NoeLoole" />
+          <EntitySet Name="ZirProjeBaravords" EntityType="AbyariModel.ZirProjeBaravord" />
+          <EntitySet Name="ZirProjeLooles" EntityType="AbyariModel.ZirProjeLoole" />
+          <AssociationSet Name="FK_ZirProjeLoole_NoeLoole" Association="AbyariModel.FK_ZirProjeLoole_NoeLoole">
+            <End Role="NoeLoole" EntitySet="NoeLooles" />
+            <End Role="ZirProjeLoole" EntitySet="ZirProjeLooles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ZirProjeBaravord_ZirProje" Association="AbyariModel.FK_ZirProjeBaravord_ZirProje">
+            <End Role="ZirProje" EntitySet="ZirProjes" />
+            <End Role="ZirProjeBaravord" EntitySet="ZirProjeBaravords" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ZirProjeLoole_ZirProje" Association="AbyariModel.FK_ZirProjeLoole_ZirProje">
+            <End Role="ZirProje" EntitySet="ZirProjes" />
+            <End Role="ZirProjeLoole" EntitySet="ZirProjeLooles" />
+          </AssociationSet>
+          <FunctionImport Name="ImportFromExcelGeneral" />
+          <FunctionImport Name="importLolehExcelformat" />
           </EntityContainer>
         <EntityType Name="PaymankarReshte">
           <Key>
@@ -969,6 +1077,9 @@ FROM [dbo].[ViewZirprojeResevation] AS [ViewZirprojeResevation]</DefiningQuery>
           <Property Name="RoleId" Type="Int32" />
           <Property Name="UserId" Type="Int32" />
           <Property Name="WfExecutingID" Type="Int32" />
+          <Property Name="AttachID" Type="Guid" />
+          <NavigationProperty Name="ZirProjeBaravords" Relationship="AbyariModel.FK_ZirProjeBaravord_ZirProje" FromRole="ZirProje" ToRole="ZirProjeBaravord" />
+          <NavigationProperty Name="ZirProjeLooles" Relationship="AbyariModel.FK_ZirProjeLoole_ZirProje" FromRole="ZirProje" ToRole="ZirProjeLoole" />
         </EntityType>
         <Association Name="FK_ZirProje_Moshtary">
           <End Type="AbyariModel.Moshtary" Role="Moshtary" Multiplicity="0..1" />
@@ -1321,6 +1432,81 @@ FROM [dbo].[ViewZirprojeResevation] AS [ViewZirprojeResevation]</DefiningQuery>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Scoring" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
+        <EntityType Name="NoeLoole">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Noe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Ghotr" Type="Int32" />
+          <Property Name="Made" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Feshar" Type="Int32" />
+          <NavigationProperty Name="ZirProjeLooles" Relationship="AbyariModel.FK_ZirProjeLoole_NoeLoole" FromRole="NoeLoole" ToRole="ZirProjeLoole" />
+        </EntityType>
+        <EntityType Name="ZirProjeBaravord">
+          <Key>
+            <PropertyRef Name="IDZirProje" />
+            <PropertyRef Name="IDNameFehrestBaha" />
+            <PropertyRef Name="CodeFaslFehrestBaha" />
+            <PropertyRef Name="CodeMetrehFehrestBaha" />
+            <PropertyRef Name="Year" />
+          </Key>
+          <Property Name="IDZirProje" Type="Int32" Nullable="false" />
+          <Property Name="IDNameFehrestBaha" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="CodeFaslFehrestBaha" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="CodeMetrehFehrestBaha" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="Year" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="Meghdar" Type="Double" />
+          <NavigationProperty Name="ZirProje" Relationship="AbyariModel.FK_ZirProjeBaravord_ZirProje" FromRole="ZirProjeBaravord" ToRole="ZirProje" />
+        </EntityType>
+        <EntityType Name="ZirProjeLoole">
+          <Key>
+            <PropertyRef Name="IDNoeLoole" />
+            <PropertyRef Name="IDZirProje" />
+          </Key>
+          <Property Name="IDNoeLoole" Type="Int32" Nullable="false" />
+          <Property Name="IDZirProje" Type="Int32" Nullable="false" />
+          <Property Name="Tedad" Type="Int32" />
+          <Property Name="Vahed" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="NoeLoole" Relationship="AbyariModel.FK_ZirProjeLoole_NoeLoole" FromRole="ZirProjeLoole" ToRole="NoeLoole" />
+          <NavigationProperty Name="ZirProje" Relationship="AbyariModel.FK_ZirProjeLoole_ZirProje" FromRole="ZirProjeLoole" ToRole="ZirProje" />
+        </EntityType>
+        <Association Name="FK_ZirProjeLoole_NoeLoole">
+          <End Type="AbyariModel.NoeLoole" Role="NoeLoole" Multiplicity="1" />
+          <End Type="AbyariModel.ZirProjeLoole" Role="ZirProjeLoole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NoeLoole">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ZirProjeLoole">
+              <PropertyRef Name="IDNoeLoole" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ZirProjeBaravord_ZirProje">
+          <End Type="AbyariModel.ZirProje" Role="ZirProje" Multiplicity="1" />
+          <End Type="AbyariModel.ZirProjeBaravord" Role="ZirProjeBaravord" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ZirProje">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ZirProjeBaravord">
+              <PropertyRef Name="IDZirProje" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ZirProjeLoole_ZirProje">
+          <End Type="AbyariModel.ZirProje" Role="ZirProje" Multiplicity="1" />
+          <End Type="AbyariModel.ZirProjeLoole" Role="ZirProjeLoole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ZirProje">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ZirProjeLoole">
+              <PropertyRef Name="IDZirProje" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1460,6 +1646,7 @@ FROM [dbo].[ViewZirprojeResevation] AS [ViewZirprojeResevation]</DefiningQuery>
           <EntitySetMapping Name="ZirProjes">
             <EntityTypeMapping TypeName="AbyariModel.ZirProje">
               <MappingFragment StoreEntitySet="ZirProje">
+                <ScalarProperty Name="AttachID" ColumnName="AttachID" />
                 <ScalarProperty Name="WfExecutingID" ColumnName="WfExecutingID" />
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
                 <ScalarProperty Name="RoleId" ColumnName="RoleId" />
@@ -1706,6 +1893,41 @@ FROM [dbo].[ViewZirprojeResevation] AS [ViewZirprojeResevation]</DefiningQuery>
             </EntityTypeMapping>
           </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="sp_AddUpdateConfig" FunctionName="AbyariModel.Store.sp_AddUpdateConfig" />
+          <EntitySetMapping Name="NoeLooles">
+            <EntityTypeMapping TypeName="AbyariModel.NoeLoole">
+              <MappingFragment StoreEntitySet="NoeLoole">
+                <ScalarProperty Name="Feshar" ColumnName="Feshar" />
+                <ScalarProperty Name="Made" ColumnName="Made" />
+                <ScalarProperty Name="Ghotr" ColumnName="Ghotr" />
+                <ScalarProperty Name="Noe" ColumnName="Noe" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ZirProjeBaravords">
+            <EntityTypeMapping TypeName="AbyariModel.ZirProjeBaravord">
+              <MappingFragment StoreEntitySet="ZirProjeBaravord">
+                <ScalarProperty Name="Meghdar" ColumnName="Meghdar" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="CodeMetrehFehrestBaha" ColumnName="CodeMetrehFehrestBaha" />
+                <ScalarProperty Name="CodeFaslFehrestBaha" ColumnName="CodeFaslFehrestBaha" />
+                <ScalarProperty Name="IDNameFehrestBaha" ColumnName="IDNameFehrestBaha" />
+                <ScalarProperty Name="IDZirProje" ColumnName="IDZirProje" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ZirProjeLooles">
+            <EntityTypeMapping TypeName="AbyariModel.ZirProjeLoole">
+              <MappingFragment StoreEntitySet="ZirProjeLoole">
+                <ScalarProperty Name="Vahed" ColumnName="Vahed" />
+                <ScalarProperty Name="Tedad" ColumnName="Tedad" />
+                <ScalarProperty Name="IDZirProje" ColumnName="IDZirProje" />
+                <ScalarProperty Name="IDNoeLoole" ColumnName="IDNoeLoole" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="ImportFromExcelGeneral" FunctionName="AbyariModel.Store.ImportFromExcelGeneral" />
+          <FunctionImportMapping FunctionImportName="importLolehExcelformat" FunctionName="AbyariModel.Store.importLolehExcelformat" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
