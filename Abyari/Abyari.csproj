@@ -58,6 +58,9 @@
     <Reference Include="App_Web_uscentitytypeshow.ascx.cc671b29">
       <HintPath>..\..\..\publish\WorkFlow\bin\App_Web_uscentitytypeshow.ascx.cc671b29.dll</HintPath>
     </Reference>
+    <Reference Include="App_Web_uscfileupload.ascx.cc671b29">
+      <HintPath>..\packages\App_Web_uscfileupload.ascx.cc671b29.dll</HintPath>
+    </Reference>
     <Reference Include="App_Web_uscimportfromexcel.ascx.cc671b29">
       <HintPath>..\..\..\publish\WebUtilityv2\bin\App_Web_uscimportfromexcel.ascx.cc671b29.dll</HintPath>
     </Reference>
@@ -98,7 +101,7 @@
       <HintPath>..\packages\Heidarpour.WebControlUI.dll</HintPath>
     </Reference>
     <Reference Include="JQControls">
-      <HintPath>..\..\..\component\JQControls_custom\JQControls_WithMs\bin\Debug\JQControls.dll</HintPath>
+      <HintPath>..\packages\JQControls.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AspNet.DynamicData.EFProvider">
       <HintPath>..\packages\Microsoft.AspNet.DynamicData.EFProvider.6.0.0\lib\net40\Microsoft.AspNet.DynamicData.EFProvider.dll</HintPath>
@@ -160,8 +163,9 @@
     <Reference Include="tkvUtility">
       <HintPath>..\..\..\component\Utility\bin\Release\tkvUtility.dll</HintPath>
     </Reference>
-    <Reference Include="WebUtilityv2">
-      <HintPath>..\..\..\component\WebUtility_v2\bin\WebUtilityv2.dll</HintPath>
+    <Reference Include="WebUtilityv2, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebUtilityv2.dll</HintPath>
     </Reference>
     <Reference Include="WorkFlow">
       <HintPath>..\..\..\publish\WorkFlow\bin\WorkFlow.dll</HintPath>
@@ -387,6 +391,7 @@
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="WebForm1.aspx" />
     <Content Include="WorkFlowHelpers\EntityDefinition.aspx" />
     <Content Include="WorkFlowHelpers\UscSearchZirProjeByWF.ascx" />
     <Content Include="WorkFlowHelpers\WorkFlowDefinition.aspx" />
@@ -801,6 +806,13 @@
     </Compile>
     <Compile Include="test.aspx.designer.cs">
       <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="WorkFlowHelpers\EntityDefinition.aspx.cs">
       <DependentUpon>EntityDefinition.aspx</DependentUpon>
@@ -1289,6 +1301,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

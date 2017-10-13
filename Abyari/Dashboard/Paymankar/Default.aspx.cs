@@ -11,7 +11,11 @@ namespace Abyari.Dashboard.Paymankar
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Helpers.SessionHelpers.GetCompany() == null )
+            if (AccessManagementService.Access.AccessControl.LoggedInUser.Roles.Any(x => x.RoleName == "مدیرسیستم"))
+            {
+                Response.Redirect("~/ZirProje/SearcZirProject.aspx", true);
+            }
+            else if (Helpers.SessionHelpers.GetCompany() == null )
             {
                 Server.Transfer("/Administrator/SelectCompany.aspx", false);
             }

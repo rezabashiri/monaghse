@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abyari", "Abyari\Abyari.csproj", "{2498220A-646C-4AED-83DF-B86DD3FA46C3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebUtility", "..\..\component\WebUtility_v2\WebUtility.csproj", "{D78F6BDC-6D1C-4511-ADD2-44B116D77CD8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{2498220A-646C-4AED-83DF-B86DD3FA46C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2498220A-646C-4AED-83DF-B86DD3FA46C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2498220A-646C-4AED-83DF-B86DD3FA46C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D78F6BDC-6D1C-4511-ADD2-44B116D77CD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D78F6BDC-6D1C-4511-ADD2-44B116D77CD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D78F6BDC-6D1C-4511-ADD2-44B116D77CD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D78F6BDC-6D1C-4511-ADD2-44B116D77CD8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
