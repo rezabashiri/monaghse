@@ -94,10 +94,10 @@
                             </div>--%>
                         </telerik:RadWizardStep>
 
-                        <telerik:RadWizardStep  ImageUrl="~/Design/Images/attach.jpg" BorderStyle="Groove" Title=" اضافه کردن فهرست بهای اجرا بصورت کلی" runat="server" StepType="Step" ValidationGroup="Confirmation" SpriteCssClass="confirmation">
+                        <telerik:RadWizardStep ImageUrl="~/Design/Images/attach.jpg" BorderStyle="Groove" Title=" اضافه کردن فهرست بهای اجرا بصورت کلی" runat="server" StepType="Step" ValidationGroup="Confirmation" SpriteCssClass="confirmation">
 
                             <div class="row">
-                                <div class="col-md-12 col-sm-12" style="text-align: center; padding-top:20px;">
+                                <div class="col-md-12 col-sm-12" style="text-align: center; padding-top: 20px;">
                                     <label>
                                         لطفا برای وارد کردن فهرست بهای اجرا بصورت کلی از قسمت زیر استفاده کنید
                                     </label>
@@ -131,10 +131,10 @@
 
                         </telerik:RadWizardStep>
 
-                        <telerik:RadWizardStep  ImageUrl="~/Design/Images/pipes.jpg" BorderStyle="Groove" Title="   اضافه کردن لوله های طرح بصورت کلی" runat="server" StepType="Step" ValidationGroup="Confirmation" SpriteCssClass="confirmation">
+                        <telerik:RadWizardStep ImageUrl="~/Design/Images/pipes.jpg" BorderStyle="Groove" Title="   اضافه کردن لوله های طرح بصورت کلی" runat="server" StepType="Step" ValidationGroup="Confirmation" SpriteCssClass="confirmation">
 
                             <div class="row">
-                                <div class="col-md-12 col-sm-12" style="text-align: center; padding-top:20px;">
+                                <div class="col-md-12 col-sm-12" style="text-align: center; padding-top: 20px;">
                                     <label>
                                         لطفا برای وارد کردن مشخصات لوله های طرح بصورت کلی از قسمت زیر استفاده نمائید
                                     </label>
@@ -170,16 +170,16 @@
 
 
 
-                           <telerik:RadWizardStep  ImageUrl="~/Design/Images/DataImportIcon.png" BorderStyle="Groove" Title="  اضافه کردن فهرست بهای اجرا و لوله های طرح بر اساس پروژه" runat="server" StepType="Finish" ValidationGroup="Confirmation" SpriteCssClass="confirmation">
+                        <telerik:RadWizardStep ImageUrl="~/Design/Images/DataImportIcon.png" BorderStyle="Groove" Title="  اضافه کردن فهرست بهای اجرا و لوله های طرح بر اساس پروژه" runat="server" StepType="Finish" ValidationGroup="Confirmation" SpriteCssClass="confirmation">
 
                             <div class="row">
-                                <div class="col-md-12 col-sm-12" style="text-align: center; padding-top:20px;">
+                                <div class="col-md-12 col-sm-12" style="text-align: center; padding-top: 20px;">
                                     <label>
                                         لطفا برای وارد کردن فهرست بهای اجرا و لوله های هر طرح بر روی عکس در جدول زیر کلیک کنید
                                     </label>
                                 </div>
                             </div>
-              
+
                             <div class="row">
 
                                 <div class="col-md-12 col-sm-12">
@@ -205,7 +205,45 @@
                         </telerik:RadWizardStep>--%>
 
                         <telerik:RadWizardStep runat="server" StepType="Complete" CssClass="complete">
-                            <p>با موفقیت مراحل را تمام کردید</p>
+                            <div class="panel panel-success">
+                                <div class="panel-heading">
+                                    با موفقیت مراحل را تمام کردید
+
+                                </div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-6">
+                                            <i class="fa fa-random"></i>
+                                            تعداد پروژه های وارد شده:
+                                        </div>
+                                        <div class="col-sm-12 col-md-6">
+
+                                            <asp:Label ID="lblProjectCount" runat="server"></asp:Label>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-6">
+                                            <i class="fa fa-empire"></i>
+                                            تعداد فهرست بهای طرح وارد شده:
+                                        </div>
+                                        <div class="col-sm-12 col-md-6">
+                                            <asp:Label ID="lblfehrestbahaCount" runat="server"></asp:Label>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-6">
+                                            <i class="fa fa-pied-piper"></i>
+                                            تعداد لوله های طرح وارد شده:
+                                        </div>
+                                        <div class="col-sm-12 col-md-6">
+                                            <asp:Label ID="lblLoolehaCount" runat="server"></asp:Label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </telerik:RadWizardStep>
 
                     </WizardSteps>

@@ -46,7 +46,7 @@ namespace Abyari.Controls
             var msg = projes.ImportFromExcelProject(_ds);
         }
 
-        public void DataBound(string projectCodes)
+        public Dictionary<string, string> DataBound(string projectCodes)
         {
             var projes = new Model.ZirProje();
             var role = AccessManagementService.Access.AccessControl.LoggedInUser.Roles.FirstOrDefault();
@@ -57,8 +57,18 @@ namespace Abyari.Controls
             }
             uscFileUplaod.UserId = AccessManagementService.Access.AccessControl.LoggedInUser.ID;
 
-            grdProjecsSelect.DataSource = projes.SearchZirProjeByConditions(projectCodes);
+            var ds = projes.SearchZirProjeByConditions(projectCodes);
+            Dictionary<string, string>  phones = new Dictionary<string, string>();
+
+            foreach (var phone in ds)
+            {
+                if (!phones.Any(x=>x.Key == phone.Mobile))
+                phones.Add(phone.Mobile, phone.NameMoshtary);
+            }
+            
+            grdProjecsSelect.DataSource = ds;
             grdProjecsSelect.DataBind();
+            return phones;
         }
     }
 }

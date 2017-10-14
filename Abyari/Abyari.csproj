@@ -52,6 +52,9 @@
     <Reference Include="App_Web_reciverposition.ascx.cc671b29">
       <HintPath>..\..\..\publish1\bin\App_Web_reciverposition.ascx.cc671b29.dll</HintPath>
     </Reference>
+    <Reference Include="App_Web_usccampains.ascx.cc671b29">
+      <HintPath>..\..\viral\publish\bin\App_Web_usccampains.ascx.cc671b29.dll</HintPath>
+    </Reference>
     <Reference Include="App_Web_usccontrol.ascx.cc671b29">
       <HintPath>..\..\..\publish\AccessManagement\bin\App_Web_usccontrol.ascx.cc671b29.dll</HintPath>
     </Reference>
@@ -102,11 +105,16 @@
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="Heidarpour.WebControlUI">
-      <HintPath>..\packages\Heidarpour.WebControlUI.dll</HintPath>
+    <Reference Include="Heidarpour.WebControlUI, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Heidarpour.WebControlUI.dll</HintPath>
     </Reference>
     <Reference Include="JQControls">
       <HintPath>..\..\..\component\JQControls_custom\JQControls_WithMs\bin\Debug\JQControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Kavenegar, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Kavenegar.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AspNet.DynamicData.EFProvider">
       <HintPath>..\packages\Microsoft.AspNet.DynamicData.EFProvider.6.0.0\lib\net40\Microsoft.AspNet.DynamicData.EFProvider.dll</HintPath>
@@ -201,7 +209,7 @@
       <HintPath>..\..\..\component\Utility\bin\Release\tkvUtility.dll</HintPath>
     </Reference>
     <Reference Include="WebUtilityv2">
-      <HintPath>..\..\..\component\WebUtility_v2\bin\WebUtilityv2.dll</HintPath>
+      <HintPath>..\packages\WebUtilityv2.dll</HintPath>
     </Reference>
     <Reference Include="WorkFlow">
       <HintPath>..\..\..\publish\WorkFlow\bin\WorkFlow.dll</HintPath>
@@ -421,6 +429,7 @@
     <Content Include="Financial\Management.aspx" />
     <Content Include="Global.asax" />
     <Content Include="LoginUser.aspx" />
+    <Content Include="Monaghese\farmerProjects.aspx" />
     <Content Include="Monaghese\getData.aspx" />
     <Content Include="Reports\Report.aspx" />
     <Content Include="Reports\ReportDesigner.aspx" />
@@ -743,6 +752,7 @@
     <Compile Include="Helpers\ReportHelpers.cs" />
     <Compile Include="Helpers\SessionHelpers.cs" />
     <Compile Include="Helpers\SetPathHelpers.cs" />
+    <Compile Include="Helpers\SMSHelpers.cs" />
     <Compile Include="Logic\Configuration.cs" />
     <Compile Include="Logic\import.cs" />
     <Compile Include="LoginUser.aspx.cs">
@@ -814,6 +824,13 @@
     </Compile>
     <Compile Include="Model\ZirProjeTahvilMovaghat.cs">
       <DependentUpon>AbyariModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Monaghese\farmerProjects.aspx.cs">
+      <DependentUpon>farmerProjects.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Monaghese\farmerProjects.aspx.designer.cs">
+      <DependentUpon>farmerProjects.aspx</DependentUpon>
     </Compile>
     <Compile Include="Monaghese\getData.aspx.cs">
       <DependentUpon>getData.aspx</DependentUpon>

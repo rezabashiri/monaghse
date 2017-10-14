@@ -15,6 +15,9 @@ namespace Abyari.Model
 
         public string ImportFromExcelLoloehProject(System.Data.DataSet ds)
         {
+
+            string cc = string.Empty;
+
             using (var en = Helpers.ContextHelpers.GetContext())
             {
                 try
@@ -53,7 +56,12 @@ namespace Abyari.Model
                         }
                         dt.Merge(table, false, MissingSchemaAction.Ignore);
                         pList.Value = dt;
-                        var ret = en.Database.ExecuteSqlCommand(TransactionalBehavior.DoNotEnsureTransaction, "dbo.importLolehExcelformat @data", pList);
+                        SqlParameter sqp = new SqlParameter();
+                        sqp.Direction = ParameterDirection.Output;
+                        sqp.ParameterName = "@count";
+                        sqp.DbType = DbType.Int32;
+                        var ret = en.Database.ExecuteSqlCommand(TransactionalBehavior.DoNotEnsureTransaction, "dbo.importLolehExcelformat @data, @count OUTPUT", pList, sqp);
+                        cc = sqp.Value.ToString();
                     }
 
                 }
@@ -68,12 +76,16 @@ namespace Abyari.Model
                             break;
                         default:
                             mes = string.Format("خطا رخ داده است : {0}", ex1.MessaeContent);
+                            WebUtility.Helpers.LogHelpers.TakeALogWithTime(ex1.MessaeContent);
                             break;
                     }
-                    return mes;
+                    return string.Empty;
                 }
             }
-            return "اطلاعات با موفقیت وارد شد";
+
+
+            //return string.Format("تعداد {0} با موفقیت وارد شد", cc);
+            return cc;
         }
     }
 }
