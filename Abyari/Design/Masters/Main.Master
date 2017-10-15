@@ -315,6 +315,7 @@
                               <li>
                                 <uc1:AccessCheckedHyperLink ID="AccessCheckedHyperLink1" runat="server" EntityName="Zirprozhe" LinkText="ورود اطلاعات" LinkHref="/ZirProje/ZirProje.aspx" ></uc1:AccessCheckedHyperLink>
                                 <uc1:AccessCheckedHyperLink ID="AccessCheckedHyperLink2" runat="server" EntityName="startMonaghese" LinkText="گرفتن اطلاعات" LinkHref="/Monaghese/getData.aspx" ></uc1:AccessCheckedHyperLink>
+                                <uc1:AccessCheckedHyperLink ID="AccessCheckedHyperLink3" runat="server" EntityName="farmerProject" LinkText="کشاورز" LinkHref="/Monaghese/farmerProjects.aspx" ></uc1:AccessCheckedHyperLink>
 
                               </li>
                                

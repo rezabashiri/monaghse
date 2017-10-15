@@ -58,6 +58,15 @@ namespace Abyari.Design.Masters {
         protected global::AccessManagementService.Controls.AccessCheckedHyperLink AccessCheckedHyperLink2;
         
         /// <summary>
+        /// AccessCheckedHyperLink3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AccessManagementService.Controls.AccessCheckedHyperLink AccessCheckedHyperLink3;
+        
+        /// <summary>
         /// BaseRepeater control.
         /// </summary>
         /// <remarks>
