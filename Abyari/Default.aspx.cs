@@ -11,8 +11,8 @@ namespace Abyari
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            ((Abyari.Design.Masters.Main)this.Master).PageTitle = "رزرو طرح های مجاز برای شما";
-            ((Abyari.Design.Masters.Main)this.Master).BreadCrumb = "از لیست زیر براساس پارامترهای دلخواه اقدام به جستجو نمایید ، در لیست طرح های مجاز براساس پارامترهای جستجو نمایش داده خواهد شد";
+            ((Abyari.Design.MasterPages.Administrator)this.Master).PageTitle = "رزرو طرح های مجاز برای شما";
+            ((Abyari.Design.MasterPages.Administrator)this.Master).BreadCrumb = "از لیست زیر براساس پارامترهای دلخواه اقدام به جستجو نمایید ، در لیست طرح های مجاز براساس پارامترهای جستجو نمایش داده خواهد شد";
             UscZirprojeSearchParameter.OnSearchCompelete += UscZirprojeSearchParameter_OnSearchCompelete;
         }
 

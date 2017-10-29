@@ -8,7 +8,8 @@ namespace Abyari.Model
 
     [MetadataType(typeof(MetaData))]
     [ScaffoldTable(false)]
-    public partial class ViewZirProjeMoshtary
+    [Serializable]
+    public partial class ViewZirProjeMoshtary :WorkFlow.InterFaces.ISearchTable
     {
         private class MetaData
         {
@@ -54,6 +55,36 @@ namespace Abyari.Model
             [Display(Name="نام متقاضی")]
             public string NameMoshtary { get; set; }
 
+        }
+        public string StepAccess
+        {
+            get;
+            set;
+        }
+
+        public WorkFlow.Logic.Step StepEntity
+        {
+            get
+            {
+                return new tkv.Utility.XmlHelper().DeserializeEntity<WorkFlow.Logic.Step>(StepAccess, new WorkFlow.Logic.Step());
+            }
+            set
+            {
+
+            }
+        }
+
+        public string StepName
+        {
+            get;
+            set;
+        }
+
+
+        public int? WfExecutingID
+        {
+            get;
+            set;
         }
     }
 }

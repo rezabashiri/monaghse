@@ -16,7 +16,7 @@ namespace Abyari.Design.Masters
                 List<MetaTable> _Basetables = Abyari.AppStart.DynamicDataConfig.DefualtModel.VisibleTables.Where(x => x.Scaffold == true).ToList();
                 BaseRepeater.DataSource = _Basetables;
                 BaseRepeater.DataBind();
-                if (AccessManagementService.Access.AccessControl.IsValidAccessToRight("مجوز مدیریت کاربر"))
+                if (global::AccessManagementService.Access.AccessControl.IsValidAccessToRight("مجوز مدیریت کاربر"))
                 {
                     UsersRepeater.DataSource = global:: AccessManagementService.AppStart.DynamicDataConfig.AccessManagementModel.VisibleTables.Where(x => x.Scaffold == true).ToList<MetaTable>();
                     UsersRepeater.DataBind();

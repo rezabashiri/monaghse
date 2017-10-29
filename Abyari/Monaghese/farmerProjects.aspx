@@ -57,9 +57,9 @@
     </div>
 
 
-    <telerik:RadGrid ID="grdProjecsSelect" runat="server" Skin="Sunset" AllowFilteringByColumn="false" AllowPaging="false">
+    <telerik:RadGrid ID="grdProjecsSelect" runat="server" Skin="Windows7" AllowFilteringByColumn="false" AllowPaging="false">
         <ClientSettings>
-            <Scrolling AllowScroll="true" ScrollHeight="700" />
+            <Scrolling AllowScroll="true" ScrollHeight="400" />
             <Resizing AllowResizeToFit="true" AllowColumnResize="true" />
 
         </ClientSettings>
@@ -73,8 +73,8 @@
                     </ItemTemplate>
                 </telerik:GridTemplateColumn>
 
-                <telerik:GridBoundColumn DataField="Name" HeaderText="نام مجری"></telerik:GridBoundColumn>
-                <telerik:GridBoundColumn DataField="CodeMeliMoshtary" HeaderText="کدملی"></telerik:GridBoundColumn>
+                <telerik:GridBoundColumn DataField="Name" HeaderText="نام طرح"></telerik:GridBoundColumn>
+                <telerik:GridBoundColumn DataField="CodeMeliMoshtary" HeaderText="کدملی بهره بردار"></telerik:GridBoundColumn>
                 <telerik:GridBoundColumn DataField="Code" HeaderText="کد پروژه"></telerik:GridBoundColumn>
                 <telerik:GridBoundColumn DataField="Shahrestan" HeaderText="شهرستان"></telerik:GridBoundColumn>
                 <telerik:GridBoundColumn DataField="NoeProje" HeaderText="عنوان کامل فعالیت"></telerik:GridBoundColumn>
@@ -95,9 +95,9 @@
             var e = document.getElementById("cmbMonagheseType");
             var cmbMonagheseType = e.options[e.selectedIndex].value;
 
-            var msg = "شما این پروژه را بصورت " + cmbMonagheseType + " وارد مناقصه خواهید کرد. آیا مطمئن هستید؟"
+            var msg = " شما طرح خود را بصورت " + cmbMonagheseType + " وارد مناقصه خواهید کرد. آیا مطمئن هستید؟"
 
-            var type = confirm("شما این پروژه با نوع را وارد مناقصه کردید" + cmbMonagheseType);
+            var type = confirm(msg);
             if (type == true) {
 
             }

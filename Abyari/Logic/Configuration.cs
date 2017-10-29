@@ -57,6 +57,14 @@ namespace Abyari.Logic
             get;
             set;
         }
+        /// <summary>
+        /// to find out witch workflow we have to use in sql zirpoje triger
+        /// </summary>
+        public Enums.SystemType SystemType
+        {
+            get;
+            set;
+        }
         public string TimeUpStepID
         {
             get;

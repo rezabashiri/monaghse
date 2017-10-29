@@ -26,7 +26,7 @@
                 <asp:TextBox ID="txtSubject" runat="server" CssClass="form-control"></asp:TextBox>
             </div>
             <div class="col-md-3 col-sm-12">
-                <asp:DropDownList ID="drpType" runat="server" CssClass="validate[required] from-control">
+                <asp:DropDownList ID="drpType" runat="server" CssClass="validate[required] form-control">
                     <asp:ListItem Text="انتخاب کنید" Selected="True" Value="">
                     </asp:ListItem>
                 </asp:DropDownList>
@@ -77,7 +77,18 @@
         </asp:TextBox>
         
     </div>
-            <div class="col-md-12 col-sm-12 text-center">
+            </div>
+             <div class="row">
+            <div class="col-md-3 col-sm-12">
+                نوع رفتار سیستم
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <asp:DropDownList ID="drpSystemType" runat="server" CssClass="validate[required] form-control">
+                    <asp:ListItem Text="انتخاب کنید" Selected="True" Value="">
+                    </asp:ListItem>
+                </asp:DropDownList>
+            </div>
+            <div class="col-md-5 col-sm-12 text-center">
                 <uc1:MoroorgaranButton ID="btnSave" CssClass="btn btn-lg btn-danger" ValidateionType="validate" Text="ثبت" OnClick="btnSave_Click" runat="server" />
 
                 </div>

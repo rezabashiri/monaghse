@@ -43,17 +43,14 @@
   <ItemGroup>
     <Reference Include="AccessManagementService, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\publish\AccessManagement\bin\AccessManagementService.dll</HintPath>
+      <HintPath>..\packages\AccessManagementService.dll</HintPath>
     </Reference>
     <Reference Include="App_Web_logincontrol.ascx.cc671b29, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\publish\AccessManagement\bin\App_Web_logincontrol.ascx.cc671b29.dll</HintPath>
+      <HintPath>..\packages\App_Web_logincontrol.ascx.cc671b29.dll</HintPath>
     </Reference>
     <Reference Include="App_Web_reciverposition.ascx.cc671b29">
       <HintPath>..\..\..\publish1\bin\App_Web_reciverposition.ascx.cc671b29.dll</HintPath>
-    </Reference>
-    <Reference Include="App_Web_usccampains.ascx.cc671b29">
-      <HintPath>..\..\viral\publish\bin\App_Web_usccampains.ascx.cc671b29.dll</HintPath>
     </Reference>
     <Reference Include="App_Web_usccontrol.ascx.cc671b29">
       <HintPath>..\..\..\publish\AccessManagement\bin\App_Web_usccontrol.ascx.cc671b29.dll</HintPath>
@@ -88,12 +85,13 @@
     <Reference Include="App_Web_uscroleselect.ascx.cc671b29">
       <HintPath>..\..\..\publish\AccessManagement\bin\App_Web_uscroleselect.ascx.cc671b29.dll</HintPath>
     </Reference>
-    <Reference Include="App_Web_uscsignup.ascx.cc671b29">
-      <HintPath>..\..\..\publish\AccessManagement\bin\App_Web_uscsignup.ascx.cc671b29.dll</HintPath>
+    <Reference Include="App_Web_uscsignup.ascx.cc671b29, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\App_Web_uscsignup.ascx.cc671b29.dll</HintPath>
     </Reference>
     <Reference Include="App_Web_uscverification.ascx.cc671b29, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\App_Web_uscverification.ascx.cc671b29.dll</HintPath>
+      <HintPath>..\packages\App_Web_uscverification.ascx.cc671b29.dll</HintPath>
     </Reference>
     <Reference Include="App_Web_uscworkflowdefinition.ascx.cc671b29">
       <HintPath>..\..\..\publish\WorkFlow\bin\App_Web_uscworkflowdefinition.ascx.cc671b29.dll</HintPath>
@@ -104,16 +102,11 @@
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="Heidarpour.WebControlUI, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Heidarpour.WebControlUI.dll</HintPath>
+    <Reference Include="Heidarpour.WebControlUI">
+      <HintPath>..\packages\Heidarpour.WebControlUI.dll</HintPath>
     </Reference>
     <Reference Include="JQControls">
       <HintPath>..\packages\JQControls.dll</HintPath>
-    </Reference>
-    <Reference Include="Kavenegar, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Kavenegar.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AspNet.DynamicData.EFProvider">
       <HintPath>..\packages\Microsoft.AspNet.DynamicData.EFProvider.6.0.0\lib\net40\Microsoft.AspNet.DynamicData.EFProvider.dll</HintPath>
@@ -302,6 +295,27 @@
     <Content Include="Dashboard\flot\LICENSE.txt" />
     <Content Include="Dashboard\Paymankar\Default.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="Design\css\bootstrap-rtl.min.css" />
+    <Content Include="Design\css\bootstrap.css" />
+    <Content Include="Design\css\bootstrap.min.css" />
+    <Content Include="Design\css\custom.css" />
+    <Content Include="Design\css\demo.min.css" />
+    <Content Include="Design\css\font-awesome.min.css" />
+    <Content Include="Design\css\lockscreen.min.css" />
+    <Content Include="Design\css\smartadmin-production-plugins.min.css" />
+    <Content Include="Design\css\smartadmin-production.min.css" />
+    <Content Include="Design\css\smartadmin-rtl.min.css" />
+    <Content Include="Design\css\smartadmin-skins.min.css" />
+    <Content Include="Design\css\StyleSheet1.css" />
+    <Content Include="Design\fonts\fontawesome-webfont78ce-2.html" />
+    <Content Include="Design\fonts\fontawesome-webfont78ce-3.html" />
+    <Content Include="Design\fonts\fontawesome-webfont78ce.html" />
+    <Content Include="Design\fonts\fontawesome-webfontd41d.html" />
+    <Content Include="Design\fonts\glyphicons-halflings-regular-2.html" />
+    <Content Include="Design\fonts\glyphicons-halflings-regular-3.html" />
+    <Content Include="Design\fonts\glyphicons-halflings-regular-4.html" />
+    <Content Include="Design\fonts\glyphicons-halflings-regular.html" />
+    <Content Include="Design\fonts\glyphicons-halflings-regulard41d.html" />
     <Content Include="Design\Images\attach.jpg" />
     <Content Include="Design\Images\backg2.jpg" />
     <Content Include="Design\Images\DataImport2.png" />
@@ -311,6 +325,65 @@
     <Content Include="Design\Images\loadingAnimation.gif" />
     <Content Include="Design\Images\pipes.jpg" />
     <Content Include="Design\Images\view-details.png" />
+    <Content Include="Design\img\ajax-loader.gif" />
+    <Content Include="Design\img\alpha.png" />
+    <Content Include="Design\img\avatars\1.png" />
+    <Content Include="Design\img\avatars\3.png" />
+    <Content Include="Design\img\avatars\4.png" />
+    <Content Include="Design\img\avatars\5.png" />
+    <Content Include="Design\img\avatars\female.png" />
+    <Content Include="Design\img\avatars\male.png" />
+    <Content Include="Design\img\avatars\sunny-big.png" />
+    <Content Include="Design\img\avatars\sunny.png" />
+    <Content Include="Design\img\blank.gif" />
+    <Content Include="Design\img\clear.png" />
+    <Content Include="Design\img\demo\iphoneview.png" />
+    <Content Include="Design\img\favicon\favicon.ico" />
+    <Content Include="Design\img\hue.png" />
+    <Content Include="Design\img\jcrop\Jcrop.gif" />
+    <Content Include="Design\img\jqueryui\ui-icons_222222_256x240.png" />
+    <Content Include="Design\img\jqueryui\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Design\img\jqueryui\ui-icons_454545_256x240.png" />
+    <Content Include="Design\img\jqueryui\ui-icons_888888_256x240.png" />
+    <Content Include="Design\img\jqueryui\ui-icons_f6cf3b_256x240.png" />
+    <Content Include="Design\img\loading.gif" />
+    <Content Include="Design\img\logo-o.png" />
+    <Content Include="Design\img\logo.png" />
+    <Content Include="Design\img\metropolitan.jpg" />
+    <Content Include="Design\img\minus.png" />
+    <Content Include="Design\img\plus.png" />
+    <Content Include="Design\img\saturation.png" />
+    <Content Include="Design\img\select2-spinner.gif" />
+    <Content Include="Design\img\splash\ipad-landscape.png" />
+    <Content Include="Design\img\splash\ipad-portrait.png" />
+    <Content Include="Design\img\splash\iphone.png" />
+    <Content Include="Design\img\splash\sptouch-icon-iphone.png" />
+    <Content Include="Design\img\splash\touch-icon-ipad-retina.png" />
+    <Content Include="Design\img\splash\touch-icon-ipad.png" />
+    <Content Include="Design\img\splash\touch-icon-iphone-retina.png" />
+    <Content Include="Design\img\voicecommand\active-btn.gif" />
+    <Content Include="Design\js\app.config.js" />
+    <Content Include="Design\js\app.min.js" />
+    <Content Include="Design\js\bootstrap\bootstrap.min.js" />
+    <Content Include="Design\js\demo.min.js" />
+    <Content Include="Design\js\JavaScript1.js" />
+    <Content Include="Design\js\libs\jquery-2.1.1.min.js" />
+    <Content Include="Design\js\libs\jquery-ui-1.10.3.min.js" />
+    <Content Include="Design\js\notification\SmartNotification.min.js" />
+    <Content Include="Design\js\plugin\bootstrap-slider\bootstrap-slider.min.js" />
+    <Content Include="Design\js\plugin\easy-pie-chart\jquery.easy-pie-chart.min.js" />
+    <Content Include="Design\js\plugin\fastclick\fastclick.min.js" />
+    <Content Include="Design\js\plugin\jquery-touch\jquery.ui.touch-punch.min.js" />
+    <Content Include="Design\js\plugin\jquery-validate\jquery.validate.min.js" />
+    <Content Include="Design\js\plugin\masked-input\jquery.maskedinput.min.js" />
+    <Content Include="Design\js\plugin\msie-fix\jquery.mb.browser.min.js" />
+    <Content Include="Design\js\plugin\pace\pace.min.js" />
+    <Content Include="Design\js\plugin\select2\select2.min.js" />
+    <Content Include="Design\js\plugin\sparkline\jquery.sparkline.min.js" />
+    <Content Include="Design\js\smart-chat-ui\smart.chat.manager.min.js" />
+    <Content Include="Design\js\smart-chat-ui\smart.chat.ui.min.js" />
+    <Content Include="Design\js\smartwidgets\jarvis.widget.min.js" />
+    <Content Include="Design\js\speech\voicecommand.min.js" />
     <Content Include="Design\Scripts\bootstrap.js" />
     <Content Include="Design\Scripts\bootstrap.min.js" />
     <Content Include="Design\Scripts\jkblayout.min.js" />
@@ -431,6 +504,7 @@
     <Content Include="LoginUser.aspx" />
     <Content Include="Monaghese\farmerProjects.aspx" />
     <Content Include="Monaghese\getData.aspx" />
+    <Content Include="Monaghese\SearchWf.aspx" />
     <Content Include="Reports\Report.aspx" />
     <Content Include="Reports\ReportDesigner.aspx" />
     <Content Include="Reports\ReportShow.aspx" />
@@ -444,6 +518,7 @@
     <Content Include="WebForm1.aspx" />
     <Content Include="WorkFlowHelpers\EntityDefinition.aspx" />
     <Content Include="WorkFlowHelpers\UscSearchZirProjeByWF.ascx" />
+    <Content Include="WorkFlowHelpers\UscSearchZirprojeMoshtariByWF.ascx" />
     <Content Include="WorkFlowHelpers\WorkFlowDefinition.aspx" />
     <Content Include="ZirProje\SearcZirProject.aspx" />
     <Content Include="ZirProje\ZirProje.aspx" />
@@ -618,6 +693,13 @@
     <Compile Include="DBClass\ZirProjeLoolePartial.cs" />
     <Compile Include="DBClass\ZirProjeReservation.cs" />
     <Compile Include="DBClass\ZirProjeTahvilMovaghatPartial.cs" />
+    <Compile Include="Design\Masters\Administrator.Master.cs">
+      <DependentUpon>Administrator.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Design\Masters\Administrator.Master.designer.cs">
+      <DependentUpon>Administrator.Master</DependentUpon>
+    </Compile>
     <Compile Include="Design\Masters\Sitepopup.Master.cs">
       <DependentUpon>Sitepopup.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -840,6 +922,13 @@
     <Compile Include="Monaghese\getData.aspx.designer.cs">
       <DependentUpon>getData.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Monaghese\SearchWf.aspx.cs">
+      <DependentUpon>SearchWf.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Monaghese\SearchWf.aspx.designer.cs">
+      <DependentUpon>SearchWf.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Reports\Report.aspx.cs">
       <DependentUpon>Report.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -902,6 +991,13 @@
     </Compile>
     <Compile Include="WorkFlowHelpers\UscSearchZirProjeByWF.ascx.designer.cs">
       <DependentUpon>UscSearchZirProjeByWF.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlowHelpers\UscSearchZirprojeMoshtariByWF.ascx.cs">
+      <DependentUpon>UscSearchZirprojeMoshtariByWF.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlowHelpers\UscSearchZirprojeMoshtariByWF.ascx.designer.cs">
+      <DependentUpon>UscSearchZirprojeMoshtariByWF.ascx</DependentUpon>
     </Compile>
     <Compile Include="WorkFlowHelpers\WorkFlowDefinition.aspx.cs">
       <DependentUpon>WorkFlowDefinition.aspx</DependentUpon>
@@ -1366,6 +1462,23 @@
     <Content Include="Download\projectProperties.xlsx" />
     <Content Include="Download\loleh_general.xlsx" />
     <Content Include="Download\loleh_jozee.xlsx" />
+    <Content Include="Design\css\bootstrap.css.map" />
+    <Content Include="Design\fonts\BYekan.eot" />
+    <Content Include="Design\fonts\BYekan.ttf" />
+    <Content Include="Design\fonts\BYekan.woff" />
+    <Content Include="Design\fonts\fontawesome-webfont78ce.svg" />
+    <Content Include="Design\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Design\fonts\IRANSans-Light.eot" />
+    <Content Include="Design\fonts\IRANSans-Light.woff" />
+    <Content Include="Design\fonts\IRANSans-Light.woff2" />
+    <Content Include="Design\fonts\IRANSANS.eot" />
+    <Content Include="Design\fonts\IRANSANS.woff" />
+    <Content Include="Design\fonts\IRANSANS.woff2" />
+    <Content Include="Design\fonts\iransw.eot" />
+    <Content Include="Design\fonts\iransw.ttf" />
+    <Content Include="Design\fonts\iransw.woff" />
+    <Content Include="Design\fonts\iransw.woff2" />
+    <Content Include="Design\Masters\Administrator.Master" />
     <None Include="Properties\PublishProfiles\abyari.pubxml" />
     <Content Include="Reports\RequestPrint.mrt" />
     <Content Include="RequestPrint.mrt" />

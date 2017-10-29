@@ -32,6 +32,18 @@ namespace Abyari.WorkFlowHelpers
             var data = _wfEngine.SearchByWorkflow<sp_ListOFPaymankarsProject_Result>(EntityTypeID, WhereParameter, AccessManagementService.Access.AccessControl.LoggedInUser.UserRoles, AccessManagementService.Access.AccessControl.LoggedInUser.ID);
             return data;
         }
+        public List<Model.ViewZirProjeMoshtary> SearchOnZirProjeMoshtari(string WhereParameter, int EntityTypeID)
+        {
+
+            WorkFlowSearchEngine _wfEngine = new WorkFlowSearchEngine();
+            if (!string.IsNullOrEmpty(WhereParameter))
+            {
+                if (WhereParameter.IndexOf(" and", 0, 4) <= 0)
+                    WhereParameter = WhereParameter.Insert(0, " and");
+            }
+            var data = _wfEngine.SearchByWorkflow<ViewZirProjeMoshtary>(EntityTypeID, WhereParameter, AccessManagementService.Access.AccessControl.LoggedInUser.UserRoles, AccessManagementService.Access.AccessControl.LoggedInUser.ID);
+            return data;
+        }
         public Step Deserialze(string _step)
         {
             //we code current step to avoid potential dangerous

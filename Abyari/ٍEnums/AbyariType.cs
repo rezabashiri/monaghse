@@ -34,5 +34,12 @@ namespace Abyari.Enums
             [Description("امتیاز پروژه های کوچک")]
             SmallScore
         }
+        public enum SystemType
+        {
+             [Description("مناقصه")]
+            Monagehese,
+             [Description("انجمن")]
+            Anjoman
+        }
     
 }

@@ -9,7 +9,7 @@ using WorkFlow.Logic;
 using System.Web.DynamicData;
 namespace Abyari.WorkFlowHelpers
 {
-    public partial class UscSearchZirProjeByWF : System.Web.UI.UserControl
+    public partial class UscSearchZirProjeByWF : System.Web.UI.UserControl,WorkFlow.InterFaces.IWorkFlowAccess
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -17,63 +17,13 @@ namespace Abyari.WorkFlowHelpers
             SetGroupByExpression();
             _engine = new WorkFlowEngineHelpers();
         }
-        public bool View
-        {
-            get;
-            set;
-        }
-
-        public bool Insert
-        {
-            get;
-            set;
-        }
-
-        public bool Edit
-        {
-            get;
-            set;
-        }
-
-        public bool Delete
-        {
-            get;
-            set;
-        }
-
-        public bool Print
-        {
-            get;
-            set;
-        }
-
-
-        public bool Attach
-        {
-            get;
-            set;
-        }
-
-        public bool WorkFlow
-        {
-            get;
-            set;
-        }
+       
         public string GroupByExpressionField
         {
             set;
             get;
         }
-        public int? ExecutingID
-        {
-            get;
-            set;
-        }
-        public string LastStep
-        {
-            get;
-            set;
-        }
+
  
         private void SetPrimaryKeys()
         {
@@ -130,7 +80,7 @@ namespace Abyari.WorkFlowHelpers
             if (ViewState["datasource"] == null)
                 return;
             var access = ViewState["datasource"] as List< Model.sp_ListOFPaymankarsProject_Result> ;
-
+     
             int counter = 0;
             foreach (Telerik.Web.UI.GridDataItem item in grdZirProjeData.Items)
             {
@@ -165,6 +115,78 @@ namespace Abyari.WorkFlowHelpers
 
             }
 
+        }
+
+        public bool Attach
+        {
+            get
+         ;
+            set
+            ;
+        }
+
+        public bool Delete
+        {
+            get
+            ;
+            set
+            ;
+        }
+
+        public bool Edit
+        {
+            get
+           ;
+            set
+           ;
+        }
+
+        public int? ExecutingID
+        {
+            get
+            ;
+            set
+            ;
+        }
+
+        public bool Insert
+        {
+            get
+            ;
+            set
+            ;
+        }
+
+        public string LastStep
+        {
+            get
+            ;
+            set
+           ;
+        }
+
+        public bool Print
+        {
+            get
+            ;
+            set
+            ;
+        }
+
+        public bool View
+        {
+            get
+            ;
+            set
+            ;
+        }
+
+        public bool WorkFlow
+        {
+            get
+           ;
+            set
+         ;
         }
     }
 }

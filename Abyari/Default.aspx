@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Design/Masters/Main.Master"  CodeBehind="Default.aspx.cs" Inherits="Abyari.Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Design/Masters/Administrator.Master"  CodeBehind="Default.aspx.cs" Inherits="Abyari.Default" %>
 
 <%@ Register Src="~/Controls/UScListZirProje.ascx" TagPrefix="uc2" TagName="UScListZirProje" %>
 <%@ Register Src="~/WorkFlowHelpers/UscSearchZirProjeByWF.ascx" TagPrefix="uc2" TagName="UscSearchZirProjeByWF" %>

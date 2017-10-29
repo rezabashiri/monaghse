@@ -18,8 +18,9 @@ namespace Abyari.ScoringSystem
                 {
                     ViewState["__scorelist"] = new Configuration();
                 }
-                BindData();
                 BindDropDown();
+
+                BindData();
             }
         }
         private void BindData()
@@ -33,6 +34,7 @@ namespace Abyari.ScoringSystem
                 config = config.Deserialize(_con.Scoring);
                 txtTime.Text = config.AllowedTime.ToString();
                 txtWfName.Text = config.TimeUpStepID;
+                drpSystemType.SelectedIndex = drpSystemType.Items.IndexOf(drpSystemType.Items.FindByValue( config.SystemType.ToString()));
                 ViewState["__scorelist"] = config;
                 grdConfig.DataBind();
             }
@@ -45,11 +47,19 @@ namespace Abyari.ScoringSystem
                 var desc = _item.GetAttributeOfType<System.ComponentModel.DescriptionAttribute>();
                 drpType.Items.Add(new ListItem() { Text = desc.Description, Value = _item.ToString() });
             }
+            foreach (var item in Enum.GetValues(typeof(Enums.SystemType)))
+            {
+                Enums.SystemType _item = (Enums.SystemType)item;
+                var desc = _item.GetAttributeOfType<System.ComponentModel.DescriptionAttribute>();
+                drpSystemType.Items.Add(new ListItem() { Text = desc.Description, Value = _item.ToString() });
+            }
         }
         protected void btkAdd_Click(object sender, EventArgs e)
         {
             var config = ViewState["__scorelist"] as Configuration;
             var sco = (Enums.ScoreType)Enum.Parse(typeof(Enums.ScoreType), drpType.SelectedValue);
+            
+
             if (!config.ScoreConfigList.Any(x => x.ScoreTypes == sco))
             {
                 config.ScoreConfigList.Add(new ScoreSystem() { Score = double.Parse(txtScore.Text), Subject = txtSubject.Text, ScoreTypes = sco });
@@ -64,10 +74,12 @@ namespace Abyari.ScoringSystem
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
+            var type = (Enums.SystemType)Enum.Parse(typeof(Enums.SystemType), drpSystemType.SelectedValue);
             Model.Config _entity = new Model.Config();
             var conf = ViewState["__scorelist"] as Configuration;
             conf.AllowedTime = txtTime.Text.ToInt32();
             conf.TimeUpStepID = txtWfName.Text;
+            conf.SystemType = type;
             _entity.Scoring = conf.SerializeToXML();
             _entity.ID = ViewState["__confid"] != null ? ViewState["__confid"].ToInt32() : -1;
             _entity.AddUpdate();

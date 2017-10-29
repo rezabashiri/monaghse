@@ -68,7 +68,7 @@ namespace Abyari.Model
             public Nullable<bool> Reserved { get; set; }
         }
 
-
+   
 
         public string StepAccess
         {

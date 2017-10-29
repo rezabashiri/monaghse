@@ -13,22 +13,31 @@ namespace Abyari {
     public partial class LoginUser {
         
         /// <summary>
-        /// divLogin control.
+        /// Form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divLogin;
+        protected global::System.Web.UI.HtmlControls.HtmlForm Form1;
         
         /// <summary>
-        /// SignUpControl control.
+        /// RadScriptManager1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AccessManagementService.Controls.SignUp SignUpControl;
+        protected global::Telerik.Web.UI.RadScriptManager RadScriptManager1;
+        
+        /// <summary>
+        /// v control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AccessManagementService.Controls.SignUp v;
         
         /// <summary>
         /// LoginControl control.
@@ -38,5 +47,14 @@ namespace Abyari {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::AccessManagementService.Controls.Login LoginControl;
+        
+        /// <summary>
+        /// load control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::WebUtility.Controls.LoadMoroorgaranControls load;
     }
 }
