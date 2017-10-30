@@ -107,17 +107,20 @@ namespace Abyari.Controls
                     
             //    }
             //}
-            if (frmAbyari.CurrentMode == FormViewMode.Insert)
+            switch (frmAbyari.CurrentMode)
             {
-                contract.Date = entry.Date = DateTime.Now;    
+                case FormViewMode.Insert:
+                    contract.Date = entry.Date = DateTime.Now;
+                    upload.Visible = false;
+                    break;
+                case FormViewMode.ReadOnly:
+                    upload.Visible = false;
+                    break;
             }
-             
+          
         }
 
-        protected void frmAbyari_ModeChanging(object sender, FormViewModeEventArgs e)
-        {
-            var t = e;
-        }
+    
 
         protected void frmAbyari_ItemUpdated(object sender, FormViewUpdatedEventArgs e)
         {

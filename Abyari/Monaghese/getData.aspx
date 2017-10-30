@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Design/Masters/Main.Master" AutoEventWireup="true" CodeBehind="getData.aspx.cs" Inherits="Abyari.Monaghese.getData" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Design/Masters/Administrator.Master" AutoEventWireup="true" CodeBehind="getData.aspx.cs" Inherits="Abyari.Monaghese.getData" %>
 
 <%@ Register Src="~/Controls/UscGridWtihAttachment.ascx" TagPrefix="uc2" TagName="UscGridWtihAttachment" %>
 

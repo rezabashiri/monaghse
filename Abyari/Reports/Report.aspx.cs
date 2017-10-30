@@ -18,8 +18,8 @@ namespace Abyari.Reports
                 //dteEnd.CalendarType = JQControls.CalendarType.Jalali;
               
                dteFrom.Date = new tkv.Utility.DateConversion().converttomiladi("1394/01/01");
-               ((Abyari.Design.Masters.Main)this.Master).PageTitle = " گزارشات مدیریت";
-               ((Abyari.Design.Masters.Main)this.Master).BreadCrumb = "براساس پارامترها ، شرایط جستجو را محدود کنید";
+               //((Abyari.Design.Masters.Main)this.Master).PageTitle = " گزارشات مدیریت";
+               //((Abyari.Design.Masters.Main)this.Master).BreadCrumb = "براساس پارامترها ، شرایط جستجو را محدود کنید";
             }
              
 

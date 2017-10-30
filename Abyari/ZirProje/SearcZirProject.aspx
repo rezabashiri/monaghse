@@ -1,4 +1,4 @@
-﻿<%@ Page Title="جستجوی زیر پروژ ها " Language="C#" EnableEventValidation="false" MasterPageFile="/Design/Masters/Main.master" AutoEventWireup="true" CodeBehind="SearcZirProject.aspx.cs" Inherits="Abyari.ZirProje.SearcZirProject" %>
+﻿<%@ Page Title="جستجوی زیر پروژ ها " Language="C#" EnableEventValidation="false" MasterPageFile="~/Design/Masters/Administrator.Master" AutoEventWireup="true" CodeBehind="SearcZirProject.aspx.cs" Inherits="Abyari.ZirProje.SearcZirProject" %>
 
 <%@ Register TagPrefix="dynamic" Assembly="Abyari" Namespace="Telerik.Web.UI.DynamicData" %>
 <%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
@@ -15,9 +15,9 @@
             var grid = $find("<%= GrdZirPRoje.ClientID %>");
             if (grid ) {
                 var columns = grid.get_masterTableView().get_columns();
-                for (var i = 0; i < columns.length; i++) {
-                    columns[i].resizeToFit(false, true);
-                }
+                //for (var i = 0; i < columns.length; i++) {
+                //    columns[i].resizeToFit(false, true);
+                //}
             }
         }
         function decontract(btn,idpay) {
@@ -120,7 +120,7 @@
 
     <asp:Panel runat="server" ID="PnlContent">
         <div class="panel panel-warning">
-            <div class="panel panel-heading text-right">
+            <div class="panel panel-heading text-left">
                 <asp:Panel ID="PnlHeader"  runat="server" Style="cursor: pointer;">
                     جستجوی  پروژ ها 
                 </asp:Panel>
@@ -130,26 +130,29 @@
                 <uc2:UscZirprojeSearchParameter ShowStatus="true" ShowCompany="true" runat="server" ID="UscZirprojeSearchParameter" />
 
                 <div class="col-sm-12 text-right" style="width: 100%; direction: rtl">
-                    <telerik:RadGrid runat="server" ID="GrdZirPRoje" Skin="Windows7" AllowFilteringByColumn="false" AllowAutomaticUpdates="true"
+                    <telerik:RadGrid runat="server" ID="GrdZirPRoje" Skin="Windows7" AllowFilteringByColumn="false" AllowAutomaticUpdates="true" ActiveItemStyle-Wrap="false"
                         AutoGenerateColumns="false" AllowPaging="false" AllowSorting="true"  ShowFooter="true" OnDataBound="GrdZirPRoje_DataBound"
-                        OnItemCommand="GrdZirPRoje_ItemCommand">
+                        OnItemCommand="GrdZirPRoje_ItemCommand"  >
                         <ExportSettings ExportOnlyData="true" FileName="پروژه ها" IgnorePaging="true" HideStructureColumns="true" >
                             <Excel Format="Biff"  />
                         </ExportSettings>
                         <ClientSettings>
-            <Scrolling AllowScroll="true" ScrollHeight="700" />
+            <Scrolling AllowScroll="true"  ScrollHeight="700" />
             <Resizing AllowResizeToFit="true" AllowColumnResize="true"  />
+                         
         </ClientSettings>
-                        <MasterTableView DataKeyNames="ID" ClientDataKeyNames="ID,IDPaymankar" CommandItemDisplay="Top" AutoGenerateColumns="false" NoMasterRecordsText="اطلاعاتی برای نمایش وجود ندارد">
+                        <HeaderStyle Width="130px" />
+                        <MasterTableView  DataKeyNames="ID"   ClientDataKeyNames="ID,IDPaymankar" CommandItemDisplay="Top" AutoGenerateColumns="false" NoMasterRecordsText="اطلاعاتی برای نمایش وجود ندارد">
                             
                             <CommandItemSettings ShowExportToExcelButton="true"  ShowExportToPdfButton="true" ShowRefreshButton="false" ShowAddNewRecordButton="false" ShowExportToWordButton="true" />
-                            <Columns>
-                                <telerik:GridTemplateColumn Exportable="false" HeaderText="چاپ">
+                            <Columns >
+                                <telerik:GridTemplateColumn  Exportable="false" HeaderText="چاپ">
                                     <ItemTemplate>
                                         <uc1:ReportShowButton ID="RepShow" runat="server" CommandName="ReportShow" ReportID="7b898480-f7e6-48de-ba47-a0a141b15b8f" OpenAsModal="true"  ViewerURL="Reports/ReportShow.aspx" ButtonType="ReportShow" />
                                     </ItemTemplate>
                                 </telerik:GridTemplateColumn>
                                 <telerik:GridTemplateColumn Exportable="false" HeaderText="پیمانکاران ثبت شده">
+                                     
                                     <ItemTemplate>
                                         <asp:Button runat="server" Text="انتخاب"   Visible="<%# setvisible() %>"  CssClass="btn btn-sm  btn-info" ID="Button1" CommandName="Close"  />
                                         <asp:Button runat="server" Text="مشاهده پیمانکاران"     CssClass="btn btn-sm  btn-info" ID="BtnSelect" CommandName="Select" />
@@ -289,6 +292,6 @@
 </div>
 </div>
         </div>
-        <%--</div>--%>
+   
     </asp:Panel>
 </asp:Content>

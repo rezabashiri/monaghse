@@ -8,49 +8,52 @@
 
 
 
-<div class="row">
+    <div class="form-horizontal">
+<div class="row">  
+      <div class="form-group">
 <uc2:uscMahaleEjra runat="server" ID="uscMahaleEjra" />
 </div>
-
-
-    
-<div class="row">
-
-                       <div class="col-md-6 com-sm-12">
+    <div class="form-group">
+                        
                         <uc2:UscNoeParameter runat="server" ID="UscNoeParameter" />
-                    </div>
-                    <div class="col-md-3 col-sm-12 text-left ">
+                     
+                    <div class="col-md-2 col-sm-12 text-right ">
                         کد پروژه
                     </div>
-                    <div class="col-md-3 col-sm-12 text-right">
+                    <div class="col-md-3 col-sm-12 text-left">
                         <asp:TextBox ID="TxtCode" CssClass="form-control text-right  number" runat="server"></asp:TextBox>
                     </div>
-              
-                       <div class="col-md-3 col-sm-12 text-left ">
+              </div>
+    <div class="form-group">
+                       <div class="col-md-2 col-sm-12 text-right ">
                       نام خانوادگی متقاضی
                     </div>
-     <div class="col-md-3 col-sm-12  text-right" style="direction: rtl">
+     <div class="col-md-3 col-sm-12   " style="direction: rtl">
                         <asp:TextBox ID="txtFamily" CssClass="form-control text-right  " runat="server"></asp:TextBox>
          </div>
-                    <div class="col-md-3 col-sm-12 text-left ">
+                    <div class="col-md-2 col-sm-12 text-right ">
                    کد ملی متقاضی
                     </div>
-                    <div class="col-md-3 col-sm-12 text-right">
+        
+                    <div class="col-md-3 col-sm-12 text-left">
                         <asp:TextBox ID="txtCodeMeli" CssClass="form-control text-right  LegalNationalCode" runat="server"></asp:TextBox>
                     </div>
-                    <div class="col-md-3 col-sm-12 text-left  ">
+        </div>
+    <div class="form-group">
+
+                    <div class="col-md-2 col-sm-12 text-right  ">
                       نام پروژه
                     </div>
-                    <div class="col-md-3 col-sm-12  text-right" style="direction: rtl">
+                    <div class="col-md-3 col-sm-12  text-left" style="direction: rtl">
                         <asp:TextBox ID="txtName" CssClass="form-control text-right  " runat="server"></asp:TextBox>
                     </div>
                 <asp:Panel ID="pnlStatus" runat="server">
                     
       
-                        <div class="col-md-3 col-sm-12 text-left">
+                        <div class="col-md-2 col-sm-12 text-right">
                       وضعیت پروژه
                     </div>
-                    <div class="col-md-3 col-sm-12  text-right"  >
+                    <div class="col-md-3 col-sm-12  text-left"  >
                         <telerik:RadComboBox ID="cmbSatus" runat="server" AppendDataBoundItems="true"  Skin="Windows7" 
                             EnableEmbeddedBaseStylesheet="true"
                             EnableEmbeddedSkins="true" DropDownAutoWidth="Enabled" Filter="Contains"
@@ -66,12 +69,16 @@
                         </telerik:RadComboBox>
                     </div>
                               </asp:Panel>
+        </div>
+        <div class="form-group">
     <uc2:UscSelectPaymankar runat="server" ID="UscSelectPaymankar" />
-    <div class="col-md-6 com-sm-12">  <uc2:UscSathParameter runat="server" ID="UscSathParameter" /></div>
-            
-       
-                  </div>
+    <div class="col-md-6 com-sm-12"> 
+         <uc2:UscSathParameter runat="server" ID="UscSathParameter" />
+    </div>
+    </div>
+    </div>
                 <div class="col-sm-12 text-center ">
                     <asp:Button ID="BtnSearch" CssClass="btn  btn-success" OnClick="BtnSearch_Click" runat="server" Text="جستجو" />
                 </div>
+        </div>
       

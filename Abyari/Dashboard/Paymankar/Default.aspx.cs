@@ -19,8 +19,8 @@ namespace Abyari.Dashboard.Paymankar
             {
                 Server.Transfer("/Administrator/SelectCompany.aspx", false);
             }
-            ((Abyari.Design.Masters.Main)this.Master).PageTitle = " مدیریت پیمانکاران";
-            ((Abyari.Design.Masters.Main)this.Master).BreadCrumb = "آمار اقدامات پیمانکار در سال جاری شمسی";
+            //((Abyari.Design.Masters.Main)this.Master).PageTitle = " مدیریت پیمانکاران";
+            //((Abyari.Design.Masters.Main)this.Master).BreadCrumb = "آمار اقدامات پیمانکار در سال جاری شمسی";
         }
     }
 }

@@ -1,10 +1,10 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UscSathParameter.ascx.cs" Inherits="Abyari.Controls.UscSathParameter" %>
 
 
-  <div class="col-md-4 col-sm-12 text-left ">
+  <div class="col-md-4 col-sm-12 text-right ">
                        سطح  پروژه
                     </div>
-                    <div class="col-md-5 col-sm-12   " style="direction: rtl">
+                    <div class="col-md-5 col-sm-12 text-left  " style="direction: rtl">
                     <asp:DropDownList ID="comComparar" CssClass="form-control text-right" runat="server"   >
                        <asp:ListItem Value="" Text="همه"></asp:ListItem>
                        <asp:ListItem Value="more" Text="بزرگتر و مساوی"></asp:ListItem>

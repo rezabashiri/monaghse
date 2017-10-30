@@ -1,4 +1,4 @@
-﻿<%@ Page Title="گزارشات مدیریتی" Language="C#" MasterPageFile="~/Design/Masters/Main.Master" AutoEventWireup="true" CodeBehind="Report.aspx.cs" Inherits="Abyari.Reports.Report" %>
+﻿<%@ Page Title="گزارشات مدیریتی" Language="C#" MasterPageFile="~/Design/Masters/Administrator.Master" AutoEventWireup="true" CodeBehind="Report.aspx.cs" Inherits="Abyari.Reports.Report" %>
 
 <%@ Register Src="~/Controls/UscPaymankarSearchParameter.ascx" TagPrefix="uc2" TagName="UscPaymankarSearchParameter" %>
 <%@ Register Src="~/Controls/UscShowPaymankars.ascx" TagPrefix="uc2" TagName="UscShowPaymankars" %>
@@ -37,7 +37,7 @@
                     </div>
 
                     <div class="col-md-4 col-sm-12 text-right">
-                       <em:JQDatePicker ID="dteFrom" DateFormat="YMD" ChangeMonth="true" EnableViewState="true"    ChangeYear="true" Regional="fa" Date='<%# Bind( "ContractDate") %>' runat="server"  ></em:JQDatePicker>
+                       <em:JQDatePicker ID="dteFrom" DateFormat="YMD" ChangeMonth="true" EnableViewState="true"  IsRTL="true" CalendarType="Jalali"   ChangeYear="true" Regional="fa" Date='<%# Bind( "ContractDate") %>' runat="server"  ></em:JQDatePicker>
                     </div>
                         <div class ="col-sm-12 col-md-2 text-left ">
                         نوع صورت حساب

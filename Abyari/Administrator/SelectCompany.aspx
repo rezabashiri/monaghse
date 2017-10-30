@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Design/Masters/Main.Master" AutoEventWireup="true" CodeBehind="SelectCompany.aspx.cs" Inherits="Abyari.Administrator.SelectCompany" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Design/Masters/Administrator.Master" AutoEventWireup="true" CodeBehind="SelectCompany.aspx.cs" Inherits="Abyari.Administrator.SelectCompany" %>
 
 <%@ Register Src="~/Controls/UscSelectPaymankar.ascx" TagPrefix="uc2" TagName="UscSelectPaymankar" %>
 

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Design/Masters/Main.Master" AutoEventWireup="true" CodeBehind="Configurate.aspx.cs" Inherits="Abyari.Administrator.Configurate" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Design/Masters/Administrator.Master" AutoEventWireup="true" CodeBehind="Configurate.aspx.cs" Inherits="Abyari.Administrator.Configurate" %>
 
 <%@ Register Src="~/ScoringSystem/uscConfig.ascx" TagPrefix="uc2" TagName="uscConfig" %>
 

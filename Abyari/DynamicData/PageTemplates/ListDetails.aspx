@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Design/Masters/Main.Master" AutoEventWireup="true" EnableViewStateMac="true"  EnableViewState="true" ViewStateMode="Enabled" ValidateRequest="false" CodeBehind="ListDetails.aspx.cs" Inherits="Abyari.DynamicData.PageTemplates.ListDetails" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Design/Masters/Administrator.Master" AutoEventWireup="true" EnableViewStateMac="true"  EnableViewState="true" ViewStateMode="Enabled" ValidateRequest="false" CodeBehind="ListDetails.aspx.cs" Inherits="Abyari.DynamicData.PageTemplates.ListDetails" %>
 
 <%@ Register Src="~/DynamicData/Content/GridViewPager.ascx" TagName="GridViewPager" TagPrefix="asp" %>
 <%--<%@ Register src="~/DynamicData/Content/FilterUserControl.ascx" tagname="DynamicFilter" tagprefix="asp" %>--%>

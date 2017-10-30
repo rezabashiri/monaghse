@@ -1474,10 +1474,6 @@
     <Content Include="Design\fonts\IRANSANS.eot" />
     <Content Include="Design\fonts\IRANSANS.woff" />
     <Content Include="Design\fonts\IRANSANS.woff2" />
-    <Content Include="Design\fonts\iransw.eot" />
-    <Content Include="Design\fonts\iransw.ttf" />
-    <Content Include="Design\fonts\iransw.woff" />
-    <Content Include="Design\fonts\iransw.woff2" />
     <Content Include="Design\Masters\Administrator.Master" />
     <None Include="Properties\PublishProfiles\abyari.pubxml" />
     <Content Include="Reports\RequestPrint.mrt" />

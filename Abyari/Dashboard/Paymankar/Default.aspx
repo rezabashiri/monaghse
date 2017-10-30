@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Design/Masters/Main.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Abyari.Dashboard.Paymankar.Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Design/Masters/Administrator.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Abyari.Dashboard.Paymankar.Default" %>
 <%@ Register Src="~/Controls/UscPaymankarDetails.ascx" TagPrefix="uc2" TagName="UscPaymankarDetails" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">

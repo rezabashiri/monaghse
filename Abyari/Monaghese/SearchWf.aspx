@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Design/Masters/Main.Master" AutoEventWireup="true" CodeBehind="SearchWf.aspx.cs" Inherits="Abyari.Monaghese.SearchWf" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Design/Masters/Administrator.Master" AutoEventWireup="true" CodeBehind="SearchWf.aspx.cs" Inherits="Abyari.Monaghese.SearchWf" %>
 
 <%@ Register Src="~/WorkFlowHelpers/UscSearchZirprojeMoshtariByWF.ascx" TagPrefix="uc2" TagName="UscSearchZirprojeMoshtariByWF" %>
 

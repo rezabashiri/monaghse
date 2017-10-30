@@ -1,4 +1,4 @@
-﻿<%@ Page Title="مدیریت پیمانکاران" Language="C#" MaintainScrollPositionOnPostback="true" MasterPageFile="~/Design/Masters/Main.Master" AutoEventWireup="true" CodeBehind="Management.aspx.cs" Inherits="Abyari.Financial.Management" %>
+﻿<%@ Page Title="مدیریت پیمانکاران" Language="C#" MaintainScrollPositionOnPostback="true" MasterPageFile="~/Design/Masters/Administrator.Master" AutoEventWireup="true" CodeBehind="Management.aspx.cs" Inherits="Abyari.Financial.Management" %>
 
 <%@ Register Src="~/Controls/UscEntekhbProjeToInvoice.ascx" TagPrefix="uc2" TagName="UscEntekhbProjeToInvoice" %>
 <%@ Register Src="~/Controls/UscPaymankarSearchParameter.ascx" TagPrefix="uc2" TagName="UscPaymankarSearchParameter" %>
@@ -36,7 +36,7 @@
     }
  </script>
  
-    <div class="panel panel-yellow">
+    <div class="panel panel-primary">
         <div class="panel-heading">
             مدیریت پیمانکاران
         </div>

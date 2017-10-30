@@ -1,6 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Design/Masters/Main.Master" AutoEventWireup="true" CodeBehind="ReportDesigner.aspx.cs" Inherits="Abyari.Reports.ReportDesigner" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Design/Masters/Administrator.Master" AutoEventWireup="true" CodeBehind="ReportDesigner.aspx.cs" Inherits="Abyari.Reports.ReportDesigner" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-          <div class="panel panel-primary">
+          <div class="panel panel-success">
            <div class="panel panel-heading text-right">
                ساخت و ویرایش گزارش
                </div>
